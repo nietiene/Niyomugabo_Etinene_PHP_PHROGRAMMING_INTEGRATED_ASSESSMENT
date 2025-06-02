@@ -46,7 +46,11 @@
             VALUES('$trainee_code', '$module_code', '$Formative', '$Summative')";
         $query = mysqli_query($conn, $sql);
         
-        if ()
+        if ($query) {
+            echo "Data Inseted Successfully";
+        } else {
+            die("ERROR:". mysqli_error($conn));
+        }
       }
 
 
