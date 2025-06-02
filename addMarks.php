@@ -38,6 +38,10 @@
         $module_code = $_POST['moduleId'];
         $Formative = $_POST['Formative_Assessment'];
         $Summative = $_POST['Summative_Assessment'];
+
+        $Total = $Formative + $Summative;
+        $Decision = ($Total >= 70) ? "Competent" : "Not_Competent";
+        
       }
 
 
