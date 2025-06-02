@@ -18,11 +18,15 @@
                 <option value="male">Male</option>
                 <option value="female">Female</option>
             </select> <br>
-            <label >Trade Id</label>
-              <select name="trade_id">
+            <label >Select Trade</label>
+              <select name="Trade_id">
                 <?php
-                  include("conn.php")
-
+                  include("conn.php");
+                  $sql = "SELECT * FROM trades";
+                  $query = mysqli_query($conn, $sql);
+                  while ($data = mysqli_fetch_assoc($query)) {
+                    echo "<option value='". $data['Trade_id'] . "'>" . $data['Trade_name'] . "</option>";
+                  }
                 ?>
               </select><br>
 
