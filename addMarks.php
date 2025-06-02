@@ -41,7 +41,12 @@
 
         $Total = $Formative + $Summative;
         $Decision = ($Total >= 70) ? "Competent" : "Not_Competent";
+
+        $sql = "INSERT INTO marks(`Trainee_Id`, `Module_Id`, `Formative_Assessment`, `Summative_Assessment`, `Total_Marks`) 
+            VALUES('$trainee_code', '$module_code', '$Formative', '$Summative')";
+        $query = mysqli_query($conn, $sql);
         
+        if ()
       }
 
 
