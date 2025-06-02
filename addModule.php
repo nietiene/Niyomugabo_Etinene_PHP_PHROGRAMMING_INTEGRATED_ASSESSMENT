@@ -25,7 +25,18 @@
 
     <?php
        include("conn.php");
-       if (isset($_POST['addModule']))
+       if (isset($_POST['addModule'])) {
+        $Module_Name = $_POST['Module_Name'];
+        $Trade_Id = $_POST['Trade_Id'];
+        $sql = "INSERT INTO modules(Module_Name, Trade_Id) VALUES('$Module_Name, '$Trade_Id')";
+        $query = mysqli_query($conn, $sql);
+
+        if ($query) {
+            echo "Module Saved Successfully";
+        } else {
+            die (mysqli_error($conn));
+        }
+       }
     
     
     
