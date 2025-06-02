@@ -10,7 +10,9 @@
        <tr>
           <th>Mark Code</th>
           <th>Trainee Code</th>
+          <th>Trainee Name</th>
           <th>Module Code</th>
+          <th>Module Name</th>
           <th>Formative Assessment /50</th>
           <th>Formative Assessment /50</th>
           <th>Total /100</th>
@@ -19,16 +21,28 @@
        
      <?php
          include ("conn.php");
-          $sql = "SELECT * FROM marks";
-          $query = mysqli_query($sql);
+          $sql = "SELECT m.Mark.id, m.Trainee.Id, m.Module.id, m.Formative_Assessment
+                  m.Summative_Assessment t.Trainee.name md.Module_Name FROM marks m
+                  JOIN trainees t ON m.Trainee.id = t.Trainee.id 
+                  JOIN modules md ON m.Module.id = md.Module.id
+                  ";
+                  
+          $query = mysqli_query($conn, $sql);
 
           while ($data = mysqli_fetch_assoc($query)) {
             echo 
                "
                <tr>
-                   <td>{}</td>
-               
-               "
+                   <td>{$data['Mark_Id']}</td>
+                   <td>{$data['Trainee_Id']}</td>
+                   <td>{$data['Trainee_Name']}</td>
+                   <td>{$data['Module_Id']}</td>
+                   <td>{$data['Module_Name']}</td>
+                   <td>{$data['Formative_Assessment']}</td>
+                   <td>{$data['Summative_Assessment']}</td>
+                   <td>{$data['Total_Marks']}</td>
+                   <td>{$data['decision']}</td>
+               ";
           }
 
      ?>
