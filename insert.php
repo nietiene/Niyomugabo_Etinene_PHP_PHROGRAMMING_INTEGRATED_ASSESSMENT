@@ -20,6 +20,22 @@
         </select> <br>
         <label >Trade Id</label>
         <input type="text" name="Trade_id" /> <br>
+
+        <button name="add">Save</button>
     </form>
+
+    <?php
+        include("conn.php");
+       
+        if (isset($_POST['add'])) {
+            $firstName = $_POST['Firstname'];
+            $lastName = $_POST['latname'];
+            $gender = $_POST['gender'];
+            $trade_id = $_POST['Trade_id'];
+        }
+
+
+
+    ?>
 </body>
 </html>
