@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add Marks</title>
 </head>
 <body>
     <form action="" method="post">
@@ -20,10 +20,10 @@
                }
             ?>
         </select> <br>
-        <label for="">Formative Assessment Makarks/50</label>
+        <label>Formative Assessment Makarks/50</label>
         <input type="text" name="Formative_Assessment" > <br>
 
-        <label for="">Summative Assessment Makarks/50</label>
+        <label>Summative Assessment Makarks/50</label>
         <input type="text" name="Summative_Assessment" > <br>
 
         <button name="addMarks">Save Marks</button>
@@ -37,15 +37,15 @@
         $module_code = $_POST['Module_Id'];
         $Formative = $_POST['Formative_Assessment'];
         $Summative = $_POST['Summative_Assessment'];
-
+       echo "Trainee Code" . $trainee_code . " <br>module_code" . $module_code . "<br>Fromative" . $Formative . "<br>Summative".$Summative;
         $Total = $Formative + $Summative;
         $Decision = ($Total >= 70) ? "Competent" : "Not Competent";
 
-        $sql = "INSERT INTO marks(Trainee_Id, Module_Id, Formative_Assessment, Summative_Assessment, Total_Marks) VALUES($trainee_code, $module_code, $Formative, $Summative, $Total)";
+        $sql = "INSERT INTO marks(Trainee_Id, Module_Id, Formative_Assessment, Summative_Assessment, Total_Marks) VALUES('$trainee_code', '$module_code', '$Formative', '$Summative', '$Total')";
         $query = mysqli_query($conn, $sql);
         
         if ($query) {
-            echo "Data Inseted Successfully";
+            echo "Data Inseted Successfully <br><strong>$Decision</strong>";
         } else {
             die("ERROR:". mysqli_error($conn));
         }

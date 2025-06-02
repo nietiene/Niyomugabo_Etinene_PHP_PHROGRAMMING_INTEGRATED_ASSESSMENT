@@ -11,7 +11,7 @@
             <input type="text" name="Firstname" > <br>
 
             <label for="">Last Name</label>
-            <input type="text" name="latname" > <br>
+            <input type="text" name="lastname" > <br>
 
             <label for="">Gender</label>
             <select name="gender" >
@@ -38,11 +38,11 @@
         
             if (isset($_POST['add'])) {
                 $firstName = $_POST['Firstname'];
-                $lastName = $_POST['latname'];
+                $lastName = $_POST['lastname'];
                 $gender = $_POST['gender'];
                 $trade_id = $_POST['Trade_id'];
 
-                $sql = "INSERT INTO trainees(firstName,latname,gender,Trade_id) VALUES('$firstName', '$lastName', '$gender', '$trade_id')";
+                $sql = "INSERT INTO trainees(firstName,lastname,gender,Trade_id) VALUES('$firstName', '$lastName', '$gender', '$trade_id')";
                 $result = mysqli_query($conn, $sql);
                 if ($result) {
                     echo "Data inserted Successfully";
