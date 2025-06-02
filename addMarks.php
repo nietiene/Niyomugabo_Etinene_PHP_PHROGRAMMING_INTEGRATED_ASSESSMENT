@@ -28,5 +28,15 @@
 
         <button name="addMarks">Save Marks</button>
     </form>
+
+    <?php
+      include("conn.php");
+
+      if (isset($_POST['addMarks'])) {
+        
+      }
+
+
+    ?>
 </body>
 </html>
