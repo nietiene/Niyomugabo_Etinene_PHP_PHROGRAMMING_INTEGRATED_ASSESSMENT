@@ -8,7 +8,7 @@
 <body>
     <form action="" method="post">
         <label for="">Trainee Code</label>
-        <input type="text" name="TraineeId" id=""> <br>
+        <input type="text" name="Trainee_Id" id=""> <br>
         <label for="">Module Name</label>
         <select name="moduleId" id="">
             <?php
@@ -21,10 +21,10 @@
             ?>
         </select> <br>
         <label for="">Formative Assessment Makarks/50</label>
-        <input type="text" name="Formative_Assessment" id=""> <br>
+        <input type="text" name="Formative_Assessment" > <br>
 
         <label for="">Summative Assessment Makarks/50</label>
-        <input type="text" name="Summative_Assessment" id=""> <br>
+        <input type="text" name="Summative_Assessment" > <br>
 
         <button name="addMarks">Save Marks</button>
     </form>
@@ -41,8 +41,7 @@
         $Total = $Formative + $Summative;
         $Decision = ($Total >= 70) ? "Competent" : "Not Competent";
 
-        $sql = "INSERT INTO marks(Trainee_Id, Module_Id, Formative_Assessment, Summative_Assessment, Total_Marks) 
-            VALUES('$trainee_code', '$module_code', '$Formative', '$Summative', '$Total')";
+        $sql = "INSERT INTO marks(Trainee_Id, Module_Id, Formative_Assessment, Summative_Assessment, Total_Marks) VALUES($trainee_code, $module_code, $Formative, $Summative, $Total)";
         $query = mysqli_query($conn, $sql);
         
         if ($query) {
