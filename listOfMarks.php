@@ -33,6 +33,7 @@
                   FROM marks m
                   JOIN trainees t ON m.Trainee_Id = t.Trainee_Id 
                   JOIN modules md ON m.Module_Id = md.Module_Id
+                  ORDER BY m.Trainee_Id ASC
                   ";
                   
           $query = mysqli_query($conn, $sql);
