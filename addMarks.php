@@ -16,7 +16,7 @@
                $sql = "SELECT * FROM modules";
                $query = mysqli_query($conn, $sql);
                while ($data = mysqli_fetch_assoc($query)) {
-                echo "'<option value=" . $data['moduleId'] . "'>" . $data['Module_Name'] . "</option>";
+                echo "<option value='" . $data['Module_Id'] . "'>" . $data['Module_Name'] . "</option>";
                }
             ?>
         </select> <br>
@@ -33,7 +33,7 @@
 
       if (isset($_POST['addMarks'])) {
         
-        $trainee_code = $_POST['TraineeId'];
+        $trainee_code = $_POST['Trainee_Id'];
         $module_code = $_POST['Module_Id'];
         $Formative = $_POST['Formative_Assessment'];
         $Summative = $_POST['Summative_Assessment'];
