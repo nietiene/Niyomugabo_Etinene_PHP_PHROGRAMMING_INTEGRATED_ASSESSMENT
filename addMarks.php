@@ -13,7 +13,11 @@
         <select name="moduleId" id="">
             <?php
                include('conn.php');
-               
+               $sql = "SELECT * FROM modules";
+               $query = mysqli_query($conn, $sql);
+               while ($data = mysqli_fetch_assoc($query)) {
+                echo "'<option value" . $data['moduleId'] . "'>" . $data['Module_Name'] . "</option>";
+               }
             ?>
         </select>
     </form>
