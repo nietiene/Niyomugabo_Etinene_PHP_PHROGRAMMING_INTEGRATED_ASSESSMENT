@@ -10,7 +10,7 @@
         <label for="">Trainee Code</label>
         <input type="text" name="Trainee_Id" id=""> <br>
         <label for="">Module Name</label>
-        <select name="moduleId" id="">
+        <select name="Module_Id" id="">
             <?php
                include('conn.php');
                $sql = "SELECT * FROM modules";
@@ -34,7 +34,7 @@
       if (isset($_POST['addMarks'])) {
         
         $trainee_code = $_POST['TraineeId'];
-        $module_code = $_POST['moduleId'];
+        $module_code = $_POST['Module_Id'];
         $Formative = $_POST['Formative_Assessment'];
         $Summative = $_POST['Summative_Assessment'];
 
