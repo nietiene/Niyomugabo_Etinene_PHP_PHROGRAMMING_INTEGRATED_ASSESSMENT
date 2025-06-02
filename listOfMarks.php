@@ -21,10 +21,18 @@
        
      <?php
          include ("conn.php");
-          $sql = "SELECT m.Mark.id, m.Trainee.Id, m.Module.id, m.Formative_Assessment
-                  m.Summative_Assessment t.Trainee.name md.Module_Name FROM marks m
-                  JOIN trainees t ON m.Trainee.id = t.Trainee.id 
-                  JOIN modules md ON m.Module.id = md.Module.id
+         $sql = " SELECT m.Mark_Id, 
+                  m.Trainee_Id, 
+                  CONCAT(t.Firstname, ' ', t.lastname) AS Trainee_name, 
+                  m.Module_id, 
+                  md.Module_Name,
+                  m.Formative_Assessment,
+                  m.Summative_Assessment,
+                  m.Total_Marks,
+                  m.Decision
+                  FROM marks m
+                  JOIN trainees t ON m.Trainee_Id = t.Trainee_Id 
+                  JOIN modules md ON m.Module_Id = md.Module_Id
                   ";
                   
           $query = mysqli_query($conn, $sql);
