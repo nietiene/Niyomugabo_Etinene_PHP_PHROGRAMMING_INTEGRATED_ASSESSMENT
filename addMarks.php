@@ -30,7 +30,6 @@
     </form>
 
     <?php
-      include("conn.php");
 
       if (isset($_POST['addMarks'])) {
         
@@ -40,10 +39,10 @@
         $Summative = $_POST['Summative_Assessment'];
 
         $Total = $Formative + $Summative;
-        $Decision = ($Total >= 70) ? "Competent" : "Not_Competent";
+        $Decision = ($Total >= 70) ? "Competent" : "Not Competent";
 
-        $sql = "INSERT INTO marks(`Trainee_Id`, `Module_Id`, `Formative_Assessment`, `Summative_Assessment`, `Total_Marks`) 
-            VALUES('$trainee_code', '$module_code', '$Formative', '$Summative')";
+        $sql = "INSERT INTO marks(Trainee_Id, Module_Id, Formative_Assessment, Summative_Assessment, Total_Marks) 
+            VALUES('$trainee_code', '$module_code', '$Formative', '$Summative', '$Total')";
         $query = mysqli_query($conn, $sql);
         
         if ($query) {
