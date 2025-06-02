@@ -8,7 +8,7 @@
 <body>
     <form action="" method="post">
         <label for="">Trainee Code</label>
-        <input type="text" name="Trade_Id" id=""> <br>
+        <input type="text" name="TraineeId" id=""> <br>
         <label for="">Module Name</label>
         <select name="moduleId" id="">
             <?php
@@ -34,6 +34,10 @@
 
       if (isset($_POST['addMarks'])) {
         
+        $trainee_code = $_POST['TraineeId'];
+        $module_code = $_POST['moduleId'];
+        $Formative = $_POST['Formative_Assessment'];
+        $Summative = $_POST['Summative_Assessment'];
       }
 
 
