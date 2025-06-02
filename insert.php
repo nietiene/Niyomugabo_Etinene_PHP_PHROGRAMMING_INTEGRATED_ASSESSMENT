@@ -32,6 +32,9 @@
             $lastName = $_POST['latname'];
             $gender = $_POST['gender'];
             $trade_id = $_POST['Trade_id'];
+
+            $sql = "INSERT INTO trainees(firstName,latname,gender,Trade_id) VALUES('$firstName', '$lastName', $gender, $trade_id)";
+            
         }
 
 
