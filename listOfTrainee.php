@@ -15,12 +15,13 @@
            <th>First Name</th>
            <th>Last Name</th>
            <th>Gender</th>
+           <th>Trade Code</th>
            <th>Trade Name</th>
        </tr>
 
        <?php
             include('conn.php');
-            $sql = "SELECT t.Trainee_Id, t.Firstname, t.lastname, t.Gender, tr.Trade_Name FROM trainees t
+            $sql = "SELECT t.Trainee_Id, t.Firstname, t.lastname, t.Gender, t.Trade_Id, tr.Trade_Name FROM trainees t
             JOIN trades tr ON t.Trade_Id = tr.Trade_Id
             ";
             $query = mysqli_query($conn, $sql);
@@ -33,6 +34,7 @@
                        <td>{$data['Firstname']}</td>
                        <td>{$data['lastname']}</td>
                        <td>{$data['Gender']}</td>
+                       <td>{$data['Trade_Id']}</td>
                        <td>{$data['Trade_Name']}</td>
                     </tr>
                 ";
