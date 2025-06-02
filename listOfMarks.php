@@ -23,8 +23,8 @@
          include ("conn.php");
          $sql = " SELECT m.Mark_Id, 
                   m.Trainee_Id, 
-                  CONCAT(t.Firstname, ' ', t.lastname) AS Trainee_name, 
-                  m.Module_id, 
+                  CONCAT(t.Firstname, ' ', t.lastname) AS Trainee_Name, 
+                  m.Module_Id, 
                   md.Module_Name,
                   m.Formative_Assessment,
                   m.Summative_Assessment,
@@ -49,7 +49,7 @@
                    <td>{$data['Formative_Assessment']}</td>
                    <td>{$data['Summative_Assessment']}</td>
                    <td>{$data['Total_Marks']}</td>
-                   <td>{$data['decision']}</td>
+                   <td>{$data['Decision']}</td>
                ";
           }
 
