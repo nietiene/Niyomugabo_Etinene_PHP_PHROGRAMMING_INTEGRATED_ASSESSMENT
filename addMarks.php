@@ -16,10 +16,17 @@
                $sql = "SELECT * FROM modules";
                $query = mysqli_query($conn, $sql);
                while ($data = mysqli_fetch_assoc($query)) {
-                echo "'<option value" . $data['moduleId'] . "'>" . $data['Module_Name'] . "</option>";
+                echo "'<option value=" . $data['moduleId'] . "'>" . $data['Module_Name'] . "</option>";
                }
             ?>
-        </select>
+        </select> <br>
+        <label for="">Formative Assessment Makarks/50</label>
+        <input type="text" name="Formative_Assessment" id=""> <br>
+
+        <label for="">Summative Assessment Makarks/50</label>
+        <input type="text" name="Summative_Assessment" id=""> <br>
+
+        <button name="addMarks">Save Marks</button>
     </form>
 </body>
 </html>
