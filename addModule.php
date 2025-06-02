@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add Module</title>
 </head>
 <body>
     <form action="" method="post">
@@ -15,10 +15,21 @@
                $sql = "SELECT * FROM trades";
                $query = mysqli_query($conn, $sql);
                while ($data = mysqli_fetch_assoc($query)) {
-                echo "<option value='" . $data['Trade_id'] . ">'" . $data['Trade_name'] . "</option>";
+                echo "<option value='" . $data['Trade_id'] . "'>" . $data['Trade_name'] . "</option>";
                }
             ?>
         </select>
+
+        <button name="addModule">Save Module</button>
     </form>
+
+    <?php
+       include("conn.php");
+       if (isset($_POST['addModule']))
+    
+    
+    
+    
+    ?>
 </body>
 </html>
