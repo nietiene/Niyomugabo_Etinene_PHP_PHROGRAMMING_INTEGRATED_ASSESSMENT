@@ -7,8 +7,9 @@
  <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
-<body>
-  <h1>List Of Trainees</h1>  
+<body class="bg-green-100 max-h-screen flex justify-center items-center px-4">
+<div class="bg-blue-200 shadow-lg max-w-2xl ">
+  <h1 class="text-center font-semibold text-2xl text-green-700">List Of Trainees</h1>  
    <li><a href="addTrainee.php">Add Trainee</a></li>
    <table border="2" cellspacing="2" cellpadding="7">
        <tr> 
@@ -46,5 +47,6 @@
 
       ?>
    </table>
+   </div>
 </body>
 </html>
