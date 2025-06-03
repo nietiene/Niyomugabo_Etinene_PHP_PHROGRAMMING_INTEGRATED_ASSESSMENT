@@ -7,13 +7,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen bg-green-100 flex justify-center items-center">
-    <div class="bg-blue-300 p-8 px-10 py-10 shadow-2xl rounded-md">
+    <div class="bg-blue-300 p-8 px-10 py-10 shadow-2xl rounded-md ">
     <div class="flex justify-end">
        <a href="addModule.php" class="mb-7 bg-green-500 py-2 px-5 text-white rounded-lg hover:bg-green-700">Add New Module</a>
     </div>
-    <table border="2" cellspacing="2" cellpadding="5">
-        <tr>
-          <th>Module Code</th>
+    <div class="overflow-x-auto rounded-sm">
+    <table border="2" cellspacing="2" cellpadding="5"
+    class="border border-blue-600 text-sm">
+        <tr class="bg-green-500 text-blue-700">
+          <th class="px-10">Module Code</th>
           <th>Module Name</th>
           <th>Trade Code</th>
           <th>Trade Name</th>
@@ -53,6 +55,7 @@
             }
        ?>
     </table>
+    </div>
     </div>
 </body>
 </html>
