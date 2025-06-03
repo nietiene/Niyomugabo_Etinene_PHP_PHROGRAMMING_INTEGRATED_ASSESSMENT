@@ -19,11 +19,10 @@
            <li><a href="addTrainee.php" class="hover:text-blue-800 hover:underline transition duration-200">Add Trainee</a></li>
            <li><a href="addModule.php" class="hover:text-blue-800 hover:underline transition duration-200">Add Module</a></li>
            <li><a href="addMarks.php" class="hover:text-blue-800 hover:underline transition duration-200">Add Marks To Trainee</a></li>
-           <div>
-               <a href="logout.php">Logout</a>
-           </div>   
-           
          </ul>
+           <div class="flex justify-end">
+               <a href="logout.php" class="text-white rounded-lg hover:bg-red-700 bg-red-500 py-1 px-4 transition duration-200">Logout</a>
+           </div>   
       </nav> 
    </div>
 
