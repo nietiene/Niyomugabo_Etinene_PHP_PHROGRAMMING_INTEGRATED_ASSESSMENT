@@ -13,7 +13,7 @@
         <a href="addTrade.php" class="bg-green-500 px-4 py-2 rounded-lg shadow-lg text-white hover:bg-green-700">Add New</a>
     </div>
 
-    <div>
+    <div class="overflow-x-auto">
     <table border="2">
         <tr>
             <th>Trade Code</th>
