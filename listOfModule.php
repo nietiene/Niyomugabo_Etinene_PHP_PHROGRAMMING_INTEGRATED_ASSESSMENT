@@ -6,6 +6,7 @@
     <title>List Of Modules</title>
 </head>
 <body>
+    <a href="addModule.php">Add New Module</a>
     <table border="2" cellspacing="2" cellpadding="5">
         <tr>
           <th>Module Code</th>
@@ -38,8 +39,8 @@
                           <td>{$data['Module_Name']}</td>
                           <td>{$data['Trade_Id']}</td>
                           <td>{$data['Trade_name']}</td>
-                          <td><a href='updateModule.php?Module_Id=$data['Module_Id']'>Update</a></td>
-                          <td><a href='deleteModule.php?Module_Id=$data['Module_Id']'>Delete</a></td>
+                          <td><a href='updateModule.php?Module_Id={$data['Module_Id']}'>Update</a></td>
+                          <td><a href='deleteModule.php?Module_Id={$data['Module_Id']}'>Delete</a></td>
                       </tr>
                       ";
                 }
