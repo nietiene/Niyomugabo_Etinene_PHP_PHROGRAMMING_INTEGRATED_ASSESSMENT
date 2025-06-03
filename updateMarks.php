@@ -41,11 +41,33 @@
     <?php
      
      if (isset($_POST['save'])) {
-        $trainee_code = $_POST['Trainee_Id'];
         $Mark_Id = $_POST['Mark_Id'];
+        $trainee_code = $_POST['Trainee_Id'];
         $Module_Id = $_POST['Module_Id'];
         $Formative = $_POST['Formative_Assessment'];
         $Summative = $_POST['Summative_Assessment'];
+
+        $Total = $Formative + $Summative;
+        $Decision = ($Total) >= 70 ? "Competent" : "Not Competent";
+
+      $sql = "UPDATE marks SET 
+             Mark_Id = '$Mark_Id',
+             Trainee_Id = '$trainee_code',
+             Module_Id = '$Module_Id',
+             Formative_Assessment = '$Formative',
+             Summative_Assessment = '$Summative',
+             Total_Marks = '$Total',
+             decision = '$Decision'
+
+             WHERE Mark_Id = '$Mark_Id'
+      ";
+      $query = mysqli_query($conn, $sql);
+
+      if ($query) {
+        header("Location:listOfMarks.php");
+      } else {
+        die("ERROR:" . mysqli_error($conn));
+      }
      }
 
 
