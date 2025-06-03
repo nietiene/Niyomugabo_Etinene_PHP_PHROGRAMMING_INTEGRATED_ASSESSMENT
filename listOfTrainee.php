@@ -8,9 +8,12 @@
 
 </head>
 <body class="bg-green-100 max-h-screen flex justify-center items-center px-4">
-<div class="bg-blue-200 shadow-lg max-w-2xl ">
-  <h1 class="text-center font-semibold text-2xl text-green-700">List Of Trainees</h1>  
-   <li><a href="addTrainee.php">Add Trainee</a></li>
+<div class="bg-blue-200 shadow-2xl rounded-xl p-6 w-full max-w-6xl">
+  <h1 class="text-center font-semibold text-2xl text-green-700 mb-6">List Of Trainees</h1>  
+  <div class="flex justify-end">
+    <a href="addTrainee.php" class="bg-green-400 py-2 px-5 rounded-lg shadow-lg text-white hover:bg-green-600 transition duration-200">Add Trainee</a>
+  </div>
+   
    <table border="2" cellspacing="2" cellpadding="7">
        <tr> 
            <th>Trainee Code</th>
