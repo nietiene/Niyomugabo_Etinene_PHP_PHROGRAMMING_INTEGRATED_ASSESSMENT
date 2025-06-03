@@ -38,8 +38,8 @@
                        <td>{$data['Gender']}</td>
                        <td>{$data['Trade_Id']}</td>
                        <td>{$data['Trade_Name']}</td>
-                       <td><a herf='updateTrainee.php'?Trainee_Id={$data['Trade_Name']}>U[Update</a></td>
-                       <td><a herf='updateTrainee.php'?Trainee_Id={$data['Trade_Name']}>U[Update</a></td>
+                       <td><a href='updateTrainee.php'?Trainee_Id={$data['Trade_Name']}>Update</a></td>
+                       <td><a href='deleteTrainee.php'?Trainee_Id={$data['Trade_Name']}>Update</a></td>
                     </tr>
                 ";
             }
