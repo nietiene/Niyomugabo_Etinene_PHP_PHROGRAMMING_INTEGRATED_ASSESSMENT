@@ -9,8 +9,9 @@
 <body class="min-h-screen bg-green-100 flex justify-center items-center">
     <div class="bg-blue-300 p-8 px-10 py-10 shadow-2xl rounded-md ">
         <h1 class="text-2xl text-center text-green-600 font-semibold shadow-lg">List Of Modules</h1>
-    <div class="flex justify-end">
+    <div class="flex justify-between">
        <a href="addModule.php" class="mb-7 bg-green-500 py-2 px-5 text-white rounded-lg hover:bg-green-700">Add New Module</a>
+       <a href="Dashboard.php" class="mb-7 bg-red-500 py-2 px-5 text-white rounded-lg hover:bg-red-700">Back</a>
     </div>
     <div class="overflow-x-auto rounded-sm">
     <table border="2" cellspacing="2" cellpadding="5"
