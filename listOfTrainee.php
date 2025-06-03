@@ -26,7 +26,7 @@
            <th class="px-4 py-2">Trade Name</th>
            <th colspan="2" class="px-4 py-2">Modification</th>
        </tr>
-
+    <tbody>
        <?php
             include('conn.php');
             $sql = "SELECT t.Trainee_Id, t.Firstname, t.lastname, t.Gender, t.Trade_Id, tr.Trade_Name FROM trainees t
@@ -37,15 +37,15 @@
             while ($data = mysqli_fetch_assoc($query)) {
                 echo
                  "
-                    <tr>
-                       <td>{$data['Trainee_Id']}</td>
-                       <td>{$data['Firstname']}</td>
-                       <td>{$data['lastname']}</td>
-                       <td>{$data['Gender']}</td>
-                       <td>{$data['Trade_Id']}</td>
-                       <td>{$data['Trade_Name']}</td>
-                       <td><a href='updateTrainee.php?Trainee_Id={$data['Trainee_Id']}'>Update</a></td>
-                       <td><a href='deleteTrainee.php?Trainee_Id={$data['Trainee_Id']}'>Delete</a></td>
+                    <tr class='hover:bg-green-300 font-semibold hover:text-blue-500 text-blue-700'>
+                       <td class='px-4 py-2 border-blue-700 border-b'>{$data['Trainee_Id']}</td>
+                       <td class='px-4 py-2 border-blue-700 border-b'>{$data['Firstname']}</td>
+                       <td class='px-4 py-2 border-blue-700 border-b'>{$data['lastname']}</td>
+                       <td class='px-4 py-2 border-blue-700 border-b'>{$data['Gender']}</td>
+                       <td class='px-4 py-2 border-blue-700 border-b'>{$data['Trade_Id']}</td>
+                       <td class='px-4 py-2 border-blue-700 border-b'>{$data['Trade_Name']}</td>
+                       <td class='px-4 py-2 border-blue-700 border-b'><a href='updateTrainee.php?Trainee_Id={$data['Trainee_Id']}' class='text-green'>Update</a></td>
+                       <td class='px-4 py-2 border-blue-700 border-b text-red-500'><a href='deleteTrainee.php?Trainee_Id={$data['Trainee_Id']}'>Delete</a></td>
                     </tr>
                 ";
             }
