@@ -6,6 +6,7 @@
     <title>List Of Marks</title>
 </head>
 <body>
+    <li><a href="addMarks.php">Add Marks To Trainee</a></li>
     <table border="2" cellpadding="5" cellspacing="2">
        <tr>
           <th>Mark Code</th>

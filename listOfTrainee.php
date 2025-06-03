@@ -9,6 +9,7 @@
 </head>
 <body>
   <h1>List Of Trainees</h1>  
+   <li><a href="addTrainee.php">Add Trainee</a></li>
    <table border="2" cellspacing="2" cellpadding="7">
        <tr> 
            <th>Trainee Code</th>
