@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Marks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <form action="" method="post">
+<body class="min-h-screen flex justify-center items-center">
+    <form action="" method="post" class="max-w-md w-full bg-green-400 p-9">
+        <h1 class="text-lg text-center text-blue-700 font-bold">Add Marks</h1>
         <label for="">Trainee Code</label>
         <input type="text" name="Trainee_Id" id=""> <br>
         <label for="">Module Name</label>
