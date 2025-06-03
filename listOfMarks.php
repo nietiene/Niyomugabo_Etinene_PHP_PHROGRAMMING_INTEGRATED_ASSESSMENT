@@ -7,12 +7,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
-<body class="min-h-screen flex bg-green-100 justify-center text-center">
-    <div class="flex items-center justify-center">
-        <div class="flex mb-[35%] justify-end">
-                 <a href="addMarks.php">Add Marks To Trainee</a>
+<body class="min-h-screen flex flex-col px-4 py-6 bg-green-100 justify-center text-center">
+    <div class="w-full max-w-7xl bg-blue-300 shadow-xl rounded-lg p-6">
+        <div class="flex justify-between items-center mb-4">
+             <h1 class="text-2xl font-bold text-green-500">List Of Marks</h1>
+             <a href="addMarks.php" class="bg-green-500 py-2 px-4 text-white rounded-lg shadow-lg hover:bg-green-700">Add Marks To Trainee</a>
         </div>
-    <table border="2" cellpadding="5" cellspacing="2">
+    
+    <div> 
+        <table border="2" cellpadding="5" cellspacing="2"
+    >
        <tr>
           <th>Mark Code</th>
           <th>Trainee Code</th>
@@ -65,6 +69,7 @@
 
      ?>
     </table>
+    </div>  
     </div>
 </body>
 </html>
