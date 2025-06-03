@@ -24,12 +24,33 @@
 <body>
     <form action="" method="post">
         <label for="">Trade Code</label>
-        <input type="text" name="Trade_id" value=<?php echo $Data['Trade_id']?>> <br>
+        <input type="text" name="Trade_id" value=<?php echo $Data['Trade_id']?> readonly> <br>
 
         <label for="">Trade Name</label>
-        <input type="text" name="Trade_Name" value=<?php echo $Data['Trade_name']?>> <br>
+        <input type="text" name="Trade_name" value=<?php echo $Data['Trade_name']?>> <br>
       
         <button name="save">Save Changes</button>
     </form>
+
+    <?php
+      
+      if (isset($_POST['save'])) {
+        $Trade_Id = $_POST['Trade_id'];
+        $Trade_Name = $_POST['Trade_name'];
+      
+        $sql = "UPDATE trades SET Trade_name = '$Trade_Name' WHERE Trade_id = '$Trade_Id'";
+        $query = mysqli_query($conn, $sql);
+
+        if ($query) {
+            header("Location:listOfTrades.php");
+        } else {
+            die ("ERROR:". mysqli_error($conn));
+        }
+
+      }
+
+
+
+   ?>
 </body>
 </html>
