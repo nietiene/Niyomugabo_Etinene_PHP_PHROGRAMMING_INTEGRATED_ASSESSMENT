@@ -35,10 +35,10 @@
         <input type="text" name="Module_Id" value="<?php echo $Module['Module_Id']?>" readonly> <br>
 
         <label for="">Module Name</label>
-        <input type="text" name="Module_Id" value="<?php echo $Module['Module_Name']?>"> <br>
+        <input type="text" name="Module_Name" value="<?php echo $Module['Module_Name']?>"> <br>
 
         <label for="">Trade Code</label>
-        <input type="text" name="Module_Id" value="<?php echo $Module['Trade_Id']?>" readonly> <br>
+        <input type="text" name="Trade_Id" value="<?php echo $Module['Trade_Id']?>" readonly> <br>
 
         <label for="">Trade Name</label>
        <select name="Trade_Id" >
@@ -63,7 +63,12 @@
 
            $sql = "UPDATE modules SET Module_Name = '$Module_Name', Trade_Id = '$Trade_Id' WHERE Module_Id = '$Module_Id'";
            $query = mysqli_query($conn, $sql);
-           
+
+           if ($query) {
+            header("Location:listOfModule.php");
+           } else {
+            die("ERROR:" . mysqli_error($conn));
+           }
        }
 
 
