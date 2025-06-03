@@ -39,13 +39,13 @@
         <input type="password" name="Password" 
         class="w-[76%] py-3 rounded-lg bg-green-200 shadow-lg focus:ring-2 focus:outline-green-400 me-2 text-green-500 mb-6"> <br>
 
-        <button name="login" class="bg-blue-400 w-[50%] py-3 text-white rounded-lg hover:bg-blue-500 shadow-2xl">Login</button>
+        <button name="login" class="bg-blue-400 w-[50%] py-3 text-white rounded-lg hover:bg-blue-500 shadow-2xl mb-6">Login</button>
 
-        <?php
-        
-        
-        
-        ?>
+        <?php if (!empty($error)): ?>
+        <div class="bg-red-200 border border-red-500 text-red-700 px-4 py-1 rounded  text-center">
+            <?php echo $error; ?>
+        </div>
+        <?php endif; ?>
     </form>
 </body>
 </html>
