@@ -13,7 +13,7 @@
             <input type="text" name="Module_Name" 
             class="w-full py-2 rounded-lg bg-green-200 text-green-500 focus:outline-green-300"/> <br>
             <label class="block text-lg text-blue-500">Trade:</label>
-            <select name="Trade_Id" class="w-full py-2 rounded-lg bg-green-200 text-green-500 focus:outline-green-300">
+            <select name="Trade_Id" class="w-full py-2 rounded-lg bg-green-200 text-blue-500 focus:outline-green-300">
                 <option>Select Trade</option>
                 <?php
                 include("conn.php");
