@@ -9,7 +9,7 @@
     <form action="" method="post">
         <label for="">Username</label>
         <input type="text" name="Usename" > <br>
-        <label for="">Passowrd</label>
+        <label for="">Password</label>
         <input type="text" name="Password" > <br>
 
         <button name="login">Login</button>
