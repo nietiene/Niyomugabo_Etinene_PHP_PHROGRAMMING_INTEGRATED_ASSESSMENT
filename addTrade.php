@@ -12,7 +12,7 @@
        <h1 class="text-2xl text-green-500 font-semibold mb-6 text-center">Add New Trade</h1>
         <label class="block text-green-500 font-semibold text-lg">Trade Name:</label>
         <input type="text" name="Trade_name" 
-        class="px-3 py-3 "> <br>
+        class="py-2 w-full focus:ring-2 focus:outline-blue-200 focus:ring-blue-300 bg-blue-200 rounded-lg text-blue-500"> <br>
 
         <button name="add">Add New</button>
     </form>
