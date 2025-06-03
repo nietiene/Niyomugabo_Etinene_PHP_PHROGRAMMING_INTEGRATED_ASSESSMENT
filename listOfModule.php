@@ -18,6 +18,19 @@
     <title>List Of Modules</title>
 </head>
 <body>
-    
+    <table border="2" cellspacing="2" cellpadding="5">
+        <tr>
+          <th>Module Code</th>
+          <t h>Module Name</th>
+          <th>Trade Code</th>
+          <th>Trade Name</th>
+          <th colspan="2">Modification</th>
+        </tr>
+
+        <?php
+         
+
+       ?>
+    </table>
 </body>
 </html>
