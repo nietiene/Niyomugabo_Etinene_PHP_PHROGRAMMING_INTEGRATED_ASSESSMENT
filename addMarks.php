@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen flex justify-center items-center">
-    <form action="" method="post" class="max-w-md w-full bg-green-400 p-9">
+    <form action="" method="post" class="max-w-md w-full bg-green-400 p-9 rounded-lg shadow-2xl">
         <h1 class="text-lg text-center text-blue-700 font-bold">Add Marks</h1>
         <label for="">Trainee Code</label>
         <input type="text" name="Trainee_Id" id=""> <br>
