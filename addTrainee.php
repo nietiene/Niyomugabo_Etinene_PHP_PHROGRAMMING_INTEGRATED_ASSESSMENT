@@ -9,22 +9,22 @@
     <body class="min-h-screen bg-green-100 flex justify-center items-center">
         <form action="" method="post" class="bg-blue-700 p-8 max-w-lg w-full rounded-lg shadow-2xl">
             <h1 class="text-center text-green-500 text-xl underline mb-6">Add New Trainee</h1>
-            <label class="text-lg text-green-500 font-semibold">Firstname:</label>
+            <label class="text-lg text-green-500 font-semibold">First Name:</label>
             <input type="text" name="Firstname" 
-            class="w-[80%] py-2 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6"> <br>
+            class="w-[78%] py-2 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6"> <br>
 
-            <label for="">Last Name</label>
+            <label class="text-lg text-green-500 font-semibold">Last Name:</label>
             <input type="text" name="lastname" 
-            class="w-[80%] py-2 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6"> <br>
+            class="w-[78.5%] py-2 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6"> <br>
 
-            <label for="">Gender</label>
-            <select name="gender" >
+            <label class="text-lg text-green-500 font-semibold">Gender:</label>
+            <select name="gender" class="w-[78%] ms-7 py-2 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6">
                 <option>Select Gender</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
             </select> <br>
-            <label >Select Trade</label>
-              <select name="Trade_id">
+            <label class="text-lg text-green-500 font-semibold">Trade:</label>
+              <select name="Trade_id" class="w-[79%] ms-9 py-2 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6">
                 <?php
                   include("conn.php");
                   $sql = "SELECT * FROM trades";
