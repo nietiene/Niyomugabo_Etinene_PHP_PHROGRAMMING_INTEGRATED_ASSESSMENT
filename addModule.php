@@ -2,6 +2,7 @@
         
         $error = "";
         if (isset($_POST['addModule'])) {
+            if (!empty($_POST['Module_Nmae']) && !empty($_POST['Trade_Id'])) {
                 $Module_Name = $_POST['Module_Name'];
                 $Trade_Id = $_POST['Trade_Id'];
                 
@@ -13,6 +14,8 @@
                 } else {
                     $error = "Please fill out the empty space";
                 }
+            }
+              
         }
         
 ?>
