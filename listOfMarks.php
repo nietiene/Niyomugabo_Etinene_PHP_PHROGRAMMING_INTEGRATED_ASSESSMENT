@@ -19,16 +19,16 @@
         class="border border-blue-500 rounded-lg text-sm"
     >
        <tr class="bg-green-500 text-blue-800">
-          <th class="py-3 px-3 border-b border-blue-500">Mark Code</th>
-          <th class="py-3 px-3 border-b border-blue-500">Trainee Code</th>
-          <th class="py-3 px-3 border-b border-blue-500">Trainee Name</th>
-          <th class="py-3 px-3 border-b border-blue-500">Module Code</th>
-          <th class="py-3 px-3 border-b border-blue-500">Module Name</th>
-          <th class="py-3 px-3 border-b border-blue-500">Formative Assessment /50</th>
-          <th class="py-3 px-3 border-b border-blue-500">Formative Assessment /50</th>
-          <th class="py-3 px-3 border-b border-blue-500">Total /100</th>
-          <th class="py-3 px-3 border-b border-blue-500">Decision</th>
-          <th colspan="2" class="py-3 px-3 border-b border-blue-500">Modification</th>
+          <th class="py-3 px-1 border-b border-e border-blue-500">Mark Code</th>
+          <th class="py-3 px-1 border-b border-e border-blue-500">Trainee Code</th>
+          <th class="py-3 px-1 border-b border-e border-blue-500">Trainee Name</th>
+          <th class="py-3 px-1 border-b border-e border-blue-500">Module Code</th>
+          <th class="py-3 px-2 border-b border-e border-blue-500">Module Name</th>
+          <th class="py-3 px-2 border-b border-e border-blue-500">Formative Assessment /50</th>
+          <th class="py-3 px-2 border-b border-e border-blue-500">Formative Assessment /50</th>
+          <th class="py-3 px-2 border-b border-e border-blue-500">Total /100</th>
+          <th class="py-3 px-2 border-b border-e border-blue-500">Decision</th>
+          <th colspan="2" class="py-3 px-2 border-b border-blue-500">Modification</th>
         </tr>
        
      <?php
@@ -53,18 +53,18 @@
           while ($data = mysqli_fetch_assoc($query)) {
             echo 
                "
-               <tr>
-                   <td>{$data['Mark_Id']}</td>
-                   <td>{$data['Trainee_Id']}</td>
-                   <td>{$data['Trainee_Name']}</td>
-                   <td>{$data['Module_Id']}</td>
-                   <td>{$data['Module_Name']}</td>
-                   <td>{$data['Formative_Assessment']}</td>
-                   <td>{$data['Summative_Assessment']}</td>
-                   <td>{$data['Total_Marks']}</td>
-                   <td>{$data['Decision']}</td>
-                   <td><a href='updateMarks.php?Mark_Id={$data['Mark_Id']}'>Update</a></td>
-                   <td><a href='deleteMarks.php?Mark_Id={$data['Mark_Id']}'>Delete</a></td>
+               <tr class='hover:bg-green-400 text-blue-700'>
+                   <td class='py-3 px-2 border-b border-blue-500 border-e'>{$data['Mark_Id']}</td>
+                   <td class='py-3 px-2 border-b border-blue-500 border-e'>{$data['Trainee_Id']}</td>
+                   <td class='py-3 px-2 border-b border-blue-500 border-e'>{$data['Trainee_Name']}</td>
+                   <td class='py-3 px-2 border-b border-blue-500 border-e'>{$data['Module_Id']}</td>
+                   <td class='py-3 px-2 border-b border-blue-500 border-e'>{$data['Module_Name']}</td>
+                   <td class='py-3 px-2 border-b border-blue-500 border-e'>{$data['Formative_Assessment']}</td>
+                   <td class='py-3 px-2 border-b border-blue-500 border-e'>{$data['Summative_Assessment']}</td>
+                   <td class='py-3 px-2 border-b border-blue-500 border-e'>{$data['Total_Marks']}</td>
+                   <td class='py-3 px-2 border-b border-blue-500 border-e'>{$data['Decision']}</td>
+                   <td><a href='updateMarks.php?Mark_Id={$data['Mark_Id']}'  class='py-3 px-2  border-blue-500 hover:underline'>Update</a></td>
+                   <td><a href='deleteMarks.php?Mark_Id={$data['Mark_Id']}'  class='py-3 px-2  border-blue-500 hover:underline text-red-500'>Delete</a></td>
                ";
           }
 
