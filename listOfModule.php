@@ -8,6 +8,7 @@
 </head>
 <body class="min-h-screen bg-green-100 flex justify-center items-center">
     <div class="bg-blue-300 p-8 px-10 py-10 shadow-2xl rounded-md ">
+        <h1 class="text-2xl text-center text-green-600 font-semibold shadow-lg">List Of Modules</h1>
     <div class="flex justify-end">
        <a href="addModule.php" class="mb-7 bg-green-500 py-2 px-5 text-white rounded-lg hover:bg-green-700">Add New Module</a>
     </div>
@@ -15,7 +16,7 @@
     <table border="2" cellspacing="2" cellpadding="5"
     class="border border-blue-600 text-sm">
         <tr class="bg-green-500 text-blue-700">
-          <th class="px-10 border-b border-blue-500">Module Code</th>
+          <th class="px-10 py-3 border-b border-blue-500">Module Code</th>
           <th class="px-10 border-b border-blue-500">Module Name</th>
           <th class="px-10 border-b border-blue-500">Trade Code</th>
           <th class="px-10 border-b border-blue-500">Trade Name</th>
@@ -40,13 +41,13 @@
                 while($data = mysqli_fetch_assoc($result)) {
                     echo 
                       "
-                      <tr>
-                          <td>{$data['Module_Id']}</td>
-                          <td>{$data['Module_Name']}</td>
-                          <td>{$data['Trade_Id']}</td>
-                          <td>{$data['Trade_name']}</td>
-                          <td><a href='updateModule.php?Module_Id={$data['Module_Id']}'>Update</a></td>
-                          <td><a href='deleteModule.php?Module_Id={$data['Module_Id']}'>Delete</a></td>
+                      <tr class='text-blue-900 hover:bg-green-500'>
+                          <td class='px-10 py-3 border-b border-blue-500'>{$data['Module_Id']}</td>
+                          <td class='px-10 py-3 border-b border-blue-500'>{$data['Module_Name']}</td>
+                          <td class='px-10 py-3 border-b border-blue-500'>{$data['Trade_Id']}</td>
+                          <td class='px-10 py-3  border-b border-blue-500'>{$data['Trade_name']}</td>
+                          <td class='px-10 py-3 border-b border-blue-500 hover:underline'><a href='updateModule.php?Module_Id={$data['Module_Id']}'>Update</a></td>
+                          <td class='px-10 py-3 border-b border-blue-500 text-red-500 hover:underline'><a href='deleteModule.php?Module_Id={$data['Module_Id']}'>Delete</a></td>
                       </tr>
                       ";
                 } 
