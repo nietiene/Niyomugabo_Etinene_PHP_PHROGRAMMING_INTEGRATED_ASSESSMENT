@@ -9,7 +9,7 @@
     <table border="2" cellspacing="2" cellpadding="5">
         <tr>
           <th>Module Code</th>
-          <t h>Module Name</th>
+          <th>Module Name</th>
           <th>Trade Code</th>
           <th>Trade Name</th>
           <th colspan="2">Modification</th>
@@ -22,9 +22,9 @@
               m.Module_Id,
               m.Module_Name,
               m.Trade_Id,
-              t.Trade_name,
+              t.Trade_name
               FROM modules m 
-              JOIN trades d
+              JOIN trades t
               ON t.Trade_id = m.Trade_Id";
 
             $result = mysqli_query($conn, $sql);
@@ -38,6 +38,8 @@
                           <td>{$data['Module_Name']}</td>
                           <td>{$data['Trade_Id']}</td>
                           <td>{$data['Trade_name']}</td>
+                          <td><a href='updateModule.php?Module_Id=$data['Module_Id']'>Update</a></td>
+                          <td><a href='deleteModule.php?Module_Id=$data['Module_Id']'>Delete</a></td>
                       </tr>
                       ";
                 }
