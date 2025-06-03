@@ -37,19 +37,19 @@
         <input type="text" name="Trainee_Id" value=<?php echo $trainee['Trainee_Id'];?> readonly> <br>
      
         <label for="">First Name</label>
-        <input type="text" name="Trainee_Id" value=<?php echo $trainee['Firstname'];?>> <br>
+        <input type="text" name="Firstname" value=<?php echo $trainee['Firstname'];?>> <br>
 
         <label for="">Last Name</label>
-        <input type="text" name="Trainee_Id" value=<?php echo $trainee['lastname'];?>> <br>
+        <input type="text" name="lastname" value=<?php echo $trainee['lastname'];?>> <br>
 
         <label for="">Gender</label>
-        <input type="text" name="Trainee_Id" value=<?php echo $trainee['Gender'];?>> <br>
+        <input type="text" name="Gender" value=<?php echo $trainee['Gender'];?>> <br>
 
         <label for="">Trade Code</label>
-        <input type="text" name="Trainee_Id" value=<?php echo $trainee['Trade_Id'];?> readonly> <br>
+        <input type="text" name="Trade_Id" value=<?php echo $trainee['Trade_Id'];?> readonly> <br>
 
         <label for="">Trade Name</label>
-        <input type="text" name="Trainee_Id" value=<?php echo $trainee['Trade_Name'];?>> <br>
+        <input type="text" name="Trade_Name" value=<?php echo $trainee['Trade_Name'];?>> <br>
 
         <button name="update">Save Changes</button>
  </form>
@@ -60,12 +60,11 @@
         $FirstName = $_POST['Firstname'];
         $lastname = $_POST['lastname'];
         $Gender = $_POST['Gender'];
-        $Trade_Name = $_POST['Trade_Name'];
         
         $sql = "UPDATE trainees  SET 
-        t.Firstname='$Firstname',
-        t.lastname='$lastname',
-        t.Gender='$Gender',
+        Firstname='$FirstName',
+        lastname='$lastname',
+        Gender='$Gender'
         
         WHERE Trainee_Id = $Trainee_Id;
         ";
