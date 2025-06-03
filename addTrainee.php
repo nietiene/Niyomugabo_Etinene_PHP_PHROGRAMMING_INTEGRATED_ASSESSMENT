@@ -1,4 +1,29 @@
-    <!DOCTYPE html>
+        <?php
+            include("conn.php");
+        
+            $error = "";
+            if (isset($_POST['add'])) {
+
+              if (!empty($_POST['Firstname'])) {
+                  
+                $firstName = $_POST['Firstname'];
+                $lastName = $_POST['lastname'];
+                $gender = $_POST['gender'];
+                $trade_id = $_POST['Trade_id'];
+
+                $sql = "INSERT INTO trainees(firstName,lastname,gender,Trade_id) VALUES('$firstName', '$lastName', '$gender', '$trade_id')";
+                $result = mysqli_query($conn, $sql);
+                if ($result) {
+                    header("Location:listOfTrainee.php");
+                } else {
+                    echo "Error" . mysqli_error($conn);
+                } 
+            } else {
+               $error = "Please Fill empty space";   
+            }
+            } 
+        ?>
+   <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -35,34 +60,17 @@
                 ?>
               </select><br>
            
-              <div class="flex justify-between">
+              <div class="flex justify-between mb-6">
                    <button name="add" class="px-8 py-2 bg-green-500 rounded-lg text-white font-semibold hover:bg-green-600 shadow-lg">Save</button>
-                   <a href="Dashboard.php" class="px-8 me-2 py-2 bg-red-500 rounded-lg text-white font-semibold hover:bg-red-600 shadow-lg">Back</a>
+                   <a href="Dashboard.php" class="px-8 me-2 py-2 bg-red-500 rounded-lg text-white font-semibold hover:bg-red-600 shadow-lg ">Back</a>
             </div>
+
+            <?php if (!empty($error)): ?>
+                <div class="bg-red-100 py-1 text-red-500 rounded border border-red-500 px-1">
+                    <?php echo $error; ?>
+                </div>
+             <?php endif; ?>   
         </form>
 
-        <?php
-            include("conn.php");
-        
-            $
-            if (isset($_POST['add'])) {
-
-                $firstName = $_POST['Firstname'];
-                $lastName = $_POST['lastname'];
-                $gender = $_POST['gender'];
-                $trade_id = $_POST['Trade_id'];
-
-                $sql = "INSERT INTO trainees(firstName,lastname,gender,Trade_id) VALUES('$firstName', '$lastName', '$gender', '$trade_id')";
-                $result = mysqli_query($conn, $sql);
-                if ($result) {
-                    header("Location:listOfTrainee.php");
-                } else {
-                    echo "Error" . mysqli_error($conn);
-                } 
-            }
-
-
-
-        ?>
     </body>
     </html>
