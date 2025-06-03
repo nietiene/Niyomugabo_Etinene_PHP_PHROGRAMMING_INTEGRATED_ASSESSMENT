@@ -6,6 +6,26 @@
     <title>Lsit Of Trade</title>
 </head>
 <body>
-    
+    <table border="2">
+        <tr>
+            <th>Trade Code</th>
+            <th>Trade Name</th>
+            <th colspan="2">Modification</th>
+        </tr>
+
+        <?php
+           include("conn.php");
+          
+           $sql = "SELECT * FROM trades";
+           $query = mysqli_query($conn, $sql);
+
+         if (mysqli_num_rows($query) > 0) {
+            while ($data = mysqli_fetch_assoc($query)) {
+                
+            }
+         }
+
+       ?>
+    </table>
 </body>
 </html>
