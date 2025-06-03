@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Trade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
-<body>
-    <form action="" method="post">
+<body class="min-h-screen bg-green-100 flex justify-center text-center">
+    <div class="bg-blue-300 p-8 px-10 py-10 shadow-2xl rounded-md ">
+    <h1>Add New Trade</h1>
+    <form  method="post">
         <label for="">Trade Name</label>
         <input type="text" name="Trade_name" > <br>
 
@@ -29,5 +33,6 @@
 
           }
     ?>
+    </div>
 </body>
 </html>
