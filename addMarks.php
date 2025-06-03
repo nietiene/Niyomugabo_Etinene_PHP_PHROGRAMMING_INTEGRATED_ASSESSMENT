@@ -11,6 +11,7 @@
         <input type="text" name="Trainee_Id" id=""> <br>
         <label for="">Module Name</label>
         <select name="Module_Id" id="">
+            <option value="">Select Module</option>
             <?php
                include('conn.php');
                $sql = "SELECT * FROM modules";

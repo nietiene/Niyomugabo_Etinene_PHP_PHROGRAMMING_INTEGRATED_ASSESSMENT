@@ -10,6 +10,7 @@
             <label for="">Module Name</label>
             <input type="text" name="Module_Name" /> <br>
             <select name="Trade_Id" >
+                <option>Select Trade</option>
                 <?php
                 include("conn.php");
                 $sql = "SELECT * FROM trades";
