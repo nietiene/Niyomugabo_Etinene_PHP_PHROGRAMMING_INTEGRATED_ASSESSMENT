@@ -1,3 +1,26 @@
+  <?php
+       include ('conn.php');
+       session_start();
+       if (isset($_POST['login'])) {
+            $username = $_POST['Usename'];
+            $password = $_POST['Password'];
+
+            $error = "";
+            $sql = "SELECT * FROM users WHERE Usename='$username' AND Password='$password'";
+            $data = mysqli_query($conn, $sql);
+            
+            if (!$data) {
+                echo "ERROR". mysqli_error($conn);
+            }
+            if (mysqli_num_rows($data) > 0) {
+                $_SESSION['Usename'] = $username;
+                header('Location:dashboard.php');
+            } else {
+               $error = "Invalid Credentials";
+            }
+       }
+
+   ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,29 +40,12 @@
         class="w-[76%] py-3 rounded-lg bg-green-200 shadow-lg focus:ring-2 focus:outline-green-400 me-2 text-green-500 mb-6"> <br>
 
         <button name="login" class="bg-blue-400 w-[50%] py-3 text-white rounded-lg hover:bg-blue-500 shadow-2xl">Login</button>
+
+        <?php
+        
+        
+        
+        ?>
     </form>
-
-    <?php
-       include ('conn.php');
-       session_start();
-       if (isset($_POST['login'])) {
-            $username = $_POST['Usename'];
-            $password = $_POST['Password'];
-
-            $sql = "SELECT * FROM users WHERE Usename='$username' AND Password='$password'";
-            $data = mysqli_query($conn, $sql);
-            
-            if (!$data) {
-                echo "ERROR". mysqli_error($conn);
-            }
-            if (mysqli_num_rows($data) > 0) {
-                $_SESSION['Usename'] = $username;
-                header('Location:dashboard.php');
-            } else {
-                echo "<p class='text-red-500 mb-[30%] me-[30%]'>Invalid Credetnials</p>";
-            }
-       }
-
-   ?>
 </body>
 </html>
