@@ -60,7 +60,9 @@
         $FirstName = $_POST['Firstname'];
         $lastname = $_POST['lastname'];
         $Gender = $_POST['Gender'];
-        
+        $Trade_Name = $_POST['Trade_Name'];
+        $Trade_Id = $_POST['Trade_Id'];
+
         $sql = "UPDATE trainees  SET 
         Firstname='$FirstName',
         lastname='$lastname',
@@ -68,9 +70,12 @@
         
         WHERE Trainee_Id = $Trainee_Id;
         ";
+        $sql_Of_Trade = "UPDATE trades SET Trade_Name='$Trade_Name' WHERE Trade_Id = '$Trade_Id'"; 
         
         $result = mysqli_query($conn, $sql);
-        if ($result) {
+        $result2 = mysqli_query($conn, $sql_Of_Trade);
+
+        if ($result && $result2) {
             echo "Trainee Updated Successfully";
             header("Location:listOfTrainee.php");
         } else {
