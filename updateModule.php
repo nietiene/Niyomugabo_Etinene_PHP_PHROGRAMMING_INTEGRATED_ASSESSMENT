@@ -22,6 +22,19 @@
     <title>Update Module <?php echo $Module['Module_Name'];?></title>
 </head>
 <body>
-    
+    <h1>Update Module <?php echo $Module['Module_Name']?></h1>
+    <form action="" method="post">
+        <label for="">Module Code</label>
+        <input type="text" name="Module_Id" value="<?php echo $Module['Module_Id']?>"> <br>
+
+        <label for="">Module Name</label>
+        <input type="text" name="Module_Id" value="<?php echo $Module['Module_Name']?>"> <br>
+
+        <label for="">Trade Code</label>
+        <input type="text" name="Module_Id" value="<?php echo $Module['Trade_Id']?>"> <br>
+<!-- 
+        <label for="">Module Code</label>
+        <input type="text" name="Module_Id" value="<?php echo $Module['Module_Id']?>"> <br> -->
+    </form>
 </body>
 </html>
