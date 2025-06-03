@@ -16,7 +16,7 @@
    
   <div class="overflow-x-auto rounded-lg">
    <table border="2" cellspacing="2" cellpadding="7"
-   class="min-w-full text-smm border border-blue-500 shadow-lg ">
+   class="min-w-full text-sm border border-blue-500 shadow-lg ">
        <tr class="bg-blue-500 text-green-400"> 
            <th class="px-4 py-2">Trainee Code</th>
            <th class="px-4 py-2">First Name</th>

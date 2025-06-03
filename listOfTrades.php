@@ -14,11 +14,11 @@
     </div>
 
     <div class="overflow-x-auto rounded-sm">
-    <table border="2" class="min-w-full border-blue-400 border-2">
-        <tr>
-            <th>Trade Code</th>
-            <th>Trade Name</th>
-            <th colspan="2">Modification</th>
+    <table border="2" class="min-w-full border-blue-400 border text-sm ">
+        <tr class="bg-green-500 text-blue-800">
+            <th class="px-4 py-2 border-b">Trade Code</th>
+            <th class="px-4 py-2 border-b">Trade Name</th>
+            <th colspan="2" class="px-4 py-2 border-b">Modification</th>
         </tr>
 
         <?php
