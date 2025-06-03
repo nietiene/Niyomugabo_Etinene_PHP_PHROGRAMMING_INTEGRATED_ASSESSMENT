@@ -46,10 +46,10 @@
         <input type="text" name="Gender" value=<?php echo $trainee['Gender'];?>> <br>
 
         <label for="">Trade Code</label>
-        <input type="text" name="Trade_Id" value=<?php echo $trainee['Trade_Id'];?> readonly> <br>
+        <input type="text" name="Trade_Id" value=<?php echo $trainee['Trade_Id'];?>> <br>
 
         <label for="">Trade Name</label>
-        <input type="text" name="Trade_Name" value=<?php echo $trainee['Trade_Name'];?>> <br>
+        <input type="text" name="Trade_Name" value=<?php echo $trainee['Trade_Name'];?> readonly> <br>
 
         <button name="update">Save Changes</button>
  </form>
@@ -60,22 +60,20 @@
         $FirstName = $_POST['Firstname'];
         $lastname = $_POST['lastname'];
         $Gender = $_POST['Gender'];
-        $Trade_Name = $_POST['Trade_Name'];
         $Trade_Id = $_POST['Trade_Id'];
 
         $sql = "UPDATE trainees  SET 
         Firstname='$FirstName',
         lastname='$lastname',
-        Gender='$Gender'
+        Gender='$Gender',
+        Trade_Id='$Trade_Id'
         
         WHERE Trainee_Id = $Trainee_Id;
         ";
-        $sql_Of_Trade = "UPDATE trades SET Trade_Name='$Trade_Name' WHERE Trade_Id = '$Trade_Id'"; 
         
         $result = mysqli_query($conn, $sql);
-        $result2 = mysqli_query($conn, $sql_Of_Trade);
-
-        if ($result && $result2) {
+       
+        if ($result) {
             echo "Trainee Updated Successfully";
             header("Location:listOfTrainee.php");
         } else {
