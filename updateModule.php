@@ -43,8 +43,9 @@
         <label for="">Trade Name</label>
        <select name="Trade_Id" >
           <?php
-            echo "<option value='<?php echo $Module['Trade_Id']?> '>"
-           ?>
+          $sql = "SELECT * FROM "
+           
+          ?>
        </select>
     </form>
 </body>
