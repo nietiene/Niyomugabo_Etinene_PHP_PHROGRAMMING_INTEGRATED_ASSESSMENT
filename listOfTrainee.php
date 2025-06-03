@@ -10,19 +10,21 @@
 <body class="bg-green-100 max-h-screen flex justify-center items-center px-4">
 <div class="bg-blue-200 shadow-2xl rounded-xl p-6 w-full max-w-6xl">
   <h1 class="text-center font-semibold text-2xl text-green-700 mb-6">List Of Trainees</h1>  
-  <div class="flex justify-end">
+  <div class="flex justify-end mb-6">
     <a href="addTrainee.php" class="bg-green-400 py-2 px-5 rounded-lg shadow-lg text-white hover:bg-green-600 transition duration-200">Add Trainee</a>
   </div>
    
-   <table border="2" cellspacing="2" cellpadding="7">
-       <tr> 
-           <th>Trainee Code</th>
-           <th>First Name</th>
-           <th>Last Name</th>
-           <th>Gender</th>
-           <th>Trade Code</th>
-           <th>Trade Name</th>
-           <th colspan="2">Modification</th>
+  <div class="overflow-x-auto rounded-lg">
+   <table border="2" cellspacing="2" cellpadding="7"
+   class="min-w-full text-smm border border-blue-500 shadow-lg ">
+       <tr class="bg-blue-500 text-green-400"> 
+           <th class="px-4 py-2">Trainee Code</th>
+           <th class="px-4 py-2">First Name</th>
+           <th class="px-4 py-2">Last Name</th>
+           <th class="px-4 py-2">Gender</th>
+           <th class="px-4 py-2">Trade Code</th>
+           <th class="px-4 py-2">Trade Name</th>
+           <th colspan="2" class="px-4 py-2">Modification</th>
        </tr>
 
        <?php
@@ -50,6 +52,7 @@
 
       ?>
    </table>
+   </div>
    </div>
 </body>
 </html>
