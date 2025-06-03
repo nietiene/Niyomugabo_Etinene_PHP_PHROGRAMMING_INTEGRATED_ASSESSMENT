@@ -53,8 +53,8 @@
                    <td>{$data['Summative_Assessment']}</td>
                    <td>{$data['Total_Marks']}</td>
                    <td>{$data['Decision']}</td>
-                   <td><a href='update.php?Mark_Id={$data['Mark_Id']}'>Update</td>
-                   <td>{$data['Decision']}</td>
+                   <td><a href='update.php?Mark_Id={$data['Mark_Id']}'>Update</a></td>
+                   <td><a href='delete.php?Mark_Id={$data['Mark_Id']}'>Delete</a></td>
                ";
           }
 
