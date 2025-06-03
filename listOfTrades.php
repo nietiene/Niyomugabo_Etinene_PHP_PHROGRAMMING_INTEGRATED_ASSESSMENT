@@ -21,7 +21,13 @@
 
          if (mysqli_num_rows($query) > 0) {
             while ($data = mysqli_fetch_assoc($query)) {
-                
+                echo 
+                "
+                 <tr>
+                    <td>{$data['Trade_Id']}</td>
+                    <td>{$data['Trade_Name']}</td>
+                 </tr>
+                ";
             }
          }
 
