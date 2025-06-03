@@ -9,12 +9,16 @@
 </head>
 <body class="min-h-screen bg-green-100 flex justify-center items-center">
     <form  method="post" class="bg-blue-700 w-full rounded-lg max-w-sm px-4 shadow-2xl">
-       <h1 class="text-2xl text-green-500 font-semibold mb-6 text-center">Add New Trade</h1>
+       <h1 class="text-2xl text-green-500 font-semibold mb-6 text-center underline">Add New Trade</h1>
         <label class="block text-green-500 font-semibold text-lg">Trade Name:</label>
         <input type="text" name="Trade_name" 
-        class="py-2 w-full focus:ring-2 focus:outline-blue-200 focus:ring-blue-300 bg-blue-200 rounded-lg text-blue-500"> <br>
+        class="py-2 w-full focus:ring-2 focus:outline-blue-200 focus:ring-blue-300 bg-blue-200 rounded-lg text-blue-500 mb-6"> <br>
 
-        <button name="add">Add New</button>
+        <div class="flex justify-between">
+              <button name="add" class="bg-green-500 px-5 py-2 mb-4 rounded-lg shadow-md text-white hover:bg-green-600">Add New</button>
+             <a href="Dashboard.php" class="bg-red-500 px-5 py-2 mb-4 rounded-lg shadow-md text-white hover:bg-red-600">Back</a>
+         </div>
+        </div>
     </form>
 
     <?php
