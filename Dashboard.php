@@ -17,6 +17,7 @@
            <li><a href="listOfTrades.php" class="hover:text-blue-800 hover:underline transition duration-200">List Of Trades</a></li>
            <li><a href="listOfModule.php" class="hover:text-blue-800 hover:underline transition duration-200">List Of Modules</a></li>
            <li><a href="listOfMarks.php" class="hover:text-blue-800 hover:underline transition duration-200">Marks Of Student</a></li>
+           <li><a href="addTrade.php" class="hover:text-blue-800 hover:underline transition duration-200">Add Trade</a></li>
            <li><a href="addTrainee.php" class="hover:text-blue-800 hover:underline transition duration-200">Add Trainee</a></li>
            <li><a href="addModule.php" class="hover:text-blue-800 hover:underline transition duration-200">Add Module</a></li>
            <li><a href="addMarks.php" class="hover:text-blue-800 hover:underline transition duration-200">Add Marks To Trainee</a></li>

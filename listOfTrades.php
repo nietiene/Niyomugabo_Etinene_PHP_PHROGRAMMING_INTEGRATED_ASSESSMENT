@@ -6,15 +6,15 @@
     <title>Lsit Of Trade</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-green-100 max-h-screen flex jusfiy-center items-center px-4">
+<body class="bg-green-100 max-h-screen flex justify-center items-center px-4">
     <div class="bg-blue-200 shadow-2xl rounded-xl p-6 w-full max-w-6xl">
     <h1 class="text-center font-semibold text-2xl text-green-700 mb-6">List Of Trades</h1>
-    <div class="flex justify-end ">
+    <div class="flex justify-end mb-6">
         <a href="addTrade.php" class="bg-green-500 px-4 py-2 rounded-lg shadow-lg text-white hover:bg-green-700">Add New</a>
     </div>
 
-    <div class="overflow-x-auto">
-    <table border="2">
+    <div class="overflow-x-auto rounded-sm">
+    <table border="2" class="min-w-full border-blue-400 border-2">
         <tr>
             <th>Trade Code</th>
             <th>Trade Name</th>
