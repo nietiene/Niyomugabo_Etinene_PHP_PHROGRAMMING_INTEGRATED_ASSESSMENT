@@ -3,7 +3,14 @@
      
      if (isset($_GET['Module_Id'])) {
         $Module_Id = $_GET['Module_Id'];   
-        $sql = "SELECT * FROM modules WHERE Module_Id = '$Module_Id'";
+        $sql = "SELECT
+              m.Module_Id,
+              m.Module_Name,
+              m.Trade_Id,
+              t.Trade_name
+              FROM modules m 
+              JOIN trades t
+              ON t.Trade_id = m.Trade_Id WHERE Module_Id = '$Module_Id'";
         $result = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($result) > 0) {
@@ -31,10 +38,14 @@
         <input type="text" name="Module_Id" value="<?php echo $Module['Module_Name']?>"> <br>
 
         <label for="">Trade Code</label>
-        <input type="text" name="Module_Id" value="<?php echo $Module['Trade_Id']?>"> <br>
-<!-- 
-        <label for="">Module Code</label>
-        <input type="text" name="Module_Id" value="<?php echo $Module['Module_Id']?>"> <br> -->
+        <input type="text" name="Module_Id" value="<?php echo $Module['Trade_Id']?>" readonly> <br>
+
+        <label for="">Trade Name</label>
+       <select name="Trade_Id" >
+          <?php
+            echo "<option value='<?php echo $Module['Trade_Id']?> '>"
+           ?>
+       </select>
     </form>
 </body>
 </html>
