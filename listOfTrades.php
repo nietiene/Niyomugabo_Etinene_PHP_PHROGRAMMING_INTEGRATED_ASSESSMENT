@@ -16,11 +16,12 @@
     <div class="overflow-x-auto rounded-sm">
     <table border="2" class="min-w-full border-blue-400 border text-sm ">
         <tr class="bg-green-500 text-blue-800">
-            <th class="px-4 py-2 border-b">Trade Code</th>
-            <th class="px-4 py-2 border-b">Trade Name</th>
-            <th colspan="2" class="px-4 py-2 border-b">Modification</th>
+            <th class="px-4 py-2 border-b border-blue-500">Trade Code</th>
+            <th class="px-4 py-2 border-b border-blue-500">Trade Name</th>
+            <th colspan="2" class="px-4 py-2 border-b border-blue-500">Modification</th>
         </tr>
 
+        <tbody>
         <?php
            include("conn.php");
           
@@ -31,19 +32,20 @@
             while ($data = mysqli_fetch_assoc($query)) {
                 echo 
                 "
-                 <tr>
-                    <td>{$data['Trade_id']}</td>
-                    <td>{$data['Trade_name']}</td>
-                    <td><a href='updateTrade.php?Trade_id={$data['Trade_id']}'>Update</a></td>
-                    <td><a href='deleteTrade.php?Trade_id={$data['Trade_id']}'>Update</a></td>
+                 <tr class='text-blue-800 font-semibold hover:bg-green-500'>
+                    <td class='px-4 py-2 border-b border-blue-500'>{$data['Trade_id']}</td>
+                    <td class='px-8 py-2 border-b border-blue-500'>{$data['Trade_name']}</td>
+                    <td class='px-4 py-2 border-b border-blue-500'><a href='updateTrade.php?Trade_id={$data['Trade_id']}'>Update</a></td>
+                    <td class='px-4 py-2 border-b border-blue-500'><a href='deleteTrade.php?Trade_id={$data['Trade_id']}'>Update</a></td>
                  </tr>
                 ";
             }
          }
 
        ?>
-       </div>
+       </tbody>
        </div>
     </table>
+       </div>
 </body>
 </html>

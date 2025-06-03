@@ -42,7 +42,7 @@
                        <td class='px-4 py-2 border-blue-700 border-b'>{$data['Firstname']}</td>
                        <td class='px-4 py-2 border-blue-700 border-b'>{$data['lastname']}</td>
                        <td class='px-4 py-2 border-blue-700 border-b'>{$data['Gender']}</td>
-                       <td class='px-4 py-2 border-blue-700 border-b'>{$data['Trade_Id']}</td>
+                       <td class='px-9 py-2 border-blue-700 border-b'>{$data['Trade_Id']}</td>
                        <td class='px-4 py-2 border-blue-700 border-b'>{$data['Trade_Name']}</td>
                        <td class='px-4 py-2 border-blue-700 border-b hover:underline'><a href='updateTrainee.php?Trainee_Id={$data['Trainee_Id']}' class='text-green'>Update</a></td>
                        <td class='px-4 py-2 border-blue-700 border-b text-red-500 hover:underline'><a href='deleteTrainee.php?Trainee_Id={$data['Trainee_Id']}'>Delete</a></td>
