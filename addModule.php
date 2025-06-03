@@ -26,8 +26,8 @@
             </select>
             
            <div class="flex justify-between">
-                  <button name="addModule">Save Module</button>
-                  <a href="Dashboard.php">Back</a>
+                  <button name="addModule" class="bg-blue-500 py-2 px-5 text-white rounded-lg shadow-2xl hover:bg-blue-600 transition duration-200">Save Module</button>
+                  <a href="Dashboard.php" class="bg-red-500 py-2 px-5 text-white rounded-lg shadow-2xl hover:bg-red-600 transition duration-200">Back</a>
             </div>
         </form>
 
