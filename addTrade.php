@@ -14,7 +14,7 @@
                     die("ERROR:" . mysqli_error($conn));
                 }
             } else {
-                $error = "Please Trade Name Cant be blank";
+                $error = "Please Trade Name Can't be blank !!!";
             }
 
           }
