@@ -31,26 +31,55 @@
     <title>Update <?php echo $trainee['Firstname']; ?></title>
 </head>
 <body>
+    <h1>Update <?php echo $trainee['Firstname']?></h1>
     <form action="" method="post">
-   <label for="">Trainee Code</label>
-   <input type="text" name="Trainee_Id" value=<?php echo $trainee['Trainee_Id'];?>> <br>
+        <label for="">Trainee Code</label>
+        <input type="text" name="Trainee_Id" value=<?php echo $trainee['Trainee_Id'];?> readonly> <br>
+     
+        <label for="">First Name</label>
+        <input type="text" name="Trainee_Id" value=<?php echo $trainee['Firstname'];?>> <br>
 
-   <label for="">First Name</label>
-   <input type="text" name="Trainee_Id" value=<?php echo $trainee['Firstname'];?>> <br>
+        <label for="">Last Name</label>
+        <input type="text" name="Trainee_Id" value=<?php echo $trainee['lastname'];?>> <br>
 
-   <label for="">Last Name</label>
-   <input type="text" name="Trainee_Id" value=<?php echo $trainee['lastname'];?>> <br>
+        <label for="">Gender</label>
+        <input type="text" name="Trainee_Id" value=<?php echo $trainee['Gender'];?>> <br>
 
-   <label for="">Gender</label>
-   <input type="text" name="Trainee_Id" value=<?php echo $trainee['Gender'];?>> <br>
+        <label for="">Trade Code</label>
+        <input type="text" name="Trainee_Id" value=<?php echo $trainee['Trade_Id'];?> readonly> <br>
 
-   <label for="">Trade Code</label>
-   <input type="text" name="Trainee_Id" value=<?php echo $trainee['Trade_Id'];?>> <br>
+        <label for="">Trade Name</label>
+        <input type="text" name="Trainee_Id" value=<?php echo $trainee['Trade_Name'];?>> <br>
 
-   <label for="">Trade Name</label>
-   <input type="text" name="Trainee_Id" value=<?php echo $trainee['Trade_Name'];?>> <br>
+        <button name="update">Save Changes</button>
+ </form>
 
-   <button name="update">Save Changes</button>
-    </form>
+ <?php
+    
+    if (isset($_POST['update'])) {
+        $FirstName = $_POST['Firstname'];
+        $lastname = $_POST['lastname'];
+        $Gender = $_POST['Gender'];
+        $Trade_Name = $_POST['Trade_Name'];
+        
+        $sql = "UPDATE trainee SET 
+        Firstname='$Firstname',
+        lastname='$lastname',
+        Gender='$Gender',
+        Trade_Name='$Trade_Name'
+        WHERE Trainee_Id = $Trainee_Id;
+        ";
+        
+        $result = mysqli_query($conn, $sql);
+        if ($result) {
+            echo "Trainee Updated Successfully";
+            header("Location:listOfTrainee.php");
+        }
+    }
+
+
+
+
+  ?>
 </body>
 </html>
