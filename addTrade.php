@@ -8,9 +8,8 @@
 
 </head>
 <body class="min-h-screen bg-green-100 flex justify-center text-center">
-    <div class="bg-blue-300 p-9 shadow-2xl rounded-md max-w-xl h-[50px]">
-    <h1>Add New Trade</h1>
-    <form  method="post">
+    <form  method="post" class="bg-blue-500 w-full rounded-lg max-w-sm">
+       <h1 class="text-2xl text-green-500">Add New Trade</h1>
         <label for="">Trade Name</label>
         <input type="text" name="Trade_name" > <br>
 
@@ -33,6 +32,6 @@
 
           }
     ?>
-    </div>
+  
 </body>
 </html>
