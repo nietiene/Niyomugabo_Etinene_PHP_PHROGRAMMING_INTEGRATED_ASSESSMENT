@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lsit Of Trade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-green-100 max-h-screen flex jusfiy-center items-center px-4">
+    <div class="bg-blue-200 shadow-2xl rounded-xl p-6 w-full max-w-6xl">
+    <h1 class="text-center font-semibold text-2xl text-green-700 mb-6">List Of Trades</h1>
+    <div class="flex justify-end bg">
+        <a href="addTrade.php">Add New</a>
+    </div>
     <table border="2">
         <tr>
             <th>Trade Code</th>
@@ -34,6 +40,7 @@
          }
 
        ?>
+       </div>
     </table>
 </body>
 </html>

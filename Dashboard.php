@@ -29,7 +29,7 @@
 
    <div class="flex justify-center items-center mt-16">
       <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-xl text-center">
-         <h2 class="font-semibold text-2xl text-green-500">Welcome <?php echo $_SESSION['Usename'];?></h2> 
+         <h2 class="font-semibold text-2xl text-green-500">Welcome <strong><u><?php echo $_SESSION['Usename'];?></u></strong> In Gikonko Tss Management system</h2> 
       </div>
         
    </div>
