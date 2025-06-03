@@ -28,14 +28,27 @@
         <input type="text" name="Mark_Id" value=<?php echo $data['Mark_Id'];?>> <br>
         <label for="">Trainee Code</label>
         <input type="text" name="Trainee_Id" value=<?php echo $data['Trainee_Id'];?>> <br>
-        <label for="">Trainee Name</label>
-        <input type="text" name="Trainee_Id" value=<?php echo $data['Trainee_Id'];?>> <br>
         <label for="">Module Code</label>
         <input type="text" name="Module_Id" value=<?php echo $data['Module_Id'];?>> <br>
         <label for="">Formative Assessment</label>
         <input type="text" name="Formative_Assessment" value=<?php echo $data['Formative_Assessment'];?>> <br>
         <label for="">Summative Assessment</label>
         <input type="text" name="Summative_Assessment" value=<?php echo $data['Summative_Assessment'];?>> <br>
+
+        <button name="save">Save Changes</button>
     </form>
+
+    <?php
+     
+     if (isset($_POST['save'])) {
+        $trainee_code = $_POST['Trainee_Id'];
+        $Mark_Id = $_POST['Mark_Id'];
+        $Module_Id = $_POST['Module_Id'];
+        $Formative = $_POST['Formative_Assessment'];
+        $Summative = $_POST['Summative_Assessment'];
+     }
+
+
+    ?>
 </body>
 </html>
