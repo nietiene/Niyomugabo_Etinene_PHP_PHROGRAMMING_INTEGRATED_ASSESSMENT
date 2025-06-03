@@ -36,7 +36,7 @@
                 $_SESSION['Usename'] = $username;
                 header('Location:dashboard.php');
             } else {
-                echo "Invalid Credetnials";
+                echo "<p class='text-red-500 mb-[30%] me-[30%]'>Invalid Credetnials</p>";
             }
        }
 
