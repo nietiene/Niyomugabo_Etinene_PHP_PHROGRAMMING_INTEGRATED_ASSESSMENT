@@ -7,13 +7,15 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body class="min-h-screen bg-green-100 flex justify-center items-center">
-        <form action="" method="post" class="bg-blue-200 p-8 max-w-lg w-full rounded-lg shadow-2xl">
-            <h1>Add New Trainee</h1>
-            <label for="">Firstname</label>
-            <input type="text" name="Firstname" > <br>
+        <form action="" method="post" class="bg-blue-700 p-8 max-w-lg w-full rounded-lg shadow-2xl">
+            <h1 class="text-center text-green-500 text-xl underline mb-6">Add New Trainee</h1>
+            <label class="text-lg text-green-500 font-semibold">Firstname:</label>
+            <input type="text" name="Firstname" 
+            class="w-[80%] py-2 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6"> <br>
 
             <label for="">Last Name</label>
-            <input type="text" name="lastname" > <br>
+            <input type="text" name="lastname" 
+            class="w-[80%] py-2 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6"> <br>
 
             <label for="">Gender</label>
             <select name="gender" >
