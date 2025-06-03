@@ -4,9 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Add Module</title>
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
-        <form action="" method="post">
+    <body class="min-h-screen bg-green-100 flex justify-center items-center">
+        <form action="" method="post" class="bg-blue-500 p-6 max-w-md rounded-lg shadow-2xl">
+            <h1 class="text-lg text-center text-green-500 underline">Add Module</h1>
             <label for="">Module Name</label>
             <input type="text" name="Module_Name" /> <br>
             <select name="Trade_Id" >
