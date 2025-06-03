@@ -32,8 +32,25 @@
 </head>
 <body>
     <form action="" method="post">
-   <label for="">Trainee_Id</label>
+   <label for="">Trainee Code</label>
    <input type="text" name="Trainee_Id" value=<?php echo $trainee['Trainee_Id'];?>> <br>
+
+   <label for="">First Name</label>
+   <input type="text" name="Trainee_Id" value=<?php echo $trainee['Firstname'];?>> <br>
+
+   <label for="">Last Name</label>
+   <input type="text" name="Trainee_Id" value=<?php echo $trainee['lastname'];?>> <br>
+
+   <label for="">Gender</label>
+   <input type="text" name="Trainee_Id" value=<?php echo $trainee['Gender'];?>> <br>
+
+   <label for="">Trade Code</label>
+   <input type="text" name="Trainee_Id" value=<?php echo $trainee['Trade_Id'];?>> <br>
+
+   <label for="">Trade Name</label>
+   <input type="text" name="Trainee_Id" value=<?php echo $trainee['Trade_Name'];?>> <br>
+
+   <button name="update">Save Changes</button>
     </form>
 </body>
 </html>
