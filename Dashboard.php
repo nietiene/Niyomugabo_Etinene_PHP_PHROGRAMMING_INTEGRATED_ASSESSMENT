@@ -13,11 +13,11 @@
     <div class="bg-blue-500 shadow-md">
       <nav class="container mx-auto flex justify-between items-center py-4 px-6">
         <ul class="flex space-x-6 text-white font-semibold">
-           <li><a href="listOfTrainee.php" class="hover:underline text-blue-700">List Of Trainee</a></li>
-           <li><a href="listOfTrades.php" class="hover:underline text-blue-700">List Of Trades</a></li>
-           <li><a href="listOfMarks.php" class="hover:underline text-blue-700">Marks Of Student</a></li>
-           <li><a href="addTrainee.php" class="hover:underline text-blue-700">Add Trainee</a></li>
-           <li><a href="addMarks.php" class="hover:underline text-blue-700">Add Marks To Trainee</a></li>
+           <li><a href="listOfTrainee.php" class="hover:text-blue-700">List Of Trainee</a></li>
+           <li><a href="listOfTrades.php" class="hover:text-blue-700">List Of Trades</a></li>
+           <li><a href="listOfMarks.php" class="hover:text-blue-700">Marks Of Student</a></li>
+           <li><a href="addTrainee.php" class="hover:text-blue-700">Add Trainee</a></li>
+           <li><a href="addMarks.php" class="hover:text-blue-700">Add Marks To Trainee</a></li>
          </ul>
       </nav> 
    </div>
