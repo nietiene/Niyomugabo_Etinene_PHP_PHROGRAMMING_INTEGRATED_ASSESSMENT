@@ -8,7 +8,7 @@
 
 </head>
 <body class="min-h-screen bg-green-100 flex justify-center text-center">
-    <div class="bg-blue-300 p-8 px-10 py-10 shadow-2xl rounded-md ">
+    <div class="bg-blue-300 p-9 shadow-2xl rounded-md max-w-xl h-[50px]">
     <h1>Add New Trade</h1>
     <form  method="post">
         <label for="">Trade Name</label>
