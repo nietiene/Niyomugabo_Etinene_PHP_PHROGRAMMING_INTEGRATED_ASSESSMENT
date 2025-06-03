@@ -33,10 +33,10 @@
                 echo 
                 "
                  <tr class='text-blue-800 font-semibold hover:bg-green-500'>
-                    <td class='px-4 py-2 border-b border-blue-500'>{$data['Trade_id']}</td>
-                    <td class='px-8 py-2 border-b border-blue-500'>{$data['Trade_name']}</td>
-                    <td class='px-4 py-2 border-b border-blue-500'><a href='updateTrade.php?Trade_id={$data['Trade_id']}'>Update</a></td>
-                    <td class='px-4 py-2 border-b border-blue-500'><a href='deleteTrade.php?Trade_id={$data['Trade_id']}'>Update</a></td>
+                    <td class='px-4 py-2 border-b border-e border-blue-500'>{$data['Trade_id']}</td>
+                    <td class='px-4  text-center py-2 border-b border-e border-blue-500'>{$data['Trade_name']}</td>
+                    <td class='px-4 py-2 border-b border-blue-500'><a href='updateTrade.php?Trade_id={$data['Trade_id']}'  class='hover:underline'>Update</a></td>
+                    <td class='px-4 py-2 border-b border-blue-500 '><a href='deleteTrade.php?Trade_id={$data['Trade_id']}' class='hover:underline text-red-500'>Delete</a></td>
                  </tr>
                 ";
             }
