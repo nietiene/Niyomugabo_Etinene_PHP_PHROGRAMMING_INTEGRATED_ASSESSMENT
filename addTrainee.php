@@ -4,7 +4,7 @@
             $error = "";
             if (isset($_POST['add'])) {
 
-              if (!empty($_POST['Firstname'])) {
+              if (!empty($_POST['Firstname']) && !empty($_POST['lastname']) && !empty($_POST['gender']) && !empty($_POST['Trade_id'])) {
                   
                 $firstName = $_POST['Firstname'];
                 $lastName = $_POST['lastname'];
