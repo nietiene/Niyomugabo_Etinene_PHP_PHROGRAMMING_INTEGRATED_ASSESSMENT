@@ -43,7 +43,9 @@
                           <td><a href='deleteModule.php?Module_Id={$data['Module_Id']}'>Delete</a></td>
                       </tr>
                       ";
-                }
+                } 
+            }else {
+                    echo "No data Found!!!!!";
             }
        ?>
     </table>
