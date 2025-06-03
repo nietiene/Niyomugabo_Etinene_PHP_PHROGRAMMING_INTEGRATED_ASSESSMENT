@@ -18,6 +18,7 @@
           <th>Formative Assessment /50</th>
           <th>Total /100</th>
           <th>Decision</th>
+          <th colspan="2">Modification</th>
         </tr>
        
      <?php
@@ -51,6 +52,8 @@
                    <td>{$data['Formative_Assessment']}</td>
                    <td>{$data['Summative_Assessment']}</td>
                    <td>{$data['Total_Marks']}</td>
+                   <td>{$data['Decision']}</td>
+                   <td><a href='update.php?Mark_Id={$data['Mark_Id']}'>Update</td>
                    <td>{$data['Decision']}</td>
                ";
           }
