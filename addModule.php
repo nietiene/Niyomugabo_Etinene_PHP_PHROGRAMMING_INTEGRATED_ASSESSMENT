@@ -6,7 +6,7 @@
         <title>Add Module</title>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body class="min-h-screen bg-green-100 flex justify-center items-center">
+    <body class="min-h-screen bg-blue-100 flex justify-center items-center">
         <form action="" method="post" class="bg-green-500 p-6 max-w-md w-[35%] rounded-lg shadow-2xl">
             <h1 class="text-lg text-center text-blue-500 underline">Add Module</h1>
             <label class="block text-lg text-blue-500">Module Name:</label>
