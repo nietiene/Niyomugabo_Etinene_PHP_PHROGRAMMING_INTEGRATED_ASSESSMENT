@@ -62,11 +62,11 @@
         $Gender = $_POST['Gender'];
         $Trade_Name = $_POST['Trade_Name'];
         
-        $sql = "UPDATE trainee SET 
-        Firstname='$Firstname',
-        lastname='$lastname',
-        Gender='$Gender',
-        Trade_Name='$Trade_Name'
+        $sql = "UPDATE trainees  SET 
+        t.Firstname='$Firstname',
+        t.lastname='$lastname',
+        t.Gender='$Gender',
+        
         WHERE Trainee_Id = $Trainee_Id;
         ";
         
@@ -74,6 +74,8 @@
         if ($result) {
             echo "Trainee Updated Successfully";
             header("Location:listOfTrainee.php");
+        } else {
+            die ("ERROR:" .mysqli_error($conn));
         }
     }
 
