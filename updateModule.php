@@ -43,7 +43,11 @@
         <label for="">Trade Name</label>
        <select name="Trade_Id" >
           <?php
-          $sql = "SELECT * FROM "
+          $sql = "SELECT * FROM trades";
+          $query = mysqli_query($conn, $sql);
+          while($data = mysqli_fetch_assoc($query)) {
+            echo "<option value='$data['Trade_id']" . "'>" . $data['Trade_name'] . "<option>";
+          }
            
           ?>
        </select>
