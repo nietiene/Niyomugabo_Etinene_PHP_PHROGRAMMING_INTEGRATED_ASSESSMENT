@@ -13,7 +13,7 @@
     <li><a href="listOfTrainee.php">List Of Trainee</a></li>
     <li><a href="listOfMarks.php">Marks Of Student</a></li>
     <li><a href="addTrainee.php">Add Trainee</a></li>
-    <li><a href="addModule.php">Add Module</a></li>
+    <li><a href="addMarks.php">Add Marks To Trainee</a></li>
    </nav> 
   <h2>Welcome <?php echo $_SESSION['Usename'];?></h2> <br>
    
