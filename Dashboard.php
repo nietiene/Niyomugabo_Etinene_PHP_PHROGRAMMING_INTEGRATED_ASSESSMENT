@@ -11,6 +11,7 @@
 <body>
    <nav>
        <li><a href="listOfTrainee.php">List Of Trainee</a></li>
+       <li><a href="listOfTrades.php">List Of Trades</a></li>
        <li><a href="listOfMarks.php">Marks Of Student</a></li>
        <li><a href="addTrainee.php">Add Trainee</a></li>
        <li><a href="addMarks.php">Add Marks To Trainee</a></li>

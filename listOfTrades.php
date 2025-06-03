@@ -24,8 +24,10 @@
                 echo 
                 "
                  <tr>
-                    <td>{$data['Trade_Id']}</td>
-                    <td>{$data['Trade_Name']}</td>
+                    <td>{$data['Trade_id']}</td>
+                    <td>{$data['Trade_name']}</td>
+                    <td><a href='updateTrade.php?Trade_id={$data['Trade_id']}'>Update</a></td>
+                    <td><a href='deleteTrade.php?Trade_id={$data['Trade_id']}'>Update</a></td>
                  </tr>
                 ";
             }
