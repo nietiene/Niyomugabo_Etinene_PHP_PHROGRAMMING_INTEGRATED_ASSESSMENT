@@ -44,7 +44,9 @@
         <?php
             include("conn.php");
         
+            $
             if (isset($_POST['add'])) {
+
                 $firstName = $_POST['Firstname'];
                 $lastName = $_POST['lastname'];
                 $gender = $_POST['gender'];
@@ -53,7 +55,7 @@
                 $sql = "INSERT INTO trainees(firstName,lastname,gender,Trade_id) VALUES('$firstName', '$lastName', '$gender', '$trade_id')";
                 $result = mysqli_query($conn, $sql);
                 if ($result) {
-                    echo "Data inserted Successfully";
+                    header("Location:listOfTrainee.php");
                 } else {
                     echo "Error" . mysqli_error($conn);
                 } 
