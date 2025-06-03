@@ -34,8 +34,11 @@
                   }
                 ?>
               </select><br>
-
-            <button name="add">Save</button>
+           
+              <div class="flex justify-between">
+                   <button name="add" class="px-8 py-2 bg-green-500 rounded-lg text-white font-semibold hover:bg-green-600 shadow-lg">Save</button>
+                   <a href="Dashboard.php" class="px-8 py-2 bg-green-500 rounded-lg text-white font-semibold hover:bg-green-600 shadow-lg">Back</a>
+            </div>
         </form>
 
         <?php
