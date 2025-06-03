@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List Of Marks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
-<body>
-    <li><a href="addMarks.php">Add Marks To Trainee</a></li>
+<body class="min-h-screen flex bg-green-100 justify-center text-center">
+    <div class="flex items-center justify-center">
+        <div class="flex mb-[35%] justify-end">
+                 <a href="addMarks.php">Add Marks To Trainee</a>
+        </div>
     <table border="2" cellpadding="5" cellspacing="2">
        <tr>
           <th>Mark Code</th>
@@ -60,5 +65,6 @@
 
      ?>
     </table>
+    </div>
 </body>
 </html>
