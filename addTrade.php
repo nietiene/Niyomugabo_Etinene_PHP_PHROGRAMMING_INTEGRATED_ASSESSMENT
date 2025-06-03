@@ -8,10 +8,11 @@
 
 </head>
 <body class="min-h-screen bg-green-100 flex justify-center items-center">
-    <form  method="post" class="bg-blue-700 w-full rounded-lg max-w-sm">
-       <h1 class="text-2xl text-green-500 font-semibold mb-6">Add New Trade</h1>
-        <label class="block ">Trade Name</label>
-        <input type="text" name="Trade_name" > <br>
+    <form  method="post" class="bg-blue-700 w-full rounded-lg max-w-sm px-4 shadow-2xl">
+       <h1 class="text-2xl text-green-500 font-semibold mb-6 text-center">Add New Trade</h1>
+        <label class="block text-green-500 font-semibold text-lg">Trade Name:</label>
+        <input type="text" name="Trade_name" 
+        class="px-3 py-3 "> <br>
 
         <button name="add">Add New</button>
     </form>
