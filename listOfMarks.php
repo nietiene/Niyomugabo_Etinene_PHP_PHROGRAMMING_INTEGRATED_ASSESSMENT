@@ -9,25 +9,26 @@
 </head>
 <body class="min-h-screen flex flex-col px-4 py-6 bg-green-100 justify-center text-center">
     <div class="w-full max-w-7xl bg-blue-300 shadow-xl rounded-lg p-6">
-        <div class="flex justify-between items-center mb-4">
+        <div class="flex justify-between items-center mb-[5%]">
              <h1 class="text-2xl font-bold text-green-500">List Of Marks</h1>
              <a href="addMarks.php" class="bg-green-500 py-2 px-4 text-white rounded-lg shadow-lg hover:bg-green-700">Add Marks To Trainee</a>
         </div>
     
-    <div> 
+    <div class="overflow-w-auto"> 
         <table border="2" cellpadding="5" cellspacing="2"
+        class="border border-blue-500 rounded-lg text-sm"
     >
-       <tr>
-          <th>Mark Code</th>
-          <th>Trainee Code</th>
-          <th>Trainee Name</th>
-          <th>Module Code</th>
-          <th>Module Name</th>
-          <th>Formative Assessment /50</th>
-          <th>Formative Assessment /50</th>
-          <th>Total /100</th>
-          <th>Decision</th>
-          <th colspan="2">Modification</th>
+       <tr class="bg-green-500 text-blue-800">
+          <th class="py-3 px-3 border-b border-blue-500">Mark Code</th>
+          <th class="py-3 px-3 border-b border-blue-500">Trainee Code</th>
+          <th class="py-3 px-3 border-b border-blue-500">Trainee Name</th>
+          <th class="py-3 px-3 border-b border-blue-500">Module Code</th>
+          <th class="py-3 px-3 border-b border-blue-500">Module Name</th>
+          <th class="py-3 px-3 border-b border-blue-500">Formative Assessment /50</th>
+          <th class="py-3 px-3 border-b border-blue-500">Formative Assessment /50</th>
+          <th class="py-3 px-3 border-b border-blue-500">Total /100</th>
+          <th class="py-3 px-3 border-b border-blue-500">Decision</th>
+          <th colspan="2" class="py-3 px-3 border-b border-blue-500">Modification</th>
         </tr>
        
      <?php
