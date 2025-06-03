@@ -15,11 +15,11 @@
     <table border="2" cellspacing="2" cellpadding="5"
     class="border border-blue-600 text-sm">
         <tr class="bg-green-500 text-blue-700">
-          <th class="px-10">Module Code</th>
-          <th>Module Name</th>
-          <th>Trade Code</th>
-          <th>Trade Name</th>
-          <th colspan="2">Modification</th>
+          <th class="px-10 border-b border-blue-500">Module Code</th>
+          <th class="px-10 border-b border-blue-500">Module Name</th>
+          <th class="px-10 border-b border-blue-500">Trade Code</th>
+          <th class="px-10 border-b border-blue-500">Trade Name</th>
+          <th colspan="2" class="px-10 border-b border-blue-500">Modification</th>
         </tr>
 
         <?php
