@@ -18,6 +18,7 @@
            <th>Gender</th>
            <th>Trade Code</th>
            <th>Trade Name</th>
+           <th colspan="2">Modification</th>
        </tr>
 
        <?php
@@ -37,6 +38,8 @@
                        <td>{$data['Gender']}</td>
                        <td>{$data['Trade_Id']}</td>
                        <td>{$data['Trade_Name']}</td>
+                       <td><a herf='updateTrainee.php'?Trainee_Id={$data['Trade_Name']}>U[Update</a></td>
+                       <td><a herf='updateTrainee.php'?Trainee_Id={$data['Trade_Name']}>U[Update</a></td>
                     </tr>
                 ";
             }
