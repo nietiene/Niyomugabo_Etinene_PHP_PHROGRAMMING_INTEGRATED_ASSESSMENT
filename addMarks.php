@@ -9,12 +9,11 @@
 <body class="min-h-screen flex justify-center items-center bg-blue-300">
     <form amethod="post" class="max-w-md w-full bg-green-400 p-9 rounded-lg shadow-2xl">
         <h1 class="text-lg text-center underline text-blue-700 font-bold mb-6">Add Marks</h1>
-        <label class="text-md text-blue-700 font-bold block">Trainee Code:</label>
+        <label class="text-md text-blue-700 font-bold block">Trainee Code</label>
         <input type="text" name="Trainee_Id" 
         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"/> <br>
-        <label class="text-md text-blue-700 font-bold block"
-         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400">Module Name</label>
-        <select name="Module_Id" id="">
+        <label class="text-md text-blue-700 font-bold block">Module Name</label>
+        <select name="Module_Id"  class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400">
             <option value="">Select Module</option>
             <?php
                include('conn.php');
@@ -25,11 +24,13 @@
                }
             ?>
         </select> <br>
-        <label>Formative Assessment Makarks/50</label>
-        <input type="text" name="Formative_Assessment" > <br>
+        <label  class="text-md text-blue-700 font-bold block">Formative Assessment Makarks/50</label>
+        <input type="text" name="Formative_Assessment" 
+         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
 
-        <label>Summative Assessment Makarks/50</label>
-        <input type="text" name="Summative_Assessment" > <br>
+        <label  class="text-md text-blue-700 font-bold block">Summative Assessment Makarks/50</label>
+        <input type="text" name="Summative_Assessment" 
+         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
 
         <button name="addMarks">Save Marks</button>
     </form>
