@@ -1,15 +1,3 @@
-<?php
-   include("conn.php");
-   $sql = "SELECT m.Module_Id,
-           m.Module_Name,
-           m.Trade_Id
-           t.Trade_Name
-           FROM modules m 
-           JOIN trades d
-           ON t.Trade_Id = m.Trade_Id";
-   $result = mysqli_query($conn, $sql);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,8 +16,32 @@
         </tr>
 
         <?php
-         
+            include("conn.php");
 
+            $sql = "SELECT
+              m.Module_Id,
+              m.Module_Name,
+              m.Trade_Id,
+              t.Trade_name,
+              FROM modules m 
+              JOIN trades d
+              ON t.Trade_id = m.Trade_Id";
+
+            $result = mysqli_query($conn, $sql);
+           
+            if (mysqli_num_rows($result) > 0) {
+                while($data = mysqli_fetch_assoc($result)) {
+                    echo 
+                      "
+                      <tr>
+                          <td>{$data['Module_Id']}</td>
+                          <td>{$data['Module_Name']}</td>
+                          <td>{$data['Trade_Id']}</td>
+                          <td>{$data['Trade_name']}</td>
+                      </tr>
+                      ";
+                }
+            }
        ?>
     </table>
 </body>
