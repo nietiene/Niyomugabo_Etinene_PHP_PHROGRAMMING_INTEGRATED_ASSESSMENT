@@ -32,7 +32,7 @@
     <h1>Update Module <?php echo $Module['Module_Name']?></h1>
     <form action="" method="post">
         <label for="">Module Code</label>
-        <input type="text" name="Module_Id" value="<?php echo $Module['Module_Id']?>"> <br>
+        <input type="text" name="Module_Id" value="<?php echo $Module['Module_Id']?>" readonly> <br>
 
         <label for="">Module Name</label>
         <input type="text" name="Module_Id" value="<?php echo $Module['Module_Name']?>"> <br>
@@ -56,7 +56,15 @@
 
     <?php
     
-       if (isset())
+       if (isset($_POST['save'])) {
+           $Module_Id = $_POST['Module_Id'];
+           $Module_Name = $_POST['Module_Name'];
+           $Trade_Id = $_POST['Trade_Id'];
+
+           $sql = "UPDATE modules SET Module_Name = '$Module_Name', Trade_Id = '$Trade_Id' WHERE Module_Id = '$Module_Id'";
+           $query = mysqli_query($conn, $sql);
+           
+       }
 
 
     ?>
