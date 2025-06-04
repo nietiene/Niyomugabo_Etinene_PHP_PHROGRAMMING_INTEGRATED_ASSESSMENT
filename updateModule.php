@@ -30,21 +30,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen bg-blue-100 flex justify-center items-center">
-    <h1>Update Module <?php echo $Module['Module_Name']?></h1>
     <form action="" method="post" class="bg-green-500 p-6 max-w-md w-[35%] rounded-lg shadow-2xl">
         <h1 class="text-lg text-center text-blue-500 underline">Update Module <?php echo $Module['Module_Name']?></h1>
         <label class="block text-lg text-blue-500">Module Code</label>
         <input type="text" name="Module_Id" value="<?php echo $Module['Module_Id']?>" readonly
         class="w-full py-2 rounded-lg bg-green-200 text-green-500 focus:outline-green-300"> <br>
 
-        <label for="">Module Name</label>
-        <input type="text" name="Module_Name" value="<?php echo $Module['Module_Name']?>"> <br>
+        <label class="block text-lg text-blue-500">Module Name</label>
+        <input type="text" name="Module_Name" value="<?php echo $Module['Module_Name']?>"
+        class="w-full py-2 rounded-lg bg-green-200 text-green-500 focus:outline-green-300"> <br>
 
-        <label for="">Trade Code</label>
-        <input type="text" name="Trade_Id" value="<?php echo $Module['Trade_Id']?>" readonly> <br>
+        <label class="block text-lg text-blue-500">Trade Code</label>
+        <input type="text" name="Trade_Id" value="<?php echo $Module['Trade_Id']?>" readonly
+        class="w-full py-2 rounded-lg bg-green-200 text-green-500 focus:outline-green-300"> <br>
 
-        <label for="">Trade Name</label>
-       <select name="Trade_Id" >
+        <label class="block text-lg text-blue-500">Trade Name</label>
+       <select name="Trade_Id" class="w-full py-2 rounded-lg bg-green-200 text-green-500 focus:outline-green-300">
           <?php
           $sql = "SELECT * FROM trades";
           $query = mysqli_query($conn, $sql);
