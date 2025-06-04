@@ -25,7 +25,7 @@
 
                if (mysqli_num_rows($sqlOfid) > 0) {
                   
-                if (!$Formative > 50 && !$Summative > 50) {
+                if ($Formative <= 50 && $Summative <= 50) {
 
                      $Total = $Formative + $Summative;
                      $Decision = ($Total >= 70) ? "Competent" : "Not Competent";
@@ -35,15 +35,15 @@
         
                    if ($query) {
                       header("Location:listOfMarks.php");
-                  }
-                } else {
+                  } else {
                      die("ERROR:". mysqli_error($conn));
-             } else {
-                $error = "Marks Must be less than or equal to 50";
-             }
+             } 
+         } 
        }   else {
               $error = "Code of trainee not found";
-       }
+       }else {
+                $error = "Marks Must be less than or equal to 50";
+             }
           } else {
               $error = "Please fill  out the empty space!!";
       }
