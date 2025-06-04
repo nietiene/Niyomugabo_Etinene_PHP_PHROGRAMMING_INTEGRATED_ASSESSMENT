@@ -29,10 +29,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update <?php echo $trainee['Firstname']; ?></title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Update <?php echo $trainee['Firstname']?></h1>
-    <form action="" method="post">
+<body class="min-h-screen bg-green-100 flex justify-center items-center">
+    
+    <form action="" method="post" class="bg-blue-700 p-8 max-w-lg w-full rounded-lg shadow-2xl">
+        <h1 class="text-center text-green-500 text-xl underline mb-6">Update <?php echo $trainee['Firstname']?></h1>
         <label for="">Trainee Code</label>
         <input type="text" name="Trainee_Id" value=<?php echo $trainee['Trainee_Id'];?> readonly> <br>
      
