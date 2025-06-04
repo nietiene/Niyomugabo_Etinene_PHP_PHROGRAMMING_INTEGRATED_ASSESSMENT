@@ -45,16 +45,16 @@
                         echo 
                         "
                          <tr>
-                             <td>{$data['Trainee_Id']}</td>
-                             <td>{$data['Trainee_Name']}</td>
-                             <td>{$data['Module_Id']}</td>
-                             <td>{$data['Module_Name']}</td>
-                             <td>{$data['decision']}</td>
+                             <td class='px-7 py-2 border-b border-blue-500'>{$data['Trainee_Id']}</td>
+                             <td class='px-7 py-2 border-b border-blue-500'>{$data['Trainee_Name']}</td>
+                             <td class='px-7 py-2 border-b border-blue-500'>{$data['Module_Id']}</td>
+                             <td class='px-7 py-2 border-b border-blue-500'>{$data['Module_Name']}</td>
+                             <td class='px-7 py-2 border-b border-blue-500 text-red-500'>{$data['decision']}</td>
                          </tr>
                         ";
                     }
                 } else {
-                      echo "<tr><td colspan='5'>No Record In table</td>";
+                      echo "<tr class='px-7 py-2 border-b border-blue-500 text-red-500'><td colspan='5'>No Record In table</td>";
                 }
 
             ?>
