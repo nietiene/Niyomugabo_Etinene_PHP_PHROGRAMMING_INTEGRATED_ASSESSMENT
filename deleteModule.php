@@ -12,6 +12,9 @@
 <?php
     include("conn.php");
     $Module_Id = $_GET['Module_Id'];
+    $sql_Marks = "DELETE FROM marks WHERE Module_Id = '$Module_Id'";
+    $query = mysqli_query($conn, $sql_Marks);
+    
     $sql = "DELETE FROM modules WHERE Module_Id = '$Module_Id'";
     $result = mysqli_query($conn, $sql);
     
