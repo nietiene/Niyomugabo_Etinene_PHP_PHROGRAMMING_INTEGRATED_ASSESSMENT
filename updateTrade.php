@@ -4,7 +4,9 @@
    session_start();
 
  if (!isset($_SESSION['Usename'])) {
-  header("Location:login.php");
+       $_SESSION['login_error'] = "Please login to access this page";
+       header("Location:login.php");
+       exit();
  }
  
      if (isset($_GET['Trade_id'])) {

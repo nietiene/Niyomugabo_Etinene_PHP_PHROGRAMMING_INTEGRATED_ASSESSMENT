@@ -5,7 +5,9 @@
    session_start();
 
     if (!isset($_SESSION['Usename'])) {
+       $_SESSION['login_error'] = "Please login to access this page";
        header("Location:login.php");
+       exit();
    }   
    if (isset($_GET['Mark_Id'])) {
        $Mark_Id = $_GET['Mark_Id'];
