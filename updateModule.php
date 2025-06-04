@@ -1,8 +1,9 @@
 <?php
      include("conn.php");
      
+     $error = "";
      if (isset($_GET['Module_Id'])) {
-           if (!empty($_POST['Trainee_Id']) && !empty($_POST['Module_Id']) && !empty($_POST['Formative_Assessment']) && !empty($_POST['Summative_Assessment'])) {
+           if (!empty($_GET['Trainee_Id']) && !empty($_GET['Module_Id']) && !empty($_GET['Formative_Assessment']) && !empty($_GET['Summative_Assessment'])) {
                 $Module_Id = $_GET['Module_Id'];   
                 $sql = "SELECT
                         m.Module_Id,
@@ -19,6 +20,8 @@
              } else {
                  echo "No Module Found To Update";
             }
+      } else {
+        $error = "Please fill out the empy space";
       }
      }
 ?>
@@ -65,7 +68,7 @@
     </form>
 
     <?php
-    
+      
        if (isset($_POST['save'])) {
            $Module_Id = $_POST['Module_Id'];
            $Module_Name = $_POST['Module_Name'];
