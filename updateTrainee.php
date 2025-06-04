@@ -35,9 +35,9 @@
     
     <form action="" method="post" class="bg-blue-700 p-8 max-w-lg w-full rounded-lg shadow-2xl">
         <h1 class="text-center text-green-500 text-xl underline mb-6">Update <?php echo $trainee['Firstname']?></h1>
-        <label class="text-lg text-green-500 font-semibold">Trainee Code:</label>
+        <label class="text-lg text-green-500 font-semibold">Trainee Code</label>
         <input type="text" name="Trainee_Id" value=<?php echo $trainee['Trainee_Id'];?> readonly
-        class="w-[74%] px-3 py-2 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6"> <br>
+        class="w-[75%] px-3 py-2 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6"> <br>
      
         <label class="text-lg text-green-500 font-semibold">First Name</label>
         <input type="text" name="Firstname" value=<?php echo $trainee['Firstname'];?>
@@ -53,13 +53,16 @@
 
         <label class="text-lg text-green-500 font-semibold">Trade Code</label>
         <input type="text" name="Trade_Id" value=<?php echo $trainee['Trade_Id'];?>
-        class="w-[75%] py-2 px-3 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6"> <br>
+        class="w-[75%] py-2 px-3 ms-3 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6"> <br>
 
         <label class="text-lg text-green-500 font-semibold">Trade Name</label>
         <input type="text" name="Trade_Name" value=<?php echo $trainee['Trade_Name'];?> readonly
-        class="w-[75%] py-2 px-3 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6"> <br>
+        class="w-[75%] py-2 ms-2 px-3 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6"> <br>
 
-        <button name="update">Save Changes</button>
+         <div class="flex justify-between mb-6">
+                <button name="update" class="px-8 py-2 bg-green-500 rounded-lg text-white font-semibold hover:bg-green-600 shadow-lg">Save Changes</button>
+                <a href="Dashboard.php" class="px-8 me-2 py-2 bg-red-500 rounded-lg text-white font-semibold hover:bg-red-600 shadow-lg ">Back</a>
+          </div>
  </form>
 
  <?php
@@ -88,10 +91,6 @@
             die ("ERROR:" .mysqli_error($conn));
         }
     }
-
-
-
-
   ?>
 </body>
 </html>
