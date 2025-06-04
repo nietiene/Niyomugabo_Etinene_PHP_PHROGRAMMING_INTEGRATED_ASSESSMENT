@@ -19,6 +19,12 @@
                $Formative = $_POST['Formative_Assessment'];
                $Summative = $_POST['Summative_Assessment'];
                //echo "Trainee Code" . $trainee_code . " <br>module_code" . $module_code . "<br>Fromative" . $Formative . "<br>Summative".$Summative;
+
+               $checkIdOfUser = "SELECT * FROM trainees WHERE Trainee_Id = '$trainee_code'";
+               $sqlOfid = mysqli_query($conn, $checkIdOfUser);
+
+               if (mysqli_num_rows($sqlOfid) > 0) {
+
                $Total = $Formative + $Summative;
                $Decision = ($Total >= 70) ? "Competent" : "Not Competent";
 
@@ -30,7 +36,10 @@
              } else {
                  die("ERROR:". mysqli_error($conn));
             }
-       } else {
+       }  else {
+           $error = "Code of trainee not found";
+       }
+               } else {
               $error = "Please fill  out the empty space!!";
       }
       }
