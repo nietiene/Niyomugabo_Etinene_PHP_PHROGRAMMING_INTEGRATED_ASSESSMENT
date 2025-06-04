@@ -64,7 +64,7 @@
       
         <label class="text-md text-blue-700 font-bold block">Mark Code</label>
         <input type="text" name="Mark_Id" value=<?php echo $data['Mark_Id'];?>
-         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
+         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400" readonly> <br>
         <label class="text-md text-blue-700 font-bold block">Trainee Code</label>
         <input type="text" name="Trainee_Id" value=<?php echo $data['Trainee_Id'];?>
          class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
@@ -79,12 +79,15 @@
         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400 mb-4"> <br>
 
         <div class="flex justify-between mb-4">
-             <button name="addMarks" class="bg-blue-500 py-2 px-5 text-white rounded-lg shadow-xl hover:bg-blue-600 transition duration-200">Save Marks</button>
+             <button name="save" class="bg-blue-500 py-2 px-5 text-white rounded-lg shadow-xl hover:bg-blue-600 transition duration-200">Save Marks</button>
              <a href="Dashboard.php" class="bg-red-500 py-2 px-5 text-white rounded-lg shadow-xl hover:bg-red-600 transition duration-200">Back</a>
         </div>
       
+       <?php if (!empty($error)): ?>
+          <div class="bg-red-100 py-1 text-red-500 rounded border border-red-500 px-1">
+                  <?php echo $error; ?>
+         </div>
+             <?php endif; ?>   
     </form>
-
-  
 </body>
 </html>
