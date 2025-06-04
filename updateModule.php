@@ -18,9 +18,7 @@
              } else {
                  echo "No Module Found To Update";
             }
-      } else {
-        $error = "Please fill out the empy space";
-      }
+      } 
 
            
      $error = "";
@@ -39,7 +37,9 @@
            } else {
             die("ERROR:" . mysqli_error($conn));
            }
-       }
+       } else {
+             $error = "Please fill out the empy space";
+      }
 }
 
 ?>
@@ -83,11 +83,9 @@
             <button name="save" class="bg-blue-500 py-2 px-5 text-white rounded-lg shadow-2xl hover:bg-blue-600 transition duration-200">Save Changes</button>
             <a href="Dashboard.php" class="bg-red-500 py-2 px-5 text-white rounded-lg shadow-2xl hover:bg-red-600 transition duration-200">Back</a>
      </div>
+     
     </form>
 
-    <?php
-     
 
-    ?>
 </body>
 </html>
