@@ -1,6 +1,6 @@
 
   <?php
-
+      include("conn.php");
       $error = "";
       if (isset($_POST['addMarks'])) {
         
@@ -17,7 +17,7 @@
               $query = mysqli_query($conn, $sql);
         
               if ($query) {
-                  echo "Data Inseted Successfully <br><strong>$Decision</strong>";
+                  header("Location:listOfMarks.php");
              } else {
                  die("ERROR:". mysqli_error($conn));
             }
@@ -36,7 +36,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen flex justify-center items-center bg-blue-300">
-    <form amethod="post" class="max-w-md w-full bg-green-400 p-9 rounded-lg shadow-2xl">
+    <form method="post" class="max-w-md w-full bg-green-400 p-9 rounded-lg shadow-2xl">
         <h1 class="text-lg text-center underline text-blue-700 font-bold mb-6">Add Marks</h1>
         <label class="text-md text-blue-700 font-bold block">Trainee Code</label>
         <input type="text" name="Trainee_Id" 
@@ -54,14 +54,14 @@
             ?>
         </select> <br>
         <label  class="text-md text-blue-700 font-bold block">Formative Assessment Makarks/50</label>
-        <input type="text" name="Formative_Assessment" 
+        <input type="number" name="Formative_Assessment" 
          class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
 
         <label  class="text-md text-blue-700 font-bold block">Summative Assessment Makarks/50</label>
-        <input type="text" name="Summative_Assessment" 
+        <input type="number" name="Summative_Assessment" 
          class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400 mb-4"> <br>
          
-         <div class="flex justify-between">
+         <div class="flex justify-between mb-4">
              <button name="addMarks" class="bg-blue-500 py-2 px-5 text-white rounded-lg shadow-xl hover:bg-blue-600 transition duration-200">Save Marks</button>
              <a href="Dashboard.php" class="bg-red-500 py-2 px-5 text-white rounded-lg shadow-xl hover:bg-red-600 transition duration-200">Back</a>
         </div>
