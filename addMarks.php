@@ -4,22 +4,26 @@
       $error = "";
       if (isset($_POST['addMarks'])) {
         
-        $trainee_code = $_POST['Trainee_Id'];
-        $module_code = $_POST['Module_Id'];
-        $Formative = $_POST['Formative_Assessment'];
-        $Summative = $_POST['Summative_Assessment'];
-       //echo "Trainee Code" . $trainee_code . " <br>module_code" . $module_code . "<br>Fromative" . $Formative . "<br>Summative".$Summative;
-        $Total = $Formative + $Summative;
-        $Decision = ($Total >= 70) ? "Competent" : "Not Competent";
+        if (!empty($_POST['Trainee_Id']) && !empty($_POST['Module_Id']) && !empty($_POST['Formative_Assessment']) && !empty($_POST['Summative_Assessment'])) {
+               $trainee_code = $_POST['Trainee_Id'];
+               $module_code = $_POST['Module_Id'];
+               $Formative = $_POST['Formative_Assessment'];
+               $Summative = $_POST['Summative_Assessment'];
+               //echo "Trainee Code" . $trainee_code . " <br>module_code" . $module_code . "<br>Fromative" . $Formative . "<br>Summative".$Summative;
+               $Total = $Formative + $Summative;
+               $Decision = ($Total >= 70) ? "Competent" : "Not Competent";
 
-        $sql = "INSERT INTO marks(Trainee_Id, Module_Id, Formative_Assessment, Summative_Assessment, Total_Marks, decision) VALUES('$trainee_code', '$module_code', '$Formative', '$Summative', '$Total', '$Decision    ')";
-        $query = mysqli_query($conn, $sql);
+              $sql = "INSERT INTO marks(Trainee_Id, Module_Id, Formative_Assessment, Summative_Assessment, Total_Marks, decision) VALUES('$trainee_code', '$module_code', '$Formative', '$Summative', '$Total', '$Decision    ')";
+              $query = mysqli_query($conn, $sql);
         
-        if ($query) {
-            echo "Data Inseted Successfully <br><strong>$Decision</strong>";
-        } else {
-            die("ERROR:". mysqli_error($conn));
-        }
+              if ($query) {
+                  echo "Data Inseted Successfully <br><strong>$Decision</strong>";
+             } else {
+                 die("ERROR:". mysqli_error($conn));
+            }
+       } else {
+              $error = "Please fill  out the empty space!!";
+      }
       }
 
 
