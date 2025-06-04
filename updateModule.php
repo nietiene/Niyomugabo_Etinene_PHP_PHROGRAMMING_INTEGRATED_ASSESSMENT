@@ -1,9 +1,7 @@
 <?php
      include("conn.php");
-     
-     $error = "";
+
      if (isset($_GET['Module_Id'])) {
-           if (!empty($_GET['Trainee_Id']) && !empty($_GET['Module_Id']) && !empty($_GET['Formative_Assessment']) && !empty($_GET['Summative_Assessment'])) {
                 $Module_Id = $_GET['Module_Id'];   
                 $sql = "SELECT
                         m.Module_Id,
@@ -23,7 +21,27 @@
       } else {
         $error = "Please fill out the empy space";
       }
-     }
+
+           
+     $error = "";
+       if (isset($_POST['save'])) {
+         
+        if (!empty($_POST['Trainee_Id']) && !empty($_POST['Module_Id']) && !empty($_POST['Formative_Assessment']) && !empty($_POST['Summative_Assessment'])) {
+           $Module_Id = $_POST['Module_Id'];
+           $Module_Name = $_POST['Module_Name'];
+           $Trade_Id = $_POST['Trade_Id'];
+
+           $sql = "UPDATE modules SET Module_Name = '$Module_Name', Trade_Id = '$Trade_Id' WHERE Module_Id = '$Module_Id'";
+           $query = mysqli_query($conn, $sql);
+
+           if ($query) {
+            header("Location:listOfModule.php");
+           } else {
+            die("ERROR:" . mysqli_error($conn));
+           }
+       }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -68,22 +86,7 @@
     </form>
 
     <?php
-      
-       if (isset($_POST['save'])) {
-           $Module_Id = $_POST['Module_Id'];
-           $Module_Name = $_POST['Module_Name'];
-           $Trade_Id = $_POST['Trade_Id'];
-
-           $sql = "UPDATE modules SET Module_Name = '$Module_Name', Trade_Id = '$Trade_Id' WHERE Module_Id = '$Module_Id'";
-           $query = mysqli_query($conn, $sql);
-
-           if ($query) {
-            header("Location:listOfModule.php");
-           } else {
-            die("ERROR:" . mysqli_error($conn));
-           }
-       }
-
+     
 
     ?>
 </body>
