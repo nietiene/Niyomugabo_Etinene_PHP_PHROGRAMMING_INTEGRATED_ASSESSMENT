@@ -1,6 +1,13 @@
         <?php
             include("conn.php");
         
+
+   session_start();
+
+    if (!isset($_SESSION['usename'])) {
+       header("Location:login.php");
+   }
+
             $error = "";
             if (isset($_POST['add'])) {
 

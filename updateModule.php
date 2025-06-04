@@ -1,6 +1,11 @@
 <?php
      include("conn.php");
 
+   session_start();
+
+    if (!isset($_SESSION['usename'])) {
+       header("Location:login.php");
+   }     
      if (isset($_GET['Module_Id'])) {
                 $Module_Id = $_GET['Module_Id'];   
                 $sql = "SELECT

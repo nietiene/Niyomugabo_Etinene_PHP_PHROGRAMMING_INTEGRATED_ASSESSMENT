@@ -1,5 +1,15 @@
  <?php
         include("conn.php");
+        
+
+   include("conn.php");
+   session_start();
+
+    if (!isset($_SESSION['usename'])) {
+       header("Location:login.php");
+   }
+
+
         $error = "";
         if (isset($_POST['addModule'])) {
             if (!empty($_POST['Module_Name']) && !empty($_POST['Trade_Id'])) {

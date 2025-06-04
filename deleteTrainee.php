@@ -1,4 +1,13 @@
 <?php
+   include("conn.php");
+   session_start();
+
+    if (!isset($_SESSION['usename'])) {
+       header("Location:login.php");
+   }
+
+?>
+<?php
    include ("conn.php");
    
    $Trainee_Id = $_GET['Trainee_Id'];

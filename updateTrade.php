@@ -1,6 +1,12 @@
 <?php
+   
+   include ("conn.php");
+   session_start();
+
+ if (!isset($_SESSION['usename'])) {
+  header("Location:login.php");
+ }
  
-     include ("conn.php");
      if (isset($_GET['Trade_id'])) {
           $Trade_Id = $_GET['Trade_id'];
           $sql = "SELECT * FROM trades WHERE Trade_id = $Trade_Id";

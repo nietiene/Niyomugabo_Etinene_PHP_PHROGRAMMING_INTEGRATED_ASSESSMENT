@@ -1,5 +1,12 @@
 <?php
+
    session_start();
+
+    if (!isset($_SESSION['usename'])) {
+       header("Location:login.php");
+   }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

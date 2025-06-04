@@ -2,6 +2,11 @@
 
    include('conn.php');
    
+   session_start();
+
+    if (!isset($_SESSION['usename'])) {
+       header("Location:login.php");
+   }   
    if (isset($_GET['Mark_Id'])) {
        $Mark_Id = $_GET['Mark_Id'];
        $sql = "SELECT * FROM marks WHERE Mark_Id = '$Mark_Id'";

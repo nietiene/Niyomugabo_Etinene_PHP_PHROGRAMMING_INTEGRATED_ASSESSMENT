@@ -1,6 +1,12 @@
 <?php
      include ('conn.php');
     
+        
+   session_start();
+
+    if (!isset($_SESSION['usename'])) {
+       header("Location:login.php");
+   }
      //handle select logic
      if (isset($_GET['Trainee_Id'])) {
          $Trainee_Id = $_GET['Trainee_Id'];
