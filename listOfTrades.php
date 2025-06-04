@@ -18,6 +18,7 @@
     <link href="output.css" rel="stylesheet">
 </head>
 <body class="bg-green-100 min-h-screen flex justify-center items-center px-4">
+    <?php include("Dashboard.php"); ?>
     <div class="bg-blue-200 shadow-2xl rounded-xl p-6 w-full max-w-6xl">
      <div  class="flex justify-between mb-6">   
     <h1 class="text-center font-semibold text-2xl text-green-700 mb-6">List Of Trades</h1>

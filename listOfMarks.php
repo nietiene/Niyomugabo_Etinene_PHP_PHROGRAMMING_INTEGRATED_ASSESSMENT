@@ -16,9 +16,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List Of Marks</title>
     <link href="output.css" rel="stylesheet">
-
+   
 </head>
 <body class="min-h-screen flex flex-col px-4 py-6 bg-green-100 justify-center text-center">
+   <?php include("Dashboard.php"); ?>
     <div class="w-full max-w-7xl bg-blue-300 shadow-xl rounded-lg p-6">
         <div class="flex justify-between items-center mb-[5%]">
              <h1 class="text-2xl font-bold text-green-500">List Of Marks</h1>

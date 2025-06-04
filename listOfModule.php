@@ -18,6 +18,7 @@
     <link href="output.css" rel="stylesheet">
 </head>
 <body class="min-h-screen bg-green-100 flex justify-center items-center">
+    <?php include("Dashboard.php"); ?>
     <div class="bg-blue-300 p-8 px-10 py-10 shadow-2xl rounded-md ">
         <h1 class="text-2xl text-center text-green-600 font-semibold shadow-lg mb-4">List Of Modules</h1>
     <div class="flex justify-between">
