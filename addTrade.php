@@ -53,7 +53,7 @@
         </div>
     
      <?php if (!empty($error)): ?>
-       <div class="bg-red-100 py-1 text-red-500 rounded border border-red-500 px-1 mb-4">
+       <div class="py-1 text-red-500 px-1">
          <?php echo $error; ?>
        </div> 
        <?php endif; ?>

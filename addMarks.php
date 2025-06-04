@@ -74,7 +74,7 @@
              <a href="Dashboard.php" class="bg-red-500 py-2 px-5 text-white rounded-lg shadow-xl hover:bg-red-600 transition duration-200">Back</a>
         </div>
           <?php if (!empty($error)): ?>
-                <div class="bg-red-100 py-1 text-red-500 rounded border border-red-500 px-1">
+                <div class="py-1 text-red-500 px-1">
                     <?php echo $error; ?>
                 </div>
              <?php endif; ?>   

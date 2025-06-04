@@ -45,7 +45,7 @@
             die("ERROR:" . mysqli_error($conn));
            }
        } else {
-             $error = "Please fill out the empy space";
+             $error = "Please fill out the empty space";
       }
 }
 
@@ -93,7 +93,7 @@
 
             
     <?php if (!empty($error)): ?>
-      <div class="bg-red-100 py-1 text-red-500 rounded border border-red-500 px-1">
+      <div class="py-1 text-red-500 px-1">
          <?php echo $error; ?>
       </div>
    <?php endif; ?>        
