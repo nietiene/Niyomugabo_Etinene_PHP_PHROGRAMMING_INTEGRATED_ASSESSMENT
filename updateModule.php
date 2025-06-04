@@ -31,20 +31,21 @@
 </head>
 <body class="min-h-screen bg-blue-100 flex justify-center items-center">
     <form action="" method="post" class="bg-green-500 p-6 max-w-md w-[35%] rounded-lg shadow-2xl">
-        <h1 class="text-lg text-center text-blue-500 underline">Update Module <?php echo $Module['Module_Name']?></h1>
-        <label class="block text-lg text-blue-500">Module Code</label>
+        <h1 class="text-lg text-center text-blue-600 font-bold underline">Update Module <?php echo $Module['Module_Name']?></h1>
+
+        <label class="block text-lg text-blue-600 font-bold">Module Code</label>
         <input type="text" name="Module_Id" value="<?php echo $Module['Module_Id']?>" readonly
         class="w-full py-2 rounded-lg bg-green-200 text-green-500 focus:outline-green-300"> <br>
 
-        <label class="block text-lg text-blue-500">Module Name</label>
+        <label class="block text-lg text-blue-600 font-bold">Module Name</label>
         <input type="text" name="Module_Name" value="<?php echo $Module['Module_Name']?>"
         class="w-full py-2 rounded-lg bg-green-200 text-green-500 focus:outline-green-300"> <br>
 
-        <label class="block text-lg text-blue-500">Trade Code</label>
+        <label class="block text-lg text-blue-600 font-bold">Trade Code</label>
         <input type="text" name="Trade_Id" value="<?php echo $Module['Trade_Id']?>" readonly
         class="w-full py-2 rounded-lg bg-green-200 text-green-500 focus:outline-green-300"> <br>
 
-        <label class="block text-lg text-blue-500">Trade Name</label>
+        <label class="block text-lg text-blue-600 font-bold">Trade Name</label>
        <select name="Trade_Id" class="w-full py-2 rounded-lg bg-green-200 text-green-500 focus:outline-green-300">
           <?php
           $sql = "SELECT * FROM trades";
