@@ -27,12 +27,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Module <?php echo $Module['Module_Name'];?></title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="min-h-screen bg-blue-100 flex justify-center items-center">
     <h1>Update Module <?php echo $Module['Module_Name']?></h1>
-    <form action="" method="post">
-        <label for="">Module Code</label>
-        <input type="text" name="Module_Id" value="<?php echo $Module['Module_Id']?>" readonly> <br>
+    <form action="" method="post" class="bg-green-500 p-6 max-w-md w-[35%] rounded-lg shadow-2xl">
+        <h1 class="text-lg text-center text-blue-500 underline">Update Module <?php echo $Module['Module_Name']?></h1>
+        <label class="block text-lg text-blue-500">Module Code</label>
+        <input type="text" name="Module_Id" value="<?php echo $Module['Module_Id']?>" readonly
+        class="w-full py-2 rounded-lg bg-green-200 text-green-500 focus:outline-green-300"> <br>
 
         <label for="">Module Name</label>
         <input type="text" name="Module_Name" value="<?php echo $Module['Module_Name']?>"> <br>
