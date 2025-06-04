@@ -38,12 +38,14 @@
 </head>
 <body class="min-h-screen bg-blue-200 flex justify-center items-center">
     <form action="" method="post" class="max-w-md w-full bg-green-400 p-8 shadow-2xl rounded-xl">
-        <?php if (!empty($loginErrorMessage)): ?>
-            <div class="bg-yellow-100 border border-yellow-500 text-yellow-700 rounded text-center mb-4">
+      
+     <?php if (!empty($loginErrorMessage)): ?>
+            <div class="text-red-500 rounded text-center mb-4">
                 <?php echo $loginErrorMessage;?>
             </div>
-          <?php endif; ?>  
-        <h1 class="text-blue font-bold underline text-center text-blue-600 text-xl mb-6">Login Page</h1>
+     <?php endif; ?>  
+     
+          <h1 class="text-blue font-bold underline text-center text-blue-600 text-xl mb-6">Login Page</h1>
         <label class="font-bold text-blue-500 text-lg">Username</label>
         <input type="text" name="Usename" 
         class="w-[76%] py-3 rounded-lg bg-green-200 shadow-lg focus:ring-2 focus:outline-green-400 mb-6 text-green-500"> <br>
