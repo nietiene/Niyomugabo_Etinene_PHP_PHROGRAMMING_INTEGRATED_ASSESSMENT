@@ -13,6 +13,7 @@
       if (isset($_POST['addMarks'])) {
         
         if (!empty($_POST['Trainee_Id']) && !empty($_POST['Module_Id']) && !empty($_POST['Formative_Assessment']) && !empty($_POST['Summative_Assessment'])) {
+            
                $trainee_code = $_POST['Trainee_Id'];
                $module_code = $_POST['Module_Id'];
                $Formative = $_POST['Formative_Assessment'];
