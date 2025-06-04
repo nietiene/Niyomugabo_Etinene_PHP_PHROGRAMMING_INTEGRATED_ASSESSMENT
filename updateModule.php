@@ -24,7 +24,7 @@
      $error = "";
        if (isset($_POST['save'])) {
          
-        if (!empty($_POST['Trainee_Id']) && !empty($_POST['Module_Id']) && !empty($_POST['Formative_Assessment']) && !empty($_POST['Summative_Assessment'])) {
+        if (!empty($_POST['Module_Name']) && !empty($_POST['Trade_Id'])) {
            $Module_Id = $_POST['Module_Id'];
            $Module_Name = $_POST['Module_Name'];
            $Trade_Id = $_POST['Trade_Id'];
