@@ -51,6 +51,7 @@
     <link href="output.css" rel="stylesheet">
 </head>
 <body class="min-h-screen bg-green-100 flex justify-center items-center">
+   <?php include("Dashboard.php"); ?>
     <form method="post" class="bg-blue-700 w-full rounded-lg max-w-sm px-4 shadow-2xl">
       <h1 class="text-2xl text-green-500 font-semibold mb-6 text-center underline">Update Trade</h1>
         <label class="block text-green-500 font-semibold text-lg">Trade Code</label>

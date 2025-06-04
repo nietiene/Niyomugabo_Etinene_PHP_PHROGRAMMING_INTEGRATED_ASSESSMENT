@@ -61,6 +61,7 @@
     <link href="output.css" rel="stylesheet">
 </head>
 <body class="min-h-screen bg-blue-100 flex justify-center items-center">
+    <?php include("Dashboard.php"); ?>
     <form action="" method="post" class="bg-green-500 p-6 max-w-md w-[35%] rounded-lg shadow-2xl">
         <h1 class="text-lg text-center text-blue-600 font-bold underline">Update Module <?php echo $Module['Module_Name']?></h1>
 

@@ -7,6 +7,7 @@
         <link href="output.css" rel="stylesheet">
 </head>
 <body  class="min-h-screen bg-green-100 flex justify-center items-center">
+    <?php include("Dashboard.php"); ?>
     <div class="bg-blue-400 p-8 rounded-lg shadow-2xl">
     <div class="flex justify-between mb-6">
           <h1 class="text-xl font-bold text-green-700 underline">Competent Trainees List </h1>

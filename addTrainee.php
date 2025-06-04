@@ -42,6 +42,7 @@
 
     </head>
     <body class="min-h-screen bg-green-100 flex justify-center items-center">
+      <?php include("Dashboard.php"); ?>
         <form action="" method="post" class="bg-blue-700 p-8 max-w-lg w-full rounded-lg shadow-2xl">
             <h1 class="text-center text-green-500 text-xl underline mb-6">Add New Trainee</h1>
             <label class="text-lg text-green-500 font-semibold">First Name:</label>
