@@ -63,8 +63,8 @@
        <?php include("Dashboard.php"); ?>
     </header>
 
-    <main class="flex flex-grow">
-      <form method="post" class="max-w-md w-full bg-green-400 p-9 rounded-lg shadow-2xl">
+    <main class="flex flex-grow items-start pt-6 px-4">
+      <form method="post" class="max-w-md w-full space-y-5 bg-green-400 p-9 rounded-lg shadow-2xl">
         <h1 class="text-lg text-center underline text-blue-700 font-bold mb-6">Add Marks</h1>
         <label class="text-md text-blue-700 font-bold block">Trainee Code</label>
         <input type="text" name="Trainee_Id" 
