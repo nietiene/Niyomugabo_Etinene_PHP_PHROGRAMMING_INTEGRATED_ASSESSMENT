@@ -2,7 +2,7 @@
 
    session_start();
 
-    if (!isset($_SESSION['usename'])) {
+    if (!isset($_SESSION['Usename'])) {
        header("Location:login.php");
    }
 
