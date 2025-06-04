@@ -2,22 +2,24 @@
      include("conn.php");
      
      if (isset($_GET['Module_Id'])) {
-        $Module_Id = $_GET['Module_Id'];   
-        $sql = "SELECT
-              m.Module_Id,
-              m.Module_Name,
-              m.Trade_Id,
-              t.Trade_name
-              FROM modules m 
-              JOIN trades t
-              ON t.Trade_id = m.Trade_Id WHERE Module_Id = '$Module_Id'";
-        $result = mysqli_query($conn, $sql);
+           if (!empty($_POST['Trainee_Id']) && !empty($_POST['Module_Id']) && !empty($_POST['Formative_Assessment']) && !empty($_POST['Summative_Assessment'])) {
+                $Module_Id = $_GET['Module_Id'];   
+                $sql = "SELECT
+                        m.Module_Id,
+                        m.Module_Name,
+                        m.Trade_Id,
+                        t.Trade_name
+                        FROM modules m 
+                        JOIN trades t
+                       ON t.Trade_id = m.Trade_Id WHERE Module_Id = '$Module_Id'";
+                 $result = mysqli_query($conn, $sql);
 
-        if (mysqli_num_rows($result) > 0) {
-            $Module = mysqli_fetch_assoc($result);
-        } else {
-            echo "No Module Found To Update";
-        }
+              if (mysqli_num_rows($result) > 0) {
+                 $Module = mysqli_fetch_assoc($result);
+             } else {
+                 echo "No Module Found To Update";
+            }
+      }
      }
 ?>
 
