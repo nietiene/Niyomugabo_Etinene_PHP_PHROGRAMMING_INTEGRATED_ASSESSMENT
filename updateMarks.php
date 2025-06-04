@@ -13,41 +13,10 @@
             echo "User Not Found";
         }
    }
-?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Marks Table</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="min-h-screen flex justify-center items-center bg-blue-300" >
-    <form method="post" class="max-w-md w-full bg-green-400 p-9 rounded-lg shadow-2xl">
-      
-        <label class="text-md text-blue-700 font-bold block">Mark Code</label>
-        <input type="text" name="Mark_Id" value=<?php echo $data['Mark_Id'];?>
-         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
-        <label class="text-md text-blue-700 font-bold block">Trainee Code</label>
-        <input type="text" name="Trainee_Id" value=<?php echo $data['Trainee_Id'];?>
-         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
-        <label  class="text-md text-blue-700 font-bold block">Module Code</label>
-        <input type="text" name="Module_Id" value=<?php echo $data['Module_Id'];?>
-        class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
-        <label  class="text-md text-blue-700 font-bold block">Formative Assessment</label>
-        <input type="text" name="Formative_Assessment" value=<?php echo $data['Formative_Assessment'];?>
-        class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
-        <label  class="text-md text-blue-700 font-bold block">Summative Assessment</label>
-        <input type="text" name="Summative_Assessment" value=<?php echo $data['Summative_Assessment'];?>
-        class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
-
-        <button name="save">Save Changes</button>
-    </form>
-
-    <?php
-     
+     $error = "";     
      if (isset($_POST['save'])) {
+        if (!empty($_POST['Mark_Id']) && !empty($_POST['Trainee_Id']) && !empty($_POST['Module_Id']) && !empty($_POST['Formative_Assessment']) && !empty($_POST['Summative_Assessment'])) {
         $Mark_Id = $_POST['Mark_Id'];
         $trainee_code = $_POST['Trainee_Id'];
         $Module_Id = $_POST['Module_Id'];
@@ -75,9 +44,47 @@
       } else {
         die("ERROR:" . mysqli_error($conn));
       }
+     } else {
+         $error = "Please fill out empty space";
      }
+    }
+    
+?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Marks Table</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex justify-center items-center bg-blue-300" >
+    <form method="post" class="max-w-md w-full bg-green-400 p-9 rounded-lg shadow-2xl">
+      
+        <label class="text-md text-blue-700 font-bold block">Mark Code</label>
+        <input type="text" name="Mark_Id" value=<?php echo $data['Mark_Id'];?>
+         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
+        <label class="text-md text-blue-700 font-bold block">Trainee Code</label>
+        <input type="text" name="Trainee_Id" value=<?php echo $data['Trainee_Id'];?>
+         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
+        <label  class="text-md text-blue-700 font-bold block">Module Code</label>
+        <input type="text" name="Module_Id" value=<?php echo $data['Module_Id'];?>
+        class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
+        <label  class="text-md text-blue-700 font-bold block">Formative Assessment</label>
+        <input type="text" name="Formative_Assessment" value=<?php echo $data['Formative_Assessment'];?>
+        class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
+        <label  class="text-md text-blue-700 font-bold block">Summative Assessment</label>
+        <input type="text" name="Summative_Assessment" value=<?php echo $data['Summative_Assessment'];?>
+        class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400 mb-4"> <br>
 
-    ?>
+        <div class="flex justify-between mb-4">
+             <button name="addMarks" class="bg-blue-500 py-2 px-5 text-white rounded-lg shadow-xl hover:bg-blue-600 transition duration-200">Save Marks</button>
+             <a href="Dashboard.php" class="bg-red-500 py-2 px-5 text-white rounded-lg shadow-xl hover:bg-red-600 transition duration-200">Back</a>
+        </div>
+      
+    </form>
+
+  
 </body>
 </html>
