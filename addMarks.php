@@ -25,8 +25,6 @@
               $error = "Please fill  out the empty space!!";
       }
       }
-
-
 ?> 
 
 <!DOCTYPE html>
