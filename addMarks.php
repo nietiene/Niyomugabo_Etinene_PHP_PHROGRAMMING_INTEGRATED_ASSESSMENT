@@ -24,22 +24,27 @@
                $sqlOfid = mysqli_query($conn, $checkIdOfUser);
 
                if (mysqli_num_rows($sqlOfid) > 0) {
+                  
+                if (!$Formative > 50 && !$Summative > 50) {
 
-               $Total = $Formative + $Summative;
-               $Decision = ($Total >= 70) ? "Competent" : "Not Competent";
+                     $Total = $Formative + $Summative;
+                     $Decision = ($Total >= 70) ? "Competent" : "Not Competent";
 
-              $sql = "INSERT INTO marks(Trainee_Id, Module_Id, Formative_Assessment, Summative_Assessment, Total_Marks, decision) VALUES('$trainee_code', '$module_code', '$Formative', '$Summative', '$Total', '$Decision    ')";
-              $query = mysqli_query($conn, $sql);
+                    $sql = "INSERT INTO marks(Trainee_Id, Module_Id, Formative_Assessment, Summative_Assessment, Total_Marks, decision) VALUES('$trainee_code', '$module_code', '$Formative', '$Summative', '$Total', '$Decision    ')";
+                    $query = mysqli_query($conn, $sql);
         
-              if ($query) {
-                  header("Location:listOfMarks.php");
+                   if ($query) {
+                      header("Location:listOfMarks.php");
+                  }
+                } else {
+                     die("ERROR:". mysqli_error($conn));
              } else {
-                 die("ERROR:". mysqli_error($conn));
-            }
-       }  else {
-           $error = "Code of trainee not found";
+                $error = "Marks Must be less than or equal to 50";
+             }
+       }   else {
+              $error = "Code of trainee not found";
        }
-               } else {
+          } else {
               $error = "Please fill  out the empty space!!";
       }
       }
@@ -51,7 +56,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Marks</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="output.css" rel="stylesheet">
 </head>
 <body class="min-h-screen flex justify-center items-center bg-blue-300">
     <form method="post" class="max-w-md w-full bg-green-400 p-9 rounded-lg shadow-2xl">

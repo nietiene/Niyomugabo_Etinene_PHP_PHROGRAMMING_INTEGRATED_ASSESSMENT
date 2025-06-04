@@ -70,9 +70,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update <?php echo $trainee['Firstname']; ?></title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="output.css" rel="stylesheet">
 </head>
-<body class="min-h-screen bg-green-100 flex justify-center items-center">
+<body class="min-h-screen bg-green-100  flex justify-center items-center">
     
     <form action="" method="post" class="bg-blue-700 p-8 max-w-lg w-full rounded-lg shadow-2xl">
         <h1 class="text-center text-green-500 text-xl underline mb-6">Update <?php echo $trainee['Firstname']?></h1>

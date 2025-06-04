@@ -57,7 +57,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Module <?php echo $Module['Module_Name'];?></title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="output.css" rel="stylesheet">
 </head>
 <body class="min-h-screen bg-blue-100 flex justify-center items-center">
     <form action="" method="post" class="bg-green-500 p-6 max-w-md w-[35%] rounded-lg shadow-2xl">

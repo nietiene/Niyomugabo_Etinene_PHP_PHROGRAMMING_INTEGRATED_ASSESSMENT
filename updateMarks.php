@@ -64,7 +64,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Marks Table</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="output.css" rel="stylesheet">
 </head>
 <body class="min-h-screen flex justify-center items-center bg-blue-300" >
     <form method="post" class="max-w-md w-full bg-green-400 p-9 rounded-lg shadow-2xl">

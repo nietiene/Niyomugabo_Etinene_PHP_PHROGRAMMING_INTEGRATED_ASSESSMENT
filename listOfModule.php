@@ -15,7 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List Of Modules</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="output.css" rel="stylesheet">
 </head>
 <body class="min-h-screen bg-green-100 flex justify-center items-center">
     <div class="bg-blue-300 p-8 px-10 py-10 shadow-2xl rounded-md ">

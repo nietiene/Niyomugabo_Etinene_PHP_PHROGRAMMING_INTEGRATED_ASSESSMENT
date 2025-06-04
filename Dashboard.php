@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOS Dashboard</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="output.css" rel="stylesheet">
 </head>
 <body class="bg-green-100 min-h-screen">
     <div class="bg-blue-500 shadow-2xl">
@@ -30,6 +30,8 @@
            <li><a href="addTrainee.php" class="hover:text-blue-800 hover:underline transition duration-200">Add Trainee</a></li>
            <li><a href="addModule.php" class="hover:text-blue-800 hover:underline transition duration-200">Add Module</a></li>
            <li><a href="addMarks.php" class="hover:text-blue-800 hover:underline transition duration-200">Add Marks To Trainee</a></li>
+           <li><a href="competent.php" class="hover:text-blue-800 hover:underline transition duration-200">List Of Competent Trainees</a></li>
+           <li><a href="notCompetent.php" class="hover:text-blue-800 hover:underline transition duration-200">List Of NYC Trainees</a></li>
          </ul>
            <div class="flex justify-end">
                <a href="logout.php" class="text-white rounded-lg hover:bg-red-700 bg-red-500 py-1 px-4 transition duration-200">Logout</a>

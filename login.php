@@ -34,7 +34,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="output.css" rel="stylesheet">
 </head>
 <body class="min-h-screen bg-blue-200 flex justify-center items-center">
     <form action="" method="post" class="max-w-md w-full bg-green-400 p-8 shadow-2xl rounded-xl">
