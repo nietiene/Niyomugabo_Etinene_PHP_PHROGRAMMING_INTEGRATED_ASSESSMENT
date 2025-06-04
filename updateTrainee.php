@@ -1,6 +1,7 @@
 <?php
      include ('conn.php');
     
+     //handle select logic
      if (isset($_GET['Trainee_Id'])) {
          $Trainee_Id = $_GET['Trainee_Id'];
       
@@ -21,6 +22,38 @@
             die ("ERROR:" . mysqli_error($conn));
         }
      }
+
+    
+     // handle update logic
+     $error = "";
+    if (isset($_POST['update'])) {
+      if (!empty($_POST['Firstname']) && !empty($_POST['lastname']) && !empty($_POST['Gender']) && !empty($_POST['Trade_Id'])) {
+          $FirstName = $_POST['Firstname'];
+          $lastname = $_POST['lastname'];
+          $Gender = $_POST['Gender'];
+          $Trade_Id = $_POST['Trade_Id'];
+
+          $sql = "UPDATE trainees  SET 
+                  Firstname='$FirstName',
+                  lastname='$lastname',
+                  Gender='$Gender',
+                  Trade_Id='$Trade_Id'
+        
+                  WHERE Trainee_Id = $Trainee_Id;
+        ";
+        
+        $result = mysqli_query($conn, $sql);
+       
+        if ($result) {
+            echo "Trainee Updated Successfully";
+            header("Location:listOfTrainee.php");
+        } else {
+            die ("ERROR:" .mysqli_error($conn));
+        }
+    } else {
+        $error = "Please fill out the empty space";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -63,34 +96,16 @@
                 <button name="update" class="px-8 py-2 bg-green-500 rounded-lg text-white font-semibold hover:bg-green-600 shadow-lg">Save Changes</button>
                 <a href="Dashboard.php" class="px-8 me-2 py-2 bg-red-500 rounded-lg text-white font-semibold hover:bg-red-600 shadow-lg ">Back</a>
           </div>
+
+       <?php if (!empty($error)): ?>
+         <div class="bg-red-100 py-1 text-red-500 rounded border border-red-500 px-1">
+              <?php echo $error; ?>
+         </div>
+             <?php endif; ?>   
  </form>
 
  <?php
-    
-    if (isset($_POST['update'])) {
-        $FirstName = $_POST['Firstname'];
-        $lastname = $_POST['lastname'];
-        $Gender = $_POST['Gender'];
-        $Trade_Id = $_POST['Trade_Id'];
 
-        $sql = "UPDATE trainees  SET 
-        Firstname='$FirstName',
-        lastname='$lastname',
-        Gender='$Gender',
-        Trade_Id='$Trade_Id'
-        
-        WHERE Trainee_Id = $Trainee_Id;
-        ";
-        
-        $result = mysqli_query($conn, $sql);
-       
-        if ($result) {
-            echo "Trainee Updated Successfully";
-            header("Location:listOfTrainee.php");
-        } else {
-            die ("ERROR:" .mysqli_error($conn));
-        }
-    }
   ?>
 </body>
 </html>
