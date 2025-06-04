@@ -46,7 +46,7 @@
         class="w-full py-2 rounded-lg bg-green-200 text-green-500 focus:outline-green-300"> <br>
 
         <label class="block text-lg text-blue-600 font-bold">Trade Name</label>
-       <select name="Trade_Id" class="w-full py-2 rounded-lg bg-green-200 text-green-500 focus:outline-green-300">
+       <select name="Trade_Id" class="w-full py-2 rounded-lg bg-green-200 text-green-500 focus:outline-green-300 mb-4">
           <?php
           $sql = "SELECT * FROM trades";
           $query = mysqli_query($conn, $sql);
@@ -56,7 +56,10 @@
           ?>
        </select> <br>
  
-    <button name="save">Save Changes</button>
+    <div class="flex justify-between mb-4">
+            <button name="save" class="bg-blue-500 py-2 px-5 text-white rounded-lg shadow-2xl hover:bg-blue-600 transition duration-200">Save Changes</button>
+            <a href="Dashboard.php" class="bg-red-500 py-2 px-5 text-white rounded-lg shadow-2xl hover:bg-red-600 transition duration-200">Back</a>
+     </div>
     </form>
 
     <?php
