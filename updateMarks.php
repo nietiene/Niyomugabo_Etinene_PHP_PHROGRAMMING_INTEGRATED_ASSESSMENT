@@ -21,10 +21,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Marks Table</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <form action="" method="post">
-        <label for="">Mark Code</label>
+<body class="min-h-screen flex justify-center items-center bg-blue-300" >
+    <form method="post" class="max-w-md w-full bg-green-400 p-9 rounded-lg shadow-2xl">
+      
+        <label class="text-md text-blue-700 font-bold block">Mark Code</label>
         <input type="text" name="Mark_Id" value=<?php echo $data['Mark_Id'];?>> <br>
         <label for="">Trainee Code</label>
         <input type="text" name="Trainee_Id" value=<?php echo $data['Trainee_Id'];?>> <br>
