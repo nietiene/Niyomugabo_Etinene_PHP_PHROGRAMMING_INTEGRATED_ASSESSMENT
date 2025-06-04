@@ -1,8 +1,8 @@
  <?php
-        
+        include("conn.php");
         $error = "";
         if (isset($_POST['addModule'])) {
-            if (!empty($_POST['Module_Nmae']) && !empty($_POST['Trade_Id'])) {
+            if (!empty($_POST['Module_Name']) && !empty($_POST['Trade_Id'])) {
                 $Module_Name = $_POST['Module_Name'];
                 $Trade_Id = $_POST['Trade_Id'];
                 
@@ -12,7 +12,7 @@
                 if ($query) {
                    header("Location:listOfModule.php");
                 } else {
-                    $error = "Please fill out the empty space";
+                   die("ERROR:" . mysqli_error($conn));
                 }
             } else {
                  $error = "Please fill out the empty space";
@@ -36,7 +36,7 @@
             <input type="text" name="Module_Name" 
             class="w-full py-2 rounded-lg bg-green-200 text-green-500 focus:outline-green-300"/> <br>
             <label class="block text-lg text-blue-500">Trade:</label>
-            <select name="Trade_Id" class="w-full py-2 rounded-lg bg-green-200 text-blue-500 focus:outline-green-300 mb-6">
+            <select name="Trade_Id" class="w-full py-2 rounded-lg bg-green-200 text-green-500 focus:outline-green-300 mb-6">
                 <option>Select Trade</option>
                 <?php
                 include("conn.php");
