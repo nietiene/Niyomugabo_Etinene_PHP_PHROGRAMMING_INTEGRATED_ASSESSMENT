@@ -13,7 +13,7 @@
           }
     }
 
-          
+   $error = "";       
    if (isset($_POST['save'])) {
          if (!empty($_POST['Trade_name'])) {
              $Trade_Id = $_POST['Trade_id'];
@@ -28,6 +28,8 @@
                   die ("ERROR:". mysqli_error($conn));
               }
 
+           } else {
+               $error = "Please fill ou the empty space";
            }
     }
 ?>
@@ -55,6 +57,12 @@
               <button name="save" class="bg-green-500 px-5 py-2 mb-4 rounded-lg shadow-md text-white hover:bg-green-600">Add New</button>
              <a href="Dashboard.php" class="bg-red-500 px-5 py-2 mb-4 rounded-lg shadow-md text-white hover:bg-red-600">Back</a>
          </div>
+
+     <?php if (!empty($error)): ?>
+       <div class="bg-red-100 py-1 text-red-500 rounded border border-red-500 px-1 mb-4">
+         <?php echo $error; ?>
+       </div> 
+       <?php endif; ?>         
     </form>
 
     <?php
