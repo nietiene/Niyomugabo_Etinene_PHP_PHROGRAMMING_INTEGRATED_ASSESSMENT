@@ -17,13 +17,16 @@
     <title>List Of Modules</title>
     <link href="output.css" rel="stylesheet">
 </head>
-<body class="min-h-screen bg-green-100 flex justify-center items-center">
+<body class="min-h-screen bg-green-100  flex flex-col">
+ <header class="w-full fixed top-0 left-0 z-50 shadow-md bg-white">
     <?php include("Dashboard.php"); ?>
+</header>
+<main class="flex-grow pt-20 px-4 flex">
     <div class="bg-blue-300 p-8 px-10 py-10 shadow-2xl rounded-md ">
         <h1 class="text-2xl text-center text-green-600 font-semibold shadow-lg mb-4">List Of Modules</h1>
     <div class="flex justify-between">
        <a href="addModule.php" class="mb-7 bg-green-500 py-2 px-5 text-white rounded-lg hover:bg-green-700">Add New Module</a>
-       <a href="Dashboard.php" class="mb-7 bg-red-500 py-2 px-5 text-white rounded-lg hover:bg-red-700">Back</a>
+       <a href="greetingUser.php" class="mb-7 bg-red-500 py-2 px-5 text-white rounded-lg hover:bg-red-700">Back</a>
     </div>
     <div class="overflow-x-auto rounded-sm">
     <table border="2" cellspacing="2" cellpadding="5"

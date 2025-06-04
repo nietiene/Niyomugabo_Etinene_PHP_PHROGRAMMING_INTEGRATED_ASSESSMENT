@@ -21,7 +21,7 @@
             }
             if (mysqli_num_rows($data) > 0) {
                 $_SESSION['Usename'] = $username;
-                header('Location:dashboard.php');
+                header('Location:greetingUser.php');
             } else {
                $error = "Invalid Credentials";
             }
