@@ -27,15 +27,20 @@
     <form method="post" class="max-w-md w-full bg-green-400 p-9 rounded-lg shadow-2xl">
       
         <label class="text-md text-blue-700 font-bold block">Mark Code</label>
-        <input type="text" name="Mark_Id" value=<?php echo $data['Mark_Id'];?>> <br>
-        <label for="">Trainee Code</label>
-        <input type="text" name="Trainee_Id" value=<?php echo $data['Trainee_Id'];?>> <br>
-        <label for="">Module Code</label>
-        <input type="text" name="Module_Id" value=<?php echo $data['Module_Id'];?>> <br>
-        <label for="">Formative Assessment</label>
-        <input type="text" name="Formative_Assessment" value=<?php echo $data['Formative_Assessment'];?>> <br>
-        <label for="">Summative Assessment</label>
-        <input type="text" name="Summative_Assessment" value=<?php echo $data['Summative_Assessment'];?>> <br>
+        <input type="text" name="Mark_Id" value=<?php echo $data['Mark_Id'];?>
+         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
+        <label class="text-md text-blue-700 font-bold block">Trainee Code</label>
+        <input type="text" name="Trainee_Id" value=<?php echo $data['Trainee_Id'];?>
+         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
+        <label  class="text-md text-blue-700 font-bold block">Module Code</label>
+        <input type="text" name="Module_Id" value=<?php echo $data['Module_Id'];?>
+        class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
+        <label  class="text-md text-blue-700 font-bold block">Formative Assessment</label>
+        <input type="text" name="Formative_Assessment" value=<?php echo $data['Formative_Assessment'];?>
+        class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
+        <label  class="text-md text-blue-700 font-bold block">Summative Assessment</label>
+        <input type="text" name="Summative_Assessment" value=<?php echo $data['Summative_Assessment'];?>
+        class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
 
         <button name="save">Save Changes</button>
     </form>
