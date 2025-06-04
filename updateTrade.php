@@ -37,7 +37,7 @@
               }
 
            } else {
-               $error = "Please fill ou the empty space";
+               $error = "Please fill out the empty space";
            }
     }
 ?>
