@@ -35,23 +35,29 @@
     
     <form action="" method="post" class="bg-blue-700 p-8 max-w-lg w-full rounded-lg shadow-2xl">
         <h1 class="text-center text-green-500 text-xl underline mb-6">Update <?php echo $trainee['Firstname']?></h1>
-        <label for="">Trainee Code</label>
-        <input type="text" name="Trainee_Id" value=<?php echo $trainee['Trainee_Id'];?> readonly> <br>
+        <label class="text-lg text-green-500 font-semibold">Trainee Code:</label>
+        <input type="text" name="Trainee_Id" value=<?php echo $trainee['Trainee_Id'];?> readonly
+        class="w-[75%] py-2 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6"> <br>
      
-        <label for="">First Name</label>
-        <input type="text" name="Firstname" value=<?php echo $trainee['Firstname'];?>> <br>
+        <label class="text-lg text-green-500 font-semibold">First Name</label>
+        <input type="text" name="Firstname" value=<?php echo $trainee['Firstname'];?>
+        class="w-[75%] py-2 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6"> <br>
 
-        <label for="">Last Name</label>
-        <input type="text" name="lastname" value=<?php echo $trainee['lastname'];?>> <br>
+        <label class="text-lg text-green-500 font-semibold">Last Name</label>
+        <input type="text" name="lastname" value=<?php echo $trainee['lastname'];?>
+        class="w-[75%] py-2 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6"> <br>
 
-        <label for="">Gender</label>
-        <input type="text" name="Gender" value=<?php echo $trainee['Gender'];?>> <br>
+        <label class="text-lg text-green-500 font-semibold">Gender</label>
+        <input type="text" name="Gender" value=<?php echo $trainee['Gender'];?>
+        class="w-[75%] py-2 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6"> <br>
 
-        <label for="">Trade Code</label>
-        <input type="text" name="Trade_Id" value=<?php echo $trainee['Trade_Id'];?>> <br>
+        <label class="text-lg text-green-500 font-semibold">Trade Code</label>
+        <input type="text" name="Trade_Id" value=<?php echo $trainee['Trade_Id'];?>
+        class="w-[75%] py-2 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6"> <br>
 
-        <label for="">Trade Name</label>
-        <input type="text" name="Trade_Name" value=<?php echo $trainee['Trade_Name'];?> readonly> <br>
+        <label class="text-lg text-green-500 font-semibold">Trade Name</label>
+        <input type="text" name="Trade_Name" value=<?php echo $trainee['Trade_Name'];?> readonly
+        class="w-[75%] py-2 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6"> <br>
 
         <button name="update">Save Changes</button>
  </form>
