@@ -38,13 +38,13 @@
                   } else {
                      die("ERROR:". mysqli_error($conn));
              } 
-         } 
+         } else {
+                $error = "Marks Must be less than or equal to 50";
+    }
        }   else {
               $error = "Code of trainee not found";
-       }else {
-                $error = "Marks Must be less than or equal to 50";
-             }
-          } else {
+       }
+   } else {
               $error = "Please fill  out the empty space!!";
       }
       }
