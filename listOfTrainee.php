@@ -25,7 +25,7 @@
     </header>
 
     <!-- Add padding top to push content below fixed navbar -->
-    <main class="flex-grow pt-20 px-4 flex justify-center">
+    <main class="flex-grow pt-20 px-4 flex justify-center p-9">
         <div class="bg-blue-200 shadow-2xl rounded-xl p-6 w-full max-w-6xl">
 
             <div class="flex justify-between mb-6 items-center">

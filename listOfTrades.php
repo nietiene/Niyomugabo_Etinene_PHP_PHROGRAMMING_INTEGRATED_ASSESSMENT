@@ -25,7 +25,7 @@
     </header>
 
     <!-- Main content pushed below fixed navbar -->
-    <main class="flex-grow pt-20 px-4 flex justify-center">
+    <main class="flex-grow pt-20 px-4 flex justify-center p-9">
         <div class="bg-blue-200 shadow-2xl rounded-xl p-6 w-full max-w-6xl">
             <div class="flex justify-between mb-6 items-center">
                 <h1 class="text-center font-semibold text-2xl text-green-700 mb-6">List Of Trades</h1>
