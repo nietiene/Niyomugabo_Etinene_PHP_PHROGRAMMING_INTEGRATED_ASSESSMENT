@@ -20,13 +20,13 @@
 </div>
 
 
-      <ul class="flex space-x-6 text-white font-semibold">
-        <li><a href="listOfTrainee.php" class="hover:text-blue-800 hover:underline transition duration-200">List Of Trainee</a></li>
-        <li><a href="listOfTrades.php" class="hover:text-blue-800 hover:underline transition duration-200">List Of Trades</a></li>
-        <li><a href="listOfModule.php" class="hover:text-blue-800 hover:underline transition duration-200">List Of Modules</a></li>
-        <li><a href="listOfMarks.php" class="hover:text-blue-800 hover:underline transition duration-200">Marks Of Student</a></li>
-        <li><a href="competent.php" class="hover:text-blue-800 hover:underline transition duration-200">List Of Competent Trainees</a></li>
-        <li><a href="notCompetent.php" class="hover:text-blue-800 hover:underline transition duration-200">List Of NYC Trainees</a></li>
+      <ul class="flex space-x-6 text-white font-semibold ">
+        <li><a href="listOfTrainee.php" class="hover:text-blue-800 hover:underline transition duration-200">Trainees</a></li>
+        <li><a href="listOfTrades.php" class="hover:text-blue-800 hover:underline transition duration-200">Trades</a></li>
+        <li><a href="listOfModule.php" class="hover:text-blue-800 hover:underline transition duration-200">Modules</a></li>
+        <li><a href="listOfMarks.php" class="hover:text-blue-800 hover:underline transition duration-200">Student</a></li>
+        <li><a href="competent.php" class="hover:text-blue-800 hover:underline transition duration-200">Competent</a></li>
+        <li><a href="notCompetent.php" class="hover:text-blue-800 hover:underline transition duration-200">NYC Trainees</a></li>
       </ul>
 
       <div class="flex justify-end">

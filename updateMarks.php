@@ -85,11 +85,11 @@
         <input type="text" name="Module_Id" value="<?php echo $data['Module_Id']; ?>"
         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
 
-        <label class="text-md text-blue-700 font-bold block">Formative Assessment</label>
+        <label class="text-md text-blue-700 font-bold block">Formative Assessment /50</label>
         <input type="text" name="Formative_Assessment" value="<?php echo $data['Formative_Assessment']; ?>"
         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
 
-        <label class="text-md text-blue-700 font-bold block">Summative Assessment</label>
+        <label class="text-md text-blue-700 font-bold block">Summative Assessment /50</label>
         <input type="text" name="Summative_Assessment" value="<?php echo $data['Summative_Assessment']; ?>"
         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400 mb-4"> <br>
 
