@@ -18,12 +18,11 @@
 </head>
 <body class="min-h-screen bg-green-100 flex flex-col">
 
-<!-- Fixed Top Navbar -->
+
 <header class="w-full fixed top-0 left-0 z-50 shadow-md bg-white h-16 flex items-center px-4">
   <?php include("Dashboard.php"); ?>
 </header>
 
-<!-- Main Content Below Header -->
 <main class="flex-grow pt-24 px-4 flex justify-center items-start">
   <div class="bg-blue-300 p-8 shadow-2xl rounded-md w-full max-w-7xl mx-auto">
     <div class="flex justify-between items-center mb-6">
@@ -32,6 +31,12 @@
     </div>
 
     <div class="overflow-x-auto rounded-md">
+      <div class="flex justify-end mb-4">
+  <a href="download_competent.php" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-800 transition">
+    Download List
+  </a>
+</div>
+
       <table class="min-w-full border border-blue-600 rounded-lg text-sm">
         <thead class="bg-green-500 text-blue-700 font-semibold">
           <tr>
