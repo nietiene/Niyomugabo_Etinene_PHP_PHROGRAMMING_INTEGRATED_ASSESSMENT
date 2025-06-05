@@ -31,5 +31,10 @@
     </form>
   </main>
 
+    
+    <footer class="bg-blue-500 text-center py-4 shadow-inner text-sm text-white">
+          &copy; <?php echo date("Y"); ?> GIKONKO TSS. All rights reserved.
+  </footer>
+
 </body>
 </html>
