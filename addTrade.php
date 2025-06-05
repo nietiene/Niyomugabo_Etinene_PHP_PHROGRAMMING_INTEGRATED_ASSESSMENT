@@ -10,7 +10,13 @@ if (!isset($_SESSION['Usename'])) {
 
 $error = "";
 if (isset($_POST['add'])) {
+
+     $sqlSql = "SELECT * FROM modules";
+    $queryTrade = mysqli_query($conn, $queryTrade);
+    $ModuleList = mysqli_fetch_assoc($queryTrade);
+
     if (!empty($_POST['Trade_name'])) {
+    if (!$_POST['Trade_name'] === $queryTrade['Trade_name']) {
         $Trade_Name = $_POST['Trade_name'];
         $sql = "INSERT INTO trades(Trade_name) VALUES('$Trade_Name')";
         $query = mysqli_query($conn, $sql);
@@ -19,7 +25,10 @@ if (isset($_POST['add'])) {
         } else {
             die("ERROR:" . mysqli_error($conn));
         }
-    } else {
+    }  else {
+        $error = "Trade already exist";
+    }
+}else {
         $error = "Please Trade Name Can't be blank !!!";
     }
 }
