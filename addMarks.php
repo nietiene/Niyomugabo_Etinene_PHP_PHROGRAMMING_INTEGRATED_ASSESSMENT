@@ -130,7 +130,7 @@
                 <a
                     href="listOfMarks.php"
                     class="bg-red-600 text-white py-2 px-6 rounded-lg shadow-xl hover:bg-red-700 transition duration-200 flex items-center justify-center">
-                    Back
+                   ← Back
                 </a>
             </div>
 

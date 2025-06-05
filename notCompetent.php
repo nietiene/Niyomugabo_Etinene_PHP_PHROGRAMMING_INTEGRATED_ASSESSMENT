@@ -32,7 +32,7 @@
     
       <div class="flex justify-between items-center mb-6">
         <h1 class="text-2xl font-bold text-red-500 underline flex-grow text-center">Not Yet Competent Trainees List</h1>
-        <a href="greetingUser.php" class="bg-red-500 px-6 py-2 text-white rounded-lg hover:bg-red-700 transition duration-300 ml-6">Back</a>
+        <a href="greetingUser.php" class="bg-red-500 px-6 py-2 text-white rounded-lg hover:bg-red-700 transition duration-300 ml-6">← Back</a>
       </div>
 
       <div class="overflow-x-auto rounded-md">

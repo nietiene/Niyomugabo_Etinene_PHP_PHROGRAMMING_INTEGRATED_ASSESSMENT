@@ -55,7 +55,7 @@ if (isset($_POST['add'])) {
                 </button>
                 <a href="listOfTrades.php" 
                     class="bg-red-500 px-5 py-2 rounded-lg shadow-md text-white hover:bg-red-600 transition">
-                    Back
+                    ← Back
                 </a>
             </div>
 

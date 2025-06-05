@@ -71,7 +71,7 @@
 
         <div class="flex justify-between">
            <button name="save" class="bg-green-500 px-5 py-2 mb-4 rounded-lg shadow-md text-white hover:bg-green-600">Save Changes</button>
-           <a href="listOfTrades.php" class="bg-red-500 px-5 py-2 mb-4 rounded-lg shadow-md text-white hover:bg-red-600">Back</a>
+           <a href="listOfTrades.php" class="bg-red-500 px-5 py-2 mb-4 rounded-lg shadow-md text-white hover:bg-red-600">← Back</a>
         </div>
 
         <?php if (!empty($error)): ?>

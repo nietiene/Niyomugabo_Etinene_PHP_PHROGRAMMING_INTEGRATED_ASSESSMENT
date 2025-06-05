@@ -1,5 +1,4 @@
 <?php
-   session_start();
    include("conn.php");
 ?>
 <!DOCTYPE html>
@@ -10,9 +9,12 @@
     <title>User Page</title>
 </head>
 <body>
+    <header>
+         <?php include("userDashboard.php"); ?>
+    </header>
+
   <form action="" method="post">
-    <h1>Welcome <?php echo $_SESSION['Firstname'];?></h1>
-           <a href="listOfUserMarks.php?Trainee_Id=<?php echo $_SESSION['Trainee_Id']; ?>">View your Marks</a>
+    <h1>Welcome <?php echo $_SESSION['Firstname'];?> in GIKONKO TSS Trainee managment system</h1>
   </form>
 </body>
 </html>

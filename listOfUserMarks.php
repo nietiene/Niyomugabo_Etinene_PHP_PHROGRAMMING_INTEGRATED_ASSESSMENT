@@ -6,6 +6,7 @@
     <title>Student's User</title>
 </head>
 <body>
+     <?php include("userDashboard.php"); ?>
     <a href="logout.php">Logout</a>
     <table border="2">
         <tr>

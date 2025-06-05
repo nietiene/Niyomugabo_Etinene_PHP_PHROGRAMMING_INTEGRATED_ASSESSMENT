@@ -32,7 +32,7 @@
                 <h1 class="font-semibold text-2xl text-green-700 mb-6">List Of Trainees</h1>
                 <div class="space-x-4">
                     <a href="addTrainee.php" class="bg-green-400 py-3 px-5 rounded-lg shadow-lg text-white hover:bg-green-600 transition duration-200">Add Trainee</a>
-                    <a href="greetingUser.php" class="bg-red-400 py-3 px-5 rounded-lg shadow-lg text-white hover:bg-red-600 transition duration-200">Back</a>
+                    <a href="greetingUser.php" class="bg-red-400 py-3 px-5 rounded-lg shadow-lg text-white hover:bg-red-600 transition duration-200">← Back</a>
                 </div>
             </div>
 

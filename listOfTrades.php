@@ -31,7 +31,7 @@
                 <h1 class="text-center font-semibold text-2xl text-green-700 mb-6">List Of Trades</h1>
                 <div class="space-x-4">
                     <a href="addTrade.php" class="bg-green-500 px-4 py-2 rounded-lg shadow-lg text-white hover:bg-green-700 transition duration-200">Add New</a>
-                    <a href="greetingUser.php" class="bg-red-500 px-4 py-2 rounded-lg shadow-lg text-white hover:bg-red-700 transition duration-200">Back</a>
+                    <a href="greetingUser.php" class="bg-red-500 px-4 py-2 rounded-lg shadow-lg text-white hover:bg-red-700 transition duration-200">← Back</a>
                 </div>
             </div>
 
