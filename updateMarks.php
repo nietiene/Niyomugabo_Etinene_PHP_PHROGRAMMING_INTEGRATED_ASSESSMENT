@@ -95,7 +95,7 @@
 
         <div class="flex justify-between mb-4">
              <button name="save" class="bg-blue-500 py-2 px-5 text-white rounded-lg shadow-xl hover:bg-blue-600 transition duration-200">Save Marks</button>
-             <a href="Dashboard.php" class="bg-red-500 py-2 px-5 text-white rounded-lg shadow-xl hover:bg-red-600 transition duration-200">Back</a>
+             <a href="greetingUser.php" class="bg-red-500 py-2 px-5 text-white rounded-lg shadow-xl hover:bg-red-600 transition duration-200">Back</a>
         </div>
       
        <?php if (!empty($error)): ?>

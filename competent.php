@@ -29,7 +29,7 @@
 
     <div class="flex justify-between items-center mb-6">
       <h1 class="text-2xl font-bold text-green-700 underline">Competent Trainees List</h1>
-      <a href="dashboard.php" class="bg-red-500 px-6 py-2 text-white rounded-lg hover:bg-red-600 transition duration-300">Back</a>
+      <a href="greetingUser.php" class="bg-red-500 px-6 py-2 text-white rounded-lg hover:bg-red-600 transition duration-300">Back</a>
     </div>
 
     <div class="overflow-x-auto rounded-md">

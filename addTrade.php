@@ -54,7 +54,7 @@ if (isset($_POST['add'])) {
                     class="bg-green-500 px-5 py-2 rounded-lg shadow-md text-white hover:bg-green-600 transition">
                     Add New
                 </button>
-                <a href="Dashboard.php" 
+                <a href="greetingUser.php" 
                     class="bg-red-500 px-5 py-2 rounded-lg shadow-md text-white hover:bg-red-600 transition">
                     Back
                 </a>
