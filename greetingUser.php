@@ -17,7 +17,7 @@
 </head>
 <body>
     <?php include("Dashboard.php"); ?>
-   <div class="flex justify-center items-center">
+   <div class="flex justify-center items-center p-9">
       <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-xl text-center">
          <h2 class="font-semibold text-2xl text-green-500">Welcome <strong><u><?php echo $_SESSION['Usename'];?></u></strong> In Gikonko Tss Management system</h2> 
       </div>
