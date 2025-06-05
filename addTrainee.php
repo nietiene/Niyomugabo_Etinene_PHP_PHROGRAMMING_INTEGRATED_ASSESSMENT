@@ -38,6 +38,7 @@ if (isset($_POST['add'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Add New Trainee</title>
     <link href="output.css" rel="stylesheet" />
+    <link rel="icon" type="/png" href="gikonko.png" />
 </head>
 
 <body class="min-h-screen bg-green-100 p-5">

@@ -15,6 +15,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Competent List</title>
   <link href="output.css" rel="stylesheet" />
+  <link rel="icon" type="/png" href="gikonko.png" />
 </head>
 <body class="min-h-screen bg-green-100 flex flex-col">
 

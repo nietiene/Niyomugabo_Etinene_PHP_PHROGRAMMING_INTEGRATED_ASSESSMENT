@@ -64,7 +64,6 @@
 </head>
 <body class="min-h-screen bg-blue-300 flex flex-col">
 
-  <!-- Nav aligned to top -->
   <div class="w-full">
     <?php include("Dashboard.php"); ?>
   </div>

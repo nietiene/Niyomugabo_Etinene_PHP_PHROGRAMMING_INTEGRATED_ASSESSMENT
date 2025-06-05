@@ -35,15 +35,16 @@ if (isset($_POST['addModule'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Add Module</title>
     <link href="output.css" rel="stylesheet" />
+    <link rel="icon" type="/png" href="gikonko.png" />
+
 </head>
 <body class="min-h-screen bg-blue-100">
 
-    <!-- Sticky nav container -->
+
     <header class="sticky top-0 w-full bg-white shadow-md z-10">
         <?php include("Dashboard.php"); ?>
     </header>
 
-    <!-- Main content centered vertically & horizontally -->
     <main class="min-h-screen flex justify-center items-center p-9">
         <form action="" method="post" class="bg-green-500 p-6 max-w-md w-full rounded-lg shadow-2xl">
             <h1 class="text-lg text-center text-blue-500 underline mb-4">Add Module</h1>

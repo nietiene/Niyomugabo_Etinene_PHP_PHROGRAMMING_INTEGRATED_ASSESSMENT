@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Not Competent List</title>
   <link href="output.css" rel="stylesheet" />
+  <link rel="icon" type="/png" href="gikonko.png" />
 </head>
 <body class="min-h-screen bg-green-100 flex flex-col">
 
-  <!-- Fixed Top Navbar -->
+
   <header class="w-full fixed top-0 left-0 z-50 shadow-md bg-white h-16 flex items-center px-4">
     <?php include("Dashboard.php"); ?>
   </header>
 
-  <!-- Main Content Below Header -->
+
   <main class="flex-grow pt-24 px-4 flex justify-center items-start">
     <div class="bg-blue-300 p-8 shadow-2xl rounded-md w-full max-w-7xl mx-auto">
 

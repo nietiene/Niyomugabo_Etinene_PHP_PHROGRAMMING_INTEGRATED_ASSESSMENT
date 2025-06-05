@@ -47,16 +47,16 @@
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
    <title>Update Trade</title>
+   <link rel="icon" type="/png" href="gikonko.png" />
    <link href="output.css" rel="stylesheet" />
 </head>
 <body class="min-h-screen bg-green-100 flex flex-col">
 
-   <!-- Nav fixed top -->
    <div class="w-full">
       <?php include("Dashboard.php"); ?>
    </div>
 
-   <!-- Form centered below nav -->
+
    <main class="flex-grow flex justify-center items-center p-9">
      <form method="post" class="bg-blue-700 w-full rounded-lg max-w-sm px-4 shadow-2xl py-8">
         <h1 class="text-2xl text-green-500 font-semibold mb-6 text-center underline">Update Trade</h1>

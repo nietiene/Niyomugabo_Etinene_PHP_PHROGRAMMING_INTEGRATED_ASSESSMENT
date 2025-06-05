@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DOS Dashboard</title>
   <link href="output.css" rel="stylesheet">
+  <link rel="icon" type="/png" href="gikonko.png" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-green-100 min-h-screen">
@@ -24,7 +25,7 @@
         <li><a href="listOfTrainee.php" class="hover:text-blue-800 hover:underline transition duration-200">Trainees</a></li>
         <li><a href="listOfTrades.php" class="hover:text-blue-800 hover:underline transition duration-200">Trades</a></li>
         <li><a href="listOfModule.php" class="hover:text-blue-800 hover:underline transition duration-200">Modules</a></li>
-        <li><a href="listOfMarks.php" class="hover:text-blue-800 hover:underline transition duration-200">Student</a></li>
+        <li><a href="listOfMarks.php" class="hover:text-blue-800 hover:underline transition duration-200">Marks</a></li>
         <li><a href="competent.php" class="hover:text-blue-800 hover:underline transition duration-200">Competent</a></li>
         <li><a href="notCompetent.php" class="hover:text-blue-800 hover:underline transition duration-200">NYC Trainees</a></li>
       </ul>

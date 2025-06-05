@@ -56,6 +56,7 @@ if (isset($_POST['save'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Update Module <?php echo $Module['Module_Name']; ?></title>
     <link href="output.css" rel="stylesheet" />
+    <link rel="icon" type="/png" href="gikonko.png" />
 </head>
 <body class="min-h-screen bg-blue-100 flex flex-col">
 

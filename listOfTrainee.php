@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>List Of Trainees</title>
     <link href="output.css" rel="stylesheet" />
+    <link rel="icon" type="/png" href="gikonko.png" />
 </head>
 <body class="bg-green-100 min-h-screen flex flex-col">
 

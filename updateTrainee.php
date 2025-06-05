@@ -68,6 +68,7 @@ if (isset($_POST['update'])) {
    <meta name="viewport" content="width=device-width, initial-scale=1" />
    <title>Update <?php echo $trainee['Firstname']; ?></title>
    <link href="output.css" rel="stylesheet" />
+   <link rel="icon" type="/png" href="gikonko.png" />
 </head>
 
 <body class="min-h-screen bg-green-100">
