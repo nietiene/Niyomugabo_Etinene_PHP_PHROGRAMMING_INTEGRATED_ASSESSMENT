@@ -40,15 +40,14 @@ if (isset($_POST['add'])) {
     <link href="output.css" rel="stylesheet" />
 </head>
 
-<body class="min-h-screen bg-green-100">
+<body class="min-h-screen bg-green-100 p-5">
 
-    <!-- Sticky nav bar -->
     <header class="sticky top-0 w-full bg-white shadow-md z-10">
         <?php include("Dashboard.php"); ?>
     </header>
 
-    <!-- Content pushed below nav -->
-    <main class="flex-grow flex justify-center items-center p-9">
+
+    <main class="min-h-screen flex justify-center items-end p-5">
         <form action="" method="post" class="bg-blue-700 p-6 max-w-md w-full rounded-lg shadow-2xl">
             <h1 class="text-2xl text-green-500 font-semibold mb-6 text-center underline">Add New Trainee</h1>
 

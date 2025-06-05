@@ -43,8 +43,8 @@ if (isset($_POST['addModule'])) {
         <?php include("Dashboard.php"); ?>
     </header>
 
-    <!-- Main content with top padding to avoid nav overlap -->
-    <main class="flex-grow flex justify-center items-center p-9">
+    <!-- Main content centered vertically & horizontally -->
+    <main class="min-h-screen flex justify-center items-center p-9">
         <form action="" method="post" class="bg-green-500 p-6 max-w-md w-full rounded-lg shadow-2xl">
             <h1 class="text-lg text-center text-blue-500 underline mb-4">Add Module</h1>
 
