@@ -11,12 +11,12 @@ if (!isset($_SESSION['Usename'])) {
 $error = "";
 if (isset($_POST['add'])) {
 
-     $sqlSql = "SELECT * FROM modules";
-    $queryTrade = mysqli_query($conn, $queryTrade);
-    $ModuleList = mysqli_fetch_assoc($queryTrade);
+     $sqlSql = "SELECT * FROM trades";
+    $queryTrade = mysqli_query($conn, $sqlSql);
+    $TradeList = mysqli_fetch_assoc($queryTrade);
 
     if (!empty($_POST['Trade_name'])) {
-    if (!$_POST['Trade_name'] === $queryTrade['Trade_name']) {
+    if (!$_POST['Trade_name'] === $TradeList['Trade_name']) {
         $Trade_Name = $_POST['Trade_name'];
         $sql = "INSERT INTO trades(Trade_name) VALUES('$Trade_Name')";
         $query = mysqli_query($conn, $sql);
