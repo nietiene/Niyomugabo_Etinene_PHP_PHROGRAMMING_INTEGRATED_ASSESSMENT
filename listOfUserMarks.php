@@ -91,7 +91,7 @@
           </tbody>
         </table>
         <div class="flex mt-8">
-            <a href="userDashboard.php" class="bg-green-500 px-4 py-2 rounded-lg hover:bg-green-700 text-white">Back to Dashboard</a>
+            <a href="userPage.php" class="bg-green-500 px-4 py-2 rounded-lg hover:bg-green-700 text-white">Back to Dashboard</a>
         </div>
       </div>
     </div>
