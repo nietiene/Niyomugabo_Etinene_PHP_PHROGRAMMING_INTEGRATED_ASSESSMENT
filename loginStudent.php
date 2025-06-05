@@ -9,7 +9,13 @@
 
         $sql = "SELECT * FROM trainees WHERE Trainee_Id = '$Trainee_id', Firstname = '$Firstname', lastname = '$lastname'";
         $query = mysqli_query($conn, $sql);
-        
+
+        if (mysqli_num_rows($query) > 0) {
+            $Firstname = $_SESSION['Firstname'];
+            header("userPage.php");
+        } else {
+            echo "Invalid data";
+        }
     }
 ?>
 <!DOCTYPE html>
