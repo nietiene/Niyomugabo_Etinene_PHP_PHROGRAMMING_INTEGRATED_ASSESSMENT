@@ -27,7 +27,7 @@
   <main class="flex-grow pt-24 flex justify-center items-center px-4">
     <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-xl text-center">
       <h2 class="font-semibold text-2xl text-green-600">
-        Welcome <strong><u><?php echo htmlspecialchars($_SESSION['Usename']); ?></u></strong> to Gikonko TSS Management System
+        Welcome <strong><u><?php echo $_SESSION['Usename']; ?></u></strong> to Gikonko TSS Trainees Management System
       </h2>
     </div>
   </main>
