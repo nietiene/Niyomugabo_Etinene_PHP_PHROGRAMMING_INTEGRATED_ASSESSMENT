@@ -1,5 +1,5 @@
 <?php
-   session_start();
+
    include("conn.php");
 ?>
 <!DOCTYPE html>
@@ -26,7 +26,7 @@
 
 
       <ul class="flex space-x-6 text-white font-semibold ">
-          <a href="listOfUserMarks.php?Trainee_Id=<?php echo $_SESSION['Trainee_Id']; ?>">View your Marks</a>
+          <a href="listOfUserMarks.php?Trainee_Id=<?php echo $_SESSION['Trainee_Id']; ?>" class="hover:text-green-500 hover:underline transition duration-200">View your Marks</a>
         
       </ul>
 

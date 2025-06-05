@@ -2,9 +2,9 @@
    include("conn.php");
    session_start();
 
-   if (!isset($_SESSION['Usename'])) {
+   if (!isset($_SESSION['Firstname'])) {
        $_SESSION['login_error'] = "Please login to access this page";
-       header("Location: login.php");
+       header("Location: loginStudent.php");
        exit();
    }
 ?>
@@ -20,16 +20,15 @@
 <body class="min-h-screen bg-green-100 flex flex-col">
 
   <header class="w-full fixed top-0 left-0 z-50 shadow-md bg-white h-16 flex items-center px-4">
-    <?php include("Dashboard.php"); ?>
+    <?php include("userDashboard.php"); ?>
   </header>
 
-
   <main class="flex-grow pt-24 flex justify-center items-center px-4">
-    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-xl text-center">
+    <form action="" method="post" class="bg-white p-8 rounded-xl shadow-lg w-full max-w-xl text-center">
       <h2 class="font-semibold text-2xl text-green-600">
-        Welcome <strong><u><?php echo $_SESSION['Usename']; ?></u></strong> to GIKONKO TSS Trainee Management System
+        Welcome <strong><u><?php echo $_SESSION['Firstname']; ?></u></strong> to GIKONKO TSS Trainee Management System
       </h2>
-    </div>
+    </form>
   </main>
 
 </body>
