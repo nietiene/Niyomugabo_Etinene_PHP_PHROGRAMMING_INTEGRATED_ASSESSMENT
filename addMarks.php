@@ -56,6 +56,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Add Marks</title>
     <link href="output.css" rel="stylesheet" />
+    <link rel="icon" type="/png" href="gikonko.png" />
 </head>
 <body class="min-h-screen bg-blue-300 flex flex-col">
 
