@@ -43,7 +43,7 @@
                             <th colspan="2" class="px-4 py-2 border-b border-blue-500">Modification</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="text-center">
                     <?php
                        include("conn.php");
                        $sql = "SELECT * FROM trades";

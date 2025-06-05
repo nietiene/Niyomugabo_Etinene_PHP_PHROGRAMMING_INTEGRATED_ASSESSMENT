@@ -127,9 +127,8 @@
                     Save Marks
                 </button>
                 <a
-                    href="greetingUser.php"
-                    class="bg-red-600 text-white py-2 px-6 rounded-lg shadow-xl hover:bg-red-700 transition duration-200 flex items-center justify-center"
-                >
+                    href="listOfMarks.php"
+                    class="bg-red-600 text-white py-2 px-6 rounded-lg shadow-xl hover:bg-red-700 transition duration-200 flex items-center justify-center">
                     Back
                 </a>
             </div>

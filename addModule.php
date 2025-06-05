@@ -71,7 +71,7 @@ if (isset($_POST['addModule'])) {
                     class="bg-blue-500 py-2 px-5 text-white rounded-lg shadow-2xl hover:bg-blue-600 transition duration-200">
                     Save Module
                 </button>
-                <a href="greetingUser.php" 
+                <a href="listOfModule.php" 
                     class="bg-red-500 py-2 px-5 text-white rounded-lg shadow-2xl hover:bg-red-600 transition duration-200">
                     Back
                 </a>
