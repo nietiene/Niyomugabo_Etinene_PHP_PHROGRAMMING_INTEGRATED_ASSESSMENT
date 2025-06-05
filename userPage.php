@@ -12,7 +12,6 @@
     <header>
          <?php include("userDashboard.php"); ?>
     </header>
-
   <form action="" method="post">
     <h1>Welcome <?php echo $_SESSION['Firstname'];?> in GIKONKO TSS Trainee managment system</h1>
   </form>

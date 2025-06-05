@@ -7,7 +7,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DOS Dashboard</title>
+  <title>Student Dashboard</title>
   <link href="output.css" rel="stylesheet">
   <link rel="icon" type="/png" href="gikonko.png" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -31,7 +31,7 @@
       </ul>
 
       <div class="flex justify-end">
-        <a href="logout.php" class="text-white rounded-lg hover:bg-red-700 bg-red-500 py-1 px-4 transition duration-200">← Logout</a>
+        <a href="userLogout.php" class="text-white rounded-lg hover:bg-red-700 bg-red-500 py-1 px-4 transition duration-200">← Logout</a>
       </div>
     </nav>
   </div>

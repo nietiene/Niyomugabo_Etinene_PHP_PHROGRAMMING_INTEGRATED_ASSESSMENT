@@ -30,9 +30,9 @@
 
             <div class="flex justify-between items-center mb-6">
                 <h1 class="text-2xl text-green-700 font-semibold w-full">List Of Modules</h1>
-                <div class="space-x-4 flex justify-between w-full">
+                <div class="space-x-3 flex justify-between w-full">
                     <a href="addModule.php" class="bg-green-500 py-2 px-4 text-white rounded-lg shadow-lg hover:bg-green-700 transition duration-200 ms-[55%]">Add New Module</a>
-                    <a href="greetingUser.php" class="bg-red-500 py-2 px-4 text-white rounded-lg shadow-lg hover:bg-red-700 transition duration-200">← Back</a>
+                    <a href="greetingUser.php" class="bg-red-500 py-2 px-4 text-white rounded-lg shadow-lg hover:bg-red-700 transition duration-200">Back</a>
                 </div>
             </div>
 
