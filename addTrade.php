@@ -41,8 +41,8 @@ if (isset($_POST['add'])) {
     </header>
 
     <!-- Content pushed below nav -->
-    <main class="flex justify-center items-start pt-20 px-4 min-h-screen">
-        <form method="post" class="bg-blue-700 w-full max-w-sm rounded-lg px-4 py-6 shadow-2xl">
+    <main class="flex-grow flex justify-center items-center p-9">
+        <form method="post" class="bg-blue-700 p-6 max-w-md w-full rounded-lg shadow-2xl">
             <h1 class="text-2xl text-green-500 font-semibold mb-6 text-center underline">Add New Trade</h1>
 
             <label class="block text-green-500 font-semibold text-lg mb-2">Trade Name:</label>

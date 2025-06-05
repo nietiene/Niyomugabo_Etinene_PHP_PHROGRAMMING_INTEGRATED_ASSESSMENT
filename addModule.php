@@ -44,8 +44,8 @@ if (isset($_POST['addModule'])) {
     </header>
 
     <!-- Main content with top padding to avoid nav overlap -->
-    <main class="flex justify-center items-start pt-20 px-4 min-h-screen">
-        <form action="" method="post" class="bg-green-500 p-6 max-w-md w-[35%] rounded-lg shadow-2xl">
+    <main class="flex-grow flex justify-center items-center p-9">
+        <form action="" method="post" class="bg-green-500 p-6 max-w-md w-full rounded-lg shadow-2xl">
             <h1 class="text-lg text-center text-blue-500 underline mb-4">Add Module</h1>
 
             <label class="block text-lg text-blue-500 mb-1">Module Name:</label>

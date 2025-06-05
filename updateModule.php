@@ -65,7 +65,7 @@ if (isset($_POST['save'])) {
     </div>
 
     <!-- Main content: form centered -->
-    <main lass="flex-grow flex justify-center items-center p-9">
+    <main class="flex-grow flex justify-center items-center p-9">
         <form action="" method="post" class="bg-green-500 p-6 max-w-md w-full rounded-lg shadow-2xl">
             <h1 class="text-lg text-center text-blue-600 font-bold underline mb-4">Update Module <?php echo $Module['Module_Name']; ?></h1>
 

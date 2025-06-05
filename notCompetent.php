@@ -1,67 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Not Competent List</title>
-        <link href="output.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Not Competent List</title>
+  <link href="output.css" rel="stylesheet">
 </head>
-<body  class="min-h-screen bg-green-100 flex justify-center items-center">
-     <?php include("Dashboard.php"); ?>
-    <div class="bg-blue-400 p-8 rounded-lg shadow-2xl">
-    <div class="flex justify-between mb-6">
-          <h1 class="text-xl font-bold text-green-700 underline">Not Yet Competent Trainees List </h1>
-          <a href="dashboard.php" class="bg-red-500 px-7 py-2 text-white rounded-lg hover:bg-red-300 transition duration-400">Back</a>
-    </div>
-    <div class="overflow-x-auto">
-    <table border="2" class="min-w-full border border-blue-600 rounded-lg text-sm">
-        <thead class="bg-green-500 text-blue-700 font-semibold">
+<body class="min-h-screen bg-green-100 flex flex-col">
+
+  <!-- Header -->
+  <header class="w-full fixed top-0 left-0 z-50 shadow-md bg-white">
+    <?php include("Dashboard.php"); ?>
+  </header>
+
+  <!-- Main content -->
+  <main class="flex-grow pt-20 px-4 flex p-9">
+    <div class="bg-blue-300 p-8 px-10 py-10 shadow-2xl rounded-md w-full max-w-7xl mx-auto">
+
+      <!-- Title and back button -->
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-2xl font-bold text-red-500 underline">Not Yet Competent Trainees List</h1>
+        <a href="dashboard.php" class="bg-red-500 px-6 py-2 text-white rounded-lg hover:bg-red-700 transition duration-300">Back</a>
+      </div>
+
+      <!-- Table -->
+      <div class="overflow-x-auto rounded-md">
+        <table class="min-w-full border border-blue-600 rounded-lg text-sm">
+          <thead class="bg-green-500 text-blue-800 font-semibold">
             <tr>
-                <th class="px-7 py-2 border-b border-blue-500">Trainee Code</th>
-                <th class="px-7 py-2 border-b border-blue-500">Trainee Name</th>
-                <th class="px-7 py-2 border-b border-blue-500">Module Code</th>
-                <th class="px-7 py-2 border-b border-blue-500">Module Name</th>
-                <th class="px-7 py-2 border-b border-blue-500">Decision</th>
+              <th class="px-4 py-3 border-b border-blue-500">Trainee Code</th>
+              <th class="px-4 py-3 border-b border-blue-500">Trainee Name</th>
+              <th class="px-4 py-3 border-b border-blue-500">Module Code</th>
+              <th class="px-4 py-3 border-b border-blue-500">Module Name</th>
+              <th class="px-4 py-3 border-b border-blue-500">Decision</th>
             </tr>
-        </thead>
-        <tbody class="font-semibold text-green-700">
+          </thead>
+          <tbody class="font-medium text-blue-300 bg-blue-500 text-center">
             <?php
-                 include("conn.php");
-               
-                $sql = "SELECT m.Trainee_Id , 
-                         CONCAT(t.Firstname, ' ', t.lastname) AS Trainee_Name,
-                         m.Module_Id,
-                         md.Module_Name,
-                         m.decision,
-                         m.Total_Marks
-                         FROM marks m 
-                         JOIN Trainees t ON t.Trainee_Id = m.Trainee_Id
-                         JOIN modules md ON m.Module_Id = md.Module_Id
-                         HAVING m.Total_Marks < 70";
+              include("conn.php");
 
-                $query = mysqli_query($conn, $sql);
-                
-                if (mysqli_num_rows($query) > 0) {
-                    while($data = mysqli_fetch_assoc($query)) {
-                        echo 
-                        "
-                         <tr>
-                             <td class='px-7 py-2 border-b border-blue-500'>{$data['Trainee_Id']}</td>
-                             <td class='px-7 py-2 border-b border-blue-500'>{$data['Trainee_Name']}</td>
-                             <td class='px-7 py-2 border-b border-blue-500'>{$data['Module_Id']}</td>
-                             <td class='px-7 py-2 border-b border-blue-500'>{$data['Module_Name']}</td>
-                             <td class='px-7 py-2 border-b border-blue-500 text-red-500'>{$data['decision']}</td>
-                         </tr>
-                        ";
-                    }
-                } else {
-                      echo "<tr class='px-7 py-2 border-b border-blue-500 text-red-500'><td colspan='5'>No Record In table</td>";
+              $sql = "SELECT 
+                        m.Trainee_Id, 
+                        CONCAT(t.Firstname, ' ', t.Lastname) AS Trainee_Name,
+                        m.Module_Id,
+                        md.Module_Name,
+                        m.Decision,
+                        m.Total_Marks
+                      FROM marks m 
+                      JOIN Trainees t ON t.Trainee_Id = m.Trainee_Id
+                      JOIN modules md ON m.Module_Id = md.Module_Id
+                      HAVING m.Total_Marks < 70";
+
+              $query = mysqli_query($conn, $sql);
+
+              if (mysqli_num_rows($query) > 0) {
+                while ($data = mysqli_fetch_assoc($query)) {
+                  echo "
+                    <tr class='hover:bg-green-200'>
+                      <td class='px-9 py-3 border-b border-blue-500'>{$data['Trainee_Id']}</td>
+                      <td class='px-9 py-3 border-b border-blue-500'>{$data['Trainee_Name']}</td>
+                      <td class='px-9 py-3 border-b border-blue-500'>{$data['Module_Id']}</td>
+                      <td class='px-9 py-3 border-b border-blue-500'>{$data['Module_Name']}</td>
+                      <td class='px-9 py-3 border-b border-blue-500 text-red-500 font-semibold'>{$data['Decision']}</td>
+                    </tr>
+                  ";
                 }
-
+              } else {
+                echo "
+                  <tr>
+                    <td colspan='5' class='px-6 py-4 text-center text-red-500 font-semibold'>No Record in Table</td>
+                  </tr>
+                ";
+              }
             ?>
-        </tbody>
-    </table>
+          </tbody>
+        </table>
+      </div>
     </div>
-    </div>
+  </main>
 </body>
 </html>

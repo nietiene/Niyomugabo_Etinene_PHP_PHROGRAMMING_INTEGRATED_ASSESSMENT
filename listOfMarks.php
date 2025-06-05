@@ -22,7 +22,7 @@
   <?php include("Dashboard.php"); ?>
 </header>
 
-<main class="flex-grow pt-20 px-4 flex">
+<main class="flex-grow pt-20 px-4 flex p-9">
   <div class="bg-blue-300 p-8 px-10 py-10 shadow-2xl rounded-md w-full max-w-7xl mx-auto">
     
     <h1 class="text-2xl text-center text-green-600 font-semibold shadow-lg mb-4">List Of Marks</h1>
