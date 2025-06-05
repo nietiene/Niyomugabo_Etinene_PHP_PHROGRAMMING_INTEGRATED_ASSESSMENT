@@ -23,18 +23,40 @@
                  session_start();
                  include("conn.php");
 
-                 $Trainee_Id = $_SESSION['Trainee_id'];
-                 $sql = "SELECT t.Trainee_id,
-                         CONCAT(t.Firstname, ' ', t.lastname) AS Trainee Name,
+              if (isset($_GET['Trainee_Id'])) {  
+
+                 $Trainee_Id = $_GET['Trainee_id'];
+                 $sql = "SELECT t.Trainee_Id,
+                         CONCAT(t.Firstname, ' ', t.lastname) AS Trainee_Name,
                          m.Module_Id, md.Module_Name,
                          m.Formative_Assessment,
                          m.Summative_Assessment,
                          m.Total_Marks,
                          m.decision
-                         FROM trainees t  JOIN marks m ON t.Trainee_id = m.Trainee_Id
+                         FROM trainees t  
+                         JOIN marks m ON t.Trainee_Id = m.Trainee_Id
                          JOIN modules md ON m.Module_Id = md.Module_Id
                          WHERE t.Trainee_id = '$Trainee_Id'
                          ";
+                         $query = mysqli_query($conn, $sql);
+                  
+                  if (mysqli_num_rows($query)) {
+                    while($daat = mysqli_fetch_assoc($query)) {
+                        echo 
+                        "
+                          <tr>
+                             <td>{$data['Trainee_id']}</td>
+                             <td>{$data['Trainee_Name']}</td>
+                             <td>{$data['Module_Id']}</td>
+                             <td>{$data['Module_Name']}</td>
+                             <td>{$data['Formative_Assessment']}</td>
+                             <td>{$data['Total_Marks']}</td>
+                             <td>{$data['decision']}</td>
+                          </tr>
+                        ";
+                    }
+                  }
+            }
             ?>
         </tbody>
     </table>
