@@ -16,22 +16,21 @@
   <title>List Of Marks</title>
   <link href="output.css" rel="stylesheet" />
 </head>
-<body class="min-h-screen bg-green-100 flex flex-col">
+<body class="min-h-screen bg-green-100 flex flex-col ">
 
-<header class="w-full fixed top-0 left-0 z-50 shadow-md bg-white">
+<header class="w-full fixed top-0 left-0 z-50 shadow-md bg-white h-16 flex items-center px-4">
   <?php include("Dashboard.php"); ?>
 </header>
 
-<main class="flex-grow pt-20 px-4 flex p-9">
+<main class="flex-grow pt-24 px-4 flex p-9 justify-center items-center">
   <div class="bg-blue-300 p-8 px-10 py-10 shadow-2xl rounded-md w-full max-w-7xl mx-auto">
-    
     <div class="mb-6 flex justify-between space-x-6">
+      <h1 class="text-2xl text-center text-green-600 font-semibold">List Of Marks</h1>
       
-    <h1 class="text-2xl text-center text-green-600 font-semibold ">List Of Marks</h1>
-    <div class="flex justify-between">
-      <a href="addMarks.php" class="bg-green-500 py-2 px-5 text-white rounded-lg hover:bg-green-700 transition">Add Marks</a>
-      <a href="greetingUser.php" class="bg-red-500 py-2 px-5 text-white rounded-lg hover:bg-red-700 transition">Back</a>
-    </div>
+      <div class="flex justify-between space-x-4">
+        <a href="addMarks.php" class="bg-green-500 py-2 px-5 text-white rounded-lg hover:bg-green-700 transition">Add Marks</a>
+        <a href="greetingUser.php" class="bg-red-500 py-2 px-5 text-white rounded-lg hover:bg-red-700 transition">Back</a>
+      </div>
     </div>
 
     <div class="overflow-x-auto rounded-sm">
