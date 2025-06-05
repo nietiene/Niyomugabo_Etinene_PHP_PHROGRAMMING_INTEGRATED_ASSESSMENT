@@ -56,6 +56,9 @@
 
         <button name="login" class="bg-blue-400 w-[50%] py-3 text-white rounded-lg hover:bg-blue-500 shadow-2xl mb-6">Login</button>
 
+        <div class="flex">
+           <a href="loginStudent.php" class="text-blue-800 hover:underline transition duration-200">Login as Student</a>
+        </div>
         <?php if (!empty($error)): ?>
         <div class="bg-red-200 border border-red-500 text-red-700 px-4 py-1 rounded  text-center">
             <?php echo $error; ?>
