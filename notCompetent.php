@@ -17,14 +17,19 @@
   <main class="flex-grow pt-24 px-4 flex justify-center items-start">
     <div class="bg-blue-300 p-8 shadow-2xl rounded-md w-full max-w-7xl mx-auto">
 
-      <!-- Title and Back Button -->
+    
       <div class="flex justify-between items-center mb-6">
         <h1 class="text-2xl font-bold text-red-500 underline flex-grow text-center">Not Yet Competent Trainees List</h1>
         <a href="greetingUser.php" class="bg-red-500 px-6 py-2 text-white rounded-lg hover:bg-red-700 transition duration-300 ml-6">Back</a>
       </div>
 
-      <!-- Table -->
       <div class="overflow-x-auto rounded-md">
+            <div class="overflow-x-auto rounded-md">
+      <div class="flex justify-end mb-4">
+  <a href="download_not_competent.php" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-800 transition">
+    Download List
+  </a>
+</div>
         <table class="min-w-full border border-blue-600 rounded-lg text-sm">
           <thead class="bg-green-500 text-blue-800 font-semibold">
             <tr>
