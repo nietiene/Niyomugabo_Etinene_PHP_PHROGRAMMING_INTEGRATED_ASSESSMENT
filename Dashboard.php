@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-green-100 min-h-screen">
-  <div class="bg-blue-500 shadow-2xl fixed top-0 right-0 left-0 z-50 p-3">
+  <div class="bg-blue-500 shadow-2xl fixed top-0 right-0 left-0 z-50 ">
     <nav class="container mx-auto flex justify-between items-center py-4 px-6">
       
 <div class="flex items-center space-x-4">
