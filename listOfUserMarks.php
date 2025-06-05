@@ -26,7 +26,7 @@
 
 
   <main class="flex-grow pt-20 px-4 flex items-center justify-center">
-    <div class="bg-blue-500 shadow-2xl rounded-xl p-6 w-full max-w-6xl min-h-[50vh] flex flex-col justify-between">
+    <div class="bg-blue-500 shadow-2xl rounded-xl p-6 w-full max-w-6xl min-h-[40vh] flex flex-col justify-between">
 
       <div class="flex justify-between mb-6 items-center">
         <h1 class="font-semibold text-2xl text-green-700">Student Marks </h1>
