@@ -8,7 +8,7 @@
     <link href="output.css" rel="stylesheet">
 </head>
 <body class="bg-green-100 min-h-screen">
-    <div class="bg-blue-500 shadow-2xl fixed top-0 right-0 z-50">
+    <div class="bg-blue-500 shadow-2xl fixed top-0 right-0 z-50 p-3">
       <nav class="container mx-auto flex justify-between items-center py-4 px-6">
         <ul class="flex space-x-6 text-white font-semibold">
            <li><a href="listOfTrainee.php" class="hover:text-blue-800 hover:underline transition duration-200">List Of Trainee</a></li>
