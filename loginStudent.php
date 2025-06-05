@@ -16,7 +16,8 @@
         }
         if (mysqli_num_rows($query) > 0) {
             $data = mysqli_fetch_assoc($query);
-             $_SESSION['Firstname'] = $Firstname = $data['Firstname'];
+             $_SESSION['Firstname'] = $Firstname;
+             $_SESSION['Trainee_Id'] = $Trainee_id;
              header("Location:userPage.php");
              exit();
         } else {

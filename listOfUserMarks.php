@@ -6,7 +6,8 @@
     <title>Student's User</title>
 </head>
 <body>
-    <table>
+    <a href="logout.php">Logout</a>
+    <table border="2">
         <tr>
              <th>Trainee Code</th>
              <th>Trainee Name</th>
@@ -25,7 +26,7 @@
 
               if (isset($_GET['Trainee_Id'])) {  
 
-                 $Trainee_Id = $_GET['Trainee_id'];
+                 $Trainee_Id = $_GET['Trainee_Id'];
                  $sql = "SELECT t.Trainee_Id,
                          CONCAT(t.Firstname, ' ', t.lastname) AS Trainee_Name,
                          m.Module_Id, md.Module_Name,
@@ -41,15 +42,16 @@
                          $query = mysqli_query($conn, $sql);
                   
                   if (mysqli_num_rows($query)) {
-                    while($daat = mysqli_fetch_assoc($query)) {
+                    while($data = mysqli_fetch_assoc($query)) {
                         echo 
                         "
                           <tr>
-                             <td>{$data['Trainee_id']}</td>
+                             <td>{$data['Trainee_Id']}</td>
                              <td>{$data['Trainee_Name']}</td>
                              <td>{$data['Module_Id']}</td>
                              <td>{$data['Module_Name']}</td>
                              <td>{$data['Formative_Assessment']}</td>
+                             <td>{$data['Summative_Assessment']}</td>
                              <td>{$data['Total_Marks']}</td>
                              <td>{$data['decision']}</td>
                           </tr>
