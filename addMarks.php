@@ -58,12 +58,11 @@
 </head>
 <body class="min-h-screen bg-blue-300">
     
-    <!-- Sticky Navigation Bar -->
     <header class="sticky top-0 w-full bg-white shadow-lg z-10">
         <?php include("Dashboard.php"); ?>
     </header>
 
-    <main class="flex-grow flex justify-center items-center p-9"> <!-- Added pt-20 to push the form down below the sticky nav -->
+    <main class="flex-grow flex justify-center items-center p-9"> 
         <form method="post" class="max-w-md w-full space-y-5 bg-green-400 p-9 rounded-lg shadow-2xl">
             <h1 class="text-lg text-center underline text-blue-700 font-bold mb-6">Add Marks</h1>
             <label class="text-md text-blue-700 font-bold block">Trainee Code</label>
