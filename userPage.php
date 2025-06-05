@@ -12,7 +12,7 @@
 <body>
   <form action="" method="post">
     <h1>Welcome <?php echo $_SESSION['Firstname'];?></h1>
-    <a href="listOfUserMarks.php?Trainee_id=<?php $_SESSION['Trainee_Id']; ?>">View your Marks</a>
+           <a href="listOfUserMarks.php?Trainee_iId=<?php $_SESSION['Trainee_Id']; ?>">View your Marks</a>
   </form>
 </body>
 </html>
