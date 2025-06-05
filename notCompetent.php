@@ -1,26 +1,26 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Not Competent List</title>
-  <link href="output.css" rel="stylesheet">
+  <link href="output.css" rel="stylesheet" />
 </head>
 <body class="min-h-screen bg-green-100 flex flex-col">
 
-  <!-- Header -->
-  <header class="w-full fixed top-0 left-0 z-50 shadow-md bg-white">
+  <!-- Fixed Top Navbar -->
+  <header class="w-full fixed top-0 left-0 z-50 shadow-md bg-white h-16 flex items-center px-4">
     <?php include("Dashboard.php"); ?>
   </header>
 
-  <!-- Main content -->
-  <main class="flex-grow pt-20 px-4 flex p-9">
-    <div class="bg-blue-300 p-8 px-10 py-10 shadow-2xl rounded-md w-full max-w-7xl mx-auto">
+  <!-- Main Content Below Header -->
+  <main class="flex-grow pt-24 px-4 flex justify-center items-start">
+    <div class="bg-blue-300 p-8 shadow-2xl rounded-md w-full max-w-7xl mx-auto">
 
-      <!-- Title and back button -->
+      <!-- Title and Back Button -->
       <div class="flex justify-between items-center mb-6">
-        <h1 class="text-2xl font-bold text-red-500 underline">Not Yet Competent Trainees List</h1>
-        <a href="greetingUser.php" class="bg-red-500 px-6 py-2 text-white rounded-lg hover:bg-red-700 transition duration-300">Back</a>
+        <h1 class="text-2xl font-bold text-red-500 underline flex-grow text-center">Not Yet Competent Trainees List</h1>
+        <a href="greetingUser.php" class="bg-red-500 px-6 py-2 text-white rounded-lg hover:bg-red-700 transition duration-300 ml-6">Back</a>
       </div>
 
       <!-- Table -->
@@ -28,14 +28,14 @@
         <table class="min-w-full border border-blue-600 rounded-lg text-sm">
           <thead class="bg-green-500 text-blue-800 font-semibold">
             <tr>
-              <th class="px-4 py-3 border-b border-blue-500">Trainee Code</th>
-              <th class="px-4 py-3 border-b border-blue-500">Trainee Name</th>
-              <th class="px-4 py-3 border-b border-blue-500">Module Code</th>
-              <th class="px-4 py-3 border-b border-blue-500">Module Name</th>
-              <th class="px-4 py-3 border-b border-blue-500">Decision</th>
+              <th class="px-6 py-3 border-b border-blue-500">Trainee Code</th>
+              <th class="px-6 py-3 border-b border-blue-500">Trainee Name</th>
+              <th class="px-6 py-3 border-b border-blue-500">Module Code</th>
+              <th class="px-6 py-3 border-b border-blue-500">Module Name</th>
+              <th class="px-6 py-3 border-b border-blue-500">Decision</th>
             </tr>
           </thead>
-          <tbody class="font-medium text-blue-300 bg-blue-500 text-center">
+          <tbody class="font-medium text-blue-900 bg-blue-100 text-center">
             <?php
               include("conn.php");
 
@@ -57,11 +57,11 @@
                 while ($data = mysqli_fetch_assoc($query)) {
                   echo "
                     <tr class='hover:bg-green-200'>
-                      <td class='px-9 py-3 border-b border-blue-500'>{$data['Trainee_Id']}</td>
-                      <td class='px-9 py-3 border-b border-blue-500'>{$data['Trainee_Name']}</td>
-                      <td class='px-9 py-3 border-b border-blue-500'>{$data['Module_Id']}</td>
-                      <td class='px-9 py-3 border-b border-blue-500'>{$data['Module_Name']}</td>
-                      <td class='px-9 py-3 border-b border-blue-500 text-red-500 font-semibold'>{$data['Decision']}</td>
+                      <td class='px-6 py-3 border-b border-blue-500'>{$data['Trainee_Id']}</td>
+                      <td class='px-6 py-3 border-b border-blue-500'>{$data['Trainee_Name']}</td>
+                      <td class='px-6 py-3 border-b border-blue-500'>{$data['Module_Id']}</td>
+                      <td class='px-6 py-3 border-b border-blue-500'>{$data['Module_Name']}</td>
+                      <td class='px-6 py-3 border-b border-blue-500 text-red-500 font-semibold'>{$data['Decision']}</td>
                     </tr>
                   ";
                 }
@@ -78,5 +78,6 @@
       </div>
     </div>
   </main>
+
 </body>
 </html>

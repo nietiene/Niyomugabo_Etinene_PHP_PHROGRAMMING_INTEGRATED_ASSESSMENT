@@ -12,24 +12,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Competent List</title>
   <link href="output.css" rel="stylesheet" />
 </head>
 <body class="min-h-screen bg-green-100 flex flex-col">
 
 <!-- Fixed Top Navbar -->
-<header class="w-full fixed top-0 left-0 z-50 shadow-md bg-white">
+<header class="w-full fixed top-0 left-0 z-50 shadow-md bg-white h-16 flex items-center px-4">
   <?php include("Dashboard.php"); ?>
 </header>
 
 <!-- Main Content Below Header -->
-<main class="flex-grow pt-20 px-4 flex p-9">
-  <div class="bg-blue-400 p-8 px-10 py-10 shadow-2xl rounded-md w-full max-w-6xl mx-auto">
-
+<main class="flex-grow pt-24 px-4 flex justify-center items-start">
+  <div class="bg-blue-300 p-8 shadow-2xl rounded-md w-full max-w-7xl mx-auto">
     <div class="flex justify-between items-center mb-6">
-      <h1 class="text-2xl font-bold text-green-700 underline">Competent Trainees List</h1>
-      <a href="greetingUser.php" class="bg-red-500 px-6 py-2 text-white rounded-lg hover:bg-red-600 transition duration-300">Back</a>
+      <h1 class="text-2xl font-semibold text-green-700 underline text-center flex-grow">Competent Trainees List</h1>
+      <a href="greetingUser.php" class="bg-red-500 px-6 py-2 text-white rounded-lg hover:bg-red-700 transition duration-300 ml-6">Back</a>
     </div>
 
     <div class="overflow-x-auto rounded-md">

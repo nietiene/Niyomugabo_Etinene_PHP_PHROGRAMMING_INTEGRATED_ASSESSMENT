@@ -22,7 +22,7 @@
   <?php include("Dashboard.php"); ?>
 </header>
 
-<main class="flex-grow pt-24 px-4 flex p-9 justify-center items-center">
+<main class="flex-grow pt-24 px-4 flex justify-center">
   <div class="bg-blue-300 p-8 px-10 py-10 shadow-2xl rounded-md w-full max-w-7xl mx-auto">
     <div class="mb-6 flex justify-between space-x-6">
       <h1 class="text-2xl text-center text-green-600 font-semibold">List Of Marks</h1>
@@ -37,15 +37,15 @@
       <table class="border border-blue-600 text-sm w-full">
         <thead>
           <tr class="bg-green-500 text-blue-800">
-            <th class="px-6 py-3 border-b border-blue-500">Mark Code</th>
-            <th class="px-6 py-3 border-b border-blue-500">Trainee Code</th>
-            <th class="px-6 py-3 border-b border-blue-500">Trainee Name</th>
-            <th class="px-6 py-3 border-b border-blue-500">Module Code</th>
-            <th class="px-6 py-3 border-b border-blue-500">Module Name</th>
-            <th class="px-6 py-3 border-b border-blue-500">Formative /50</th>
-            <th class="px-6 py-3 border-b border-blue-500">Summative /50</th>
-            <th class="px-6 py-3 border-b border-blue-500">Total /100</th>
-            <th class="px-6 py-3 border-b border-blue-500">Decision</th>
+            <th class="px-2 py-2 border-b border-blue-500">Mark Code</th>
+            <th class="px-2 py-2 border-b border-blue-500">Trainee Code</th>
+            <th class="px-2 py-2 border-b border-blue-500">Trainee Name</th>
+            <th class="px-2 py-2 border-b border-blue-500">Module Code</th>
+            <th class="px-2 py-2 border-b border-blue-500">Module Name</th>
+            <th class="px-2 py-2 border-b border-blue-500">Formative /50</th>
+            <th class="px-2 py-2 border-b border-blue-500">Summative /50</th>
+            <th class="px-2 py-2 border-b border-blue-500">Total /100</th>
+            <th class="px-2 py-2 border-b border-blue-500">Decision</th>
             <th colspan="2" class="px-6 py-3 border-b border-blue-500">Modification</th>
           </tr>
         </thead>
@@ -71,18 +71,18 @@
           if (mysqli_num_rows($query) > 0) {
               while ($data = mysqli_fetch_assoc($query)) {
                   echo "
-                  <tr class='text-blue-900 hover:bg-green-400'>
-                    <td class='px-6 py-3 border-b border-blue-500'>{$data['Mark_Id']}</td>
-                    <td class='px-6 py-3 border-b border-blue-500'>{$data['Trainee_Id']}</td>
-                    <td class='px-6 py-3 border-b border-blue-500'>{$data['Trainee_Name']}</td>
-                    <td class='px-6 py-3 border-b border-blue-500'>{$data['Module_Id']}</td>
-                    <td class='px-6 py-3 border-b border-blue-500'>{$data['Module_Name']}</td>
-                    <td class='px-6 py-3 border-b border-blue-500'>{$data['Formative_Assessment']}</td>
-                    <td class='px-6 py-3 border-b border-blue-500'>{$data['Summative_Assessment']}</td>
-                    <td class='px-6 py-3 border-b border-blue-500'>{$data['Total_Marks']}</td>
-                    <td class='px-6 py-3 border-b border-blue-500'>{$data['Decision']}</td>
-                    <td class='px-6 py-3 border-b border-blue-500 hover:underline'><a href='updateMarks.php?Mark_Id={$data['Mark_Id']}'>Update</a></td>
-                    <td class='px-6 py-3 border-b border-blue-500 text-red-500 hover:underline'><a href='deleteMarks.php?Mark_Id={$data['Mark_Id']}'>Delete</a></td>
+                  <tr class='text-blue-900 hover:bg-green-400 font-bold'>
+                    <td class='px-3 py-2 border-b border-e border-blue-500'>{$data['Mark_Id']}</td>
+                    <td class='px-3 py-2 border-b border-e border-blue-500'>{$data['Trainee_Id']}</td>
+                    <td class='px-3 py-2 border-b border-e border-blue-500'>{$data['Trainee_Name']}</td>
+                    <td class='px-3 py-2 border-b border-e border-blue-500'>{$data['Module_Id']}</td>
+                    <td class='px-3 py-2 border-b border-e border-blue-500'>{$data['Module_Name']}</td>
+                    <td class='px-3 py-2 border-b border-e border-blue-500'>{$data['Formative_Assessment']}</td>
+                    <td class='px-3 py-2 border-b border-e border-blue-500'>{$data['Summative_Assessment']}</td>
+                    <td class='px-3 py-2 border-b border-e border-blue-500'>{$data['Total_Marks']}</td>
+                    <td class='px-3 py-2 border-b border-e border-blue-500'>{$data['Decision']}</td>
+                    <td class='px-3 py-2 border-b border-e border-blue-500 hover:underline'><a href='updateMarks.php?Mark_Id={$data['Mark_Id']}'>Update</a></td>
+                    <td class='px-3 py-2 border-b border-e border-blue-500 text-red-500 hover:underline'><a href='deleteMarks.php?Mark_Id={$data['Mark_Id']}'>Delete</a></td>
                   </tr>
                   ";
               }
