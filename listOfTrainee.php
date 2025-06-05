@@ -7,7 +7,6 @@
        header("Location:login.php");
        exit();
    }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,24 +18,24 @@
 </head>
 <body class="bg-green-100 min-h-screen flex flex-col">
 
-    <!-- Keep Dashboard.php as fixed top navbar -->
+
     <header class="w-full fixed top-0 left-0 z-50 shadow-md bg-white">
         <?php include("Dashboard.php"); ?>
     </header>
 
-    <!-- Add padding top to push content below fixed navbar -->
-    <main class="flex-grow pt-20 px-4 flex justify-center p-9">
-        <div class="bg-blue-200 shadow-2xl rounded-xl p-6 w-full max-w-6xl">
+
+    <main class="flex-grow pt-20 px-4 flex items-center justify-center">
+        <div class="bg-blue-200 shadow-2xl rounded-xl p-6 w-full max-w-6xl min-h-[60vh] flex flex-col justify-between">
 
             <div class="flex justify-between mb-6 items-center">
                 <h1 class="font-semibold text-2xl text-green-700 mb-6">List Of Trainees</h1>
                 <div class="space-x-4">
                     <a href="addTrainee.php" class="bg-green-400 py-3 px-5 rounded-lg shadow-lg text-white hover:bg-green-600 transition duration-200">Add Trainee</a>
-                    <a href="greetingUser.php.php" class="bg-red-400 py-3 px-5 rounded-lg shadow-lg text-white hover:bg-red-600 transition duration-200">Back</a>
+                    <a href="greetingUser.php" class="bg-red-400 py-3 px-5 rounded-lg shadow-lg text-white hover:bg-red-600 transition duration-200">Back</a>
                 </div>
             </div>
 
-            <div class="overflow-x-auto rounded-lg">
+            <div class="overflow-x-auto rounded-lg flex-grow">
                 <table border="2" cellspacing="2" cellpadding="7" class="min-w-full text-sm border border-blue-500 shadow-lg">
                     <tr class="bg-blue-500 text-green-400">
                         <th class="px-4 py-2">Trainee Code</th>

@@ -11,10 +11,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>List Of Marks</title>
-  <link href="output.css" rel="stylesheet">
+  <link href="output.css" rel="stylesheet" />
 </head>
 <body class="min-h-screen bg-green-100 flex flex-col">
 
@@ -25,28 +25,32 @@
 <main class="flex-grow pt-20 px-4 flex p-9">
   <div class="bg-blue-300 p-8 px-10 py-10 shadow-2xl rounded-md w-full max-w-7xl mx-auto">
     
-    <h1 class="text-2xl text-center text-green-600 font-semibold shadow-lg mb-4">List Of Marks</h1>
-    
-    <div class="flex justify-between mb-6">
-      <a href="addMarks.php" class="bg-green-500 py-2 px-5 text-white rounded-lg hover:bg-green-700">Add Marks</a>
-      <a href="greetingUser.php" class="bg-red-500 py-2 px-5 text-white rounded-lg hover:bg-red-700">Back</a>
+    <div class="mb-6 flex justify-between space-x-6">
+      
+    <h1 class="text-2xl text-center text-green-600 font-semibold ">List Of Marks</h1>
+    <div class="flex justify-between">
+      <a href="addMarks.php" class="bg-green-500 py-2 px-5 text-white rounded-lg hover:bg-green-700 transition">Add Marks</a>
+      <a href="greetingUser.php" class="bg-red-500 py-2 px-5 text-white rounded-lg hover:bg-red-700 transition">Back</a>
+    </div>
     </div>
 
     <div class="overflow-x-auto rounded-sm">
       <table class="border border-blue-600 text-sm w-full">
-        <tr class="bg-green-500 text-blue-800">
-          <th class="px-6 py-3 border-b border-blue-500">Mark Code</th>
-          <th class="px-6 py-3 border-b border-blue-500">Trainee Code</th>
-          <th class="px-6 py-3 border-b border-blue-500">Trainee Name</th>
-          <th class="px-6 py-3 border-b border-blue-500">Module Code</th>
-          <th class="px-6 py-3 border-b border-blue-500">Module Name</th>
-          <th class="px-6 py-3 border-b border-blue-500">Formative /50</th>
-          <th class="px-6 py-3 border-b border-blue-500">Summative /50</th>
-          <th class="px-6 py-3 border-b border-blue-500">Total /100</th>
-          <th class="px-6 py-3 border-b border-blue-500">Decision</th>
-          <th colspan="2" class="px-6 py-3 border-b border-blue-500">Modification</th>
-        </tr>
-
+        <thead>
+          <tr class="bg-green-500 text-blue-800">
+            <th class="px-6 py-3 border-b border-blue-500">Mark Code</th>
+            <th class="px-6 py-3 border-b border-blue-500">Trainee Code</th>
+            <th class="px-6 py-3 border-b border-blue-500">Trainee Name</th>
+            <th class="px-6 py-3 border-b border-blue-500">Module Code</th>
+            <th class="px-6 py-3 border-b border-blue-500">Module Name</th>
+            <th class="px-6 py-3 border-b border-blue-500">Formative /50</th>
+            <th class="px-6 py-3 border-b border-blue-500">Summative /50</th>
+            <th class="px-6 py-3 border-b border-blue-500">Total /100</th>
+            <th class="px-6 py-3 border-b border-blue-500">Decision</th>
+            <th colspan="2" class="px-6 py-3 border-b border-blue-500">Modification</th>
+          </tr>
+        </thead>
+        <tbody>
         <?php
           $sql = "SELECT 
                       m.Mark_Id, 
@@ -87,6 +91,7 @@
               echo "<tr><td colspan='11' class='text-center py-4 text-red-600 font-semibold'>No data found!</td></tr>";
           }
         ?>
+        </tbody>
       </table>
     </div>
   </div>
