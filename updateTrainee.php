@@ -66,43 +66,44 @@ if (isset($_POST['update'])) {
 <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <title>Update <?php echo htmlspecialchars($trainee['Firstname']); ?></title>
+   <title>Update <?php echo $trainee['Firstname']; ?></title>
    <link href="output.css" rel="stylesheet" />
 </head>
-<body class="min-h-screen bg-green-100 flex flex-col">
 
-   <!-- Fixed Nav at top -->
-   <div class="w-full">
+<body class="min-h-screen bg-green-100">
+
+
+   <div class="w-full fixed top-0 left-0 z-10">
       <?php include("Dashboard.php"); ?>
    </div>
 
-   <!-- Form centered below nav -->
-   <main class="flex-grow flex justify-center items-center p-6">
+
+   <main class="flex justify-center items-center min-h-screen pt-32">
       <form action="" method="post" class="bg-blue-700 p-8 max-w-lg w-full rounded-lg shadow-2xl">
-         <h1 class="text-center text-green-500 text-xl underline mb-6">Update <?php echo htmlspecialchars($trainee['Firstname']); ?></h1>
+         <h1 class="text-center text-green-500 text-xl underline mb-6">Update <?php echo $trainee['Firstname']; ?></h1>
 
          <label class="text-lg text-green-500 font-semibold">Trainee Code</label>
-         <input type="text" name="Trainee_Id" value="<?php echo htmlspecialchars($trainee['Trainee_Id']); ?>" readonly
+         <input type="text" name="Trainee_Id" value="<?php echo $trainee['Trainee_Id']; ?>" readonly
             class="w-[75%] px-3 py-2 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6" /> <br>
 
          <label class="text-lg text-green-500 font-semibold">First Name</label>
-         <input type="text" name="Firstname" value="<?php echo htmlspecialchars($trainee['Firstname']); ?>"
+         <input type="text" name="Firstname" value="<?php echo $trainee['Firstname']; ?>"
             class="w-[74.7%] py-2 px-3 ms-5 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6" /> <br>
 
          <label class="text-lg text-green-500 font-semibold">Last Name</label>
-         <input type="text" name="lastname" value="<?php echo htmlspecialchars($trainee['lastname']); ?>"
+         <input type="text" name="lastname" value="<?php echo $trainee['lastname']; ?>"
             class="w-[75%] py-2 px-3 bg-blue-200 ms-5 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6" /> <br>
 
          <label class="text-lg text-green-500 font-semibold">Gender</label>
-         <input type="text" name="Gender" value="<?php echo htmlspecialchars($trainee['Gender']); ?>"
+         <input type="text" name="Gender" value="<?php echo $trainee['Gender']; ?>"
             class="w-[75%] py-2 px-3 bg-blue-200 ms-[10%] rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6" /> <br>
 
          <label class="text-lg text-green-500 font-semibold">Trade Code</label>
-         <input type="text" name="Trade_Id" value="<?php echo htmlspecialchars($trainee['Trade_Id']); ?>"
+         <input type="text" name="Trade_Id" value="<?php echo $trainee['Trade_Id']; ?>"
             class="w-[75%] py-2 px-3 ms-3 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6" /> <br>
 
          <label class="text-lg text-green-500 font-semibold">Trade Name</label>
-         <input type="text" name="Trade_Name" value="<?php echo htmlspecialchars($trainee['Trade_Name']); ?>" readonly
+         <input type="text" name="Trade_Name" value="<?php echo $trainee['Trade_Name']; ?>" readonly
             class="w-[75%] py-2 ms-2 px-3 bg-blue-200 rounded-lg focus:outline-none text-blue-500 focus:ring-2 mb-6" /> <br>
 
          <div class="flex justify-between mb-6">
@@ -117,6 +118,6 @@ if (isset($_POST['update'])) {
          <?php endif; ?>
       </form>
    </main>
-   
+
 </body>
 </html>

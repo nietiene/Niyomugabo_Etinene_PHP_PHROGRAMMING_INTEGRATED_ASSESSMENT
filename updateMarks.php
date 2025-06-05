@@ -70,7 +70,7 @@
   </div>
 
   <!-- Main content: form centered vertically and horizontally -->
-  <main lass="flex-grow flex justify-center items-center p-9">
+  <main class="flex-grow flex justify-center items-center p-9">
     <form method="post" class="max-w-md w-full bg-green-400 p-9 rounded-lg shadow-2xl">
       
         <label class="text-md text-blue-700 font-bold block">Mark Code</label>
