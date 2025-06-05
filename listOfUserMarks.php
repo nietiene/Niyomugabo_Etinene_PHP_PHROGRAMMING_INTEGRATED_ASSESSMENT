@@ -35,9 +35,9 @@
 
       <div class="overflow-x-auto rounded-lg flex-grow">
         <table class="min-w-full text-sm border border-blue-500 shadow-lg">
-          <thead class="bg-blue-500 text-white text-center">
+          <thead class="bg-blue-700 text-green-400 text-center">
             <tr>
-              <th class="px-4 py-3">Trainee Code</th>
+              <th class="px-4 py-3 ">Trainee Code</th>
               <th class="px-4 py-3 ">Trainee Name</th>
               <th class="px-4 py-3 ">Module Code</th>
               <th class="px-4 py-3 ">Module Name</th>
@@ -47,7 +47,7 @@
               <th class="px-4 py-3 ">Decision</th>
             </tr>
           </thead>
-          <tbody class="bg-blue-500 text-center font-semibold text-green-300">
+          <tbody class="bg-green-500 text-center font-semibold text-blue-900">
             <?php
               if (isset($_GET['Trainee_Id'])) {
                 $Trainee_Id = $_GET['Trainee_Id'];
@@ -67,7 +67,7 @@
                 if (mysqli_num_rows($query)) {
                   while($data = mysqli_fetch_assoc($query)) {
                     echo "
-                      <tr class='hover:bg-green-300 hover:text-blue-900 transition duration-150'>
+                      <tr class='hover:bg-green-400 hover:text-blue-800 transition duration-150'>
                         <td class='px-4 py-2 border-blue-700 border-b'>{$data['Trainee_Id']}</td>
                         <td class='px-4 py-2 border-blue-700 border-b'>{$data['Trainee_Name']}</td>
                         <td class='px-4 py-2 border-blue-700 border-b'>{$data['Module_Id']}</td>
