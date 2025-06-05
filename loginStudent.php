@@ -7,12 +7,12 @@
         $Firstname = $_POST['Firstname'];
         $lastname = $_POST['lastname'];
 
-        $sql = "SELECT * FROM trainees WHERE Trainee_Id = '$Trainee_id', Firstname = '$Firstname', lastname = '$lastname'";
+        $sql = "SELECT * FROM trainees WHERE Trainee_Id = '$Trainee_id'AND Firstname = '$Firstname'AND lastname = '$lastname'";
         $query = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($query) > 0) {
-            $Firstname = $_SESSION['Firstname'];
-            header("userPage.php");
+             $_SESSION['Firstname'] = $Firstname;
+             header("userPage.php");
         } else {
             echo "Invalid data";
         }

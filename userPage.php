@@ -6,6 +6,8 @@
     <title>User Page</title>
 </head>
 <body>
-
+  <form action="" method="post">
+    <h1>Welcom <?php echo $_SESSION['Firstname'];?></h1>
+  </form>
 </body>
 </html>
