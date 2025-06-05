@@ -108,7 +108,7 @@ if (isset($_POST['update'])) {
 
          <div class="flex justify-between mb-6">
             <button name="update" class="px-8 py-2 bg-green-500 rounded-lg text-white font-semibold hover:bg-green-600 shadow-lg">Save Changes</button>
-            <a href="greetingUser.php" class="px-8 me-2 py-2 bg-red-500 rounded-lg text-white font-semibold hover:bg-red-600 shadow-lg">Back</a>
+            <a href="listOfTrainee.php" class="px-8 me-2 py-2 bg-red-500 rounded-lg text-white font-semibold hover:bg-red-600 shadow-lg">Back</a>
          </div>
 
          <?php if (!empty($error)): ?>
