@@ -7,11 +7,14 @@ if (!isset($_SESSION['Usename'])) {
     exit();
 }
 
+// setting up headers
 header('Content-Type: text/csv');
 header('Content-Disposition: attachment; filename="not_competent_trainee.csv"');
 
+//open file in the stream
 $output = fopen("php://output", "w");
 
+// create column in the excel
 fputcsv($output, ['Trainee Code', 'Trainee Name', 'Module Code', 'Module Name', 'Decision']);
 
 $sql = "SELECT m.Trainee_Id, 
