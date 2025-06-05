@@ -1,3 +1,17 @@
+<?php
+    include("conn.php");
+
+    if (isset($_POST['login'])) {
+       
+        $Trainee_id = $_POST['Trainee_Id'];
+        $Firstname = $_POST['Firstname'];
+        $lastname = $_POST['lastname'];
+
+        $sql = "SELECT * FROM trainees WHERE Trainee_Id = '$Trainee_id', Firstname = '$Firstname', lastname = '$lastname'";
+        $query = mysqli_query($conn, $sql);
+        
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
