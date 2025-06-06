@@ -11,6 +11,8 @@
     $error = "";
     if (isset($_POST['addMarks'])) {
 
+        $sqlMarks = "SELECT * FROM marks";
+        $queryMarks = mysqli_query($conn, $sqlMarks);
         if (!empty($_POST['Trainee_Id']) && !empty($_POST['Module_Id']) && !empty($_POST['Formative_Assessment']) && !empty($_POST['Summative_Assessment'])) {
 
             $trainee_code = $_POST['Trainee_Id'];
@@ -70,9 +72,24 @@
             <h1 class="text-xl font-bold text-blue-700 underline text-center">Add Marks</h1>
 
             <div>
-                <label for="Trainee_Id" class="block mb-1 font-semibold text-blue-700">Trainee Code</label>
-                <input  type="text"  id="Trainee_Id" name="Trainee_Id"
-                    class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-700 focus:ring-2 focus:ring-green-400 focus:outline-none" required/>
+                <label for="Trainee_Id" class="block mb-1 font-semibold text-blue-700">Trainee Name</label>
+                <select name="Trainee_Id_Select" id="Trainee_Id_Select" required
+                class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-700 focus:ring-2 focus:ring-green-400 focus:outline-none">
+                <option value="" disabled selected>Select Trainee</option>
+                    <?php
+                       $sql = "SELECT Trainee_id, CONCAT(Firstname, ' ', Lastname) AS Trainee_Name FROM trainees";
+                       $query = mysqli_query($conn, $sql);
+                       while ($data = mysqli_fetch_assoc($query)) {
+                              echo "<option value='" . $data['Trainee_id'] . "' data-id='" . $data['Trainee_id'] . "'>" . $data['Trainee_Name'] . "</option>";
+                       }
+                    ?>
+</select>
+
+            </div>
+            <div>
+                <label class="block mb-1 font-semibold text-blue-700">Trainee Code</label>
+               <input  type="text"  name="Trainee_Id"  id="Trainee_Id"
+                    class="w-full py-2  px-3 rounded-lg shadow-lg bg-green-200 text-green-700 focus:ring-2 focus:ring-green-400 focus:outline-none" readonly/>
             </div>
 
             <div>
@@ -114,6 +131,21 @@
             <?php endif; ?>
         </form>
     </main>
+<script>
+  
+  // this helps to fetch all data in select option, function runs every time user changed an option
+   document.getElementById('Trainee_Id_Select').addEventListener('change', function () {
+    
+   // helps to get options data and their index
+    const selectedOption = this.options[this.selectedIndex];
+    
+    // fetch Id from the trainee by using data-id
+    const traineeCode = selectedOption.getAttribute('data-id');
+    
+    // Store it in the traineeId which is the trainee Field
+    document.getElementById('Trainee_Id').value = traineeCode;
+});
+</script>
 
 </body>
 </html>
