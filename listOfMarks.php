@@ -24,7 +24,8 @@
 </header>
 
 <main class="flex-grow pt-24 px-4 flex justify-center">
-  <div class="bg-blue-300 p-8 px-10 py-10 shadow-2xl rounded-md w-full max-w-7xl mx-auto">
+  <div class="bg-blue-300 shadow-2xl rounded-xl p-8 w-full max-w-6xl min-h-[10vh] flex flex-col justify-between">
+
     <div class="mb-6 flex justify-between space-x-6">
       <h1 class="text-2xl text-center text-green-600 font-semibold">List Of Marks</h1>
       
@@ -34,7 +35,7 @@
       </div>
     </div>
 
-    <div class="overflow-x-auto rounded-sm">
+    <div class="overflow-x-auto rounded-sm mb-[20%]">
       <table class="border border-blue-600 text-sm w-full">
         <thead>
           <tr class="bg-green-500 text-blue-800">
