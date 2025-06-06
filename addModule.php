@@ -57,13 +57,13 @@ if (isset($_POST['addModule'])) {
 
     <main class="min-h-screen flex justify-center items-center p-9">
         <form action="" method="post" class="bg-green-500 p-6 max-w-md w-full rounded-lg shadow-2xl">
-            <h1 class="text-lg text-center text-blue-500 underline mb-4">Add Module</h1>
+            <h1 class="text-lg text-center text-blue-600 font-bold underline mb-4">Add Module</h1>
 
-            <label class="block text-lg text-blue-500 mb-1">Module Name:</label>
+            <label class="block text-lg text-blue-600 font-bold mb-1">Module Name:</label>
             <input type="text" name="Module_Name" 
                 class="w-full py-2 rounded-lg bg-green-200 text-green-500 focus:outline-green-300 mb-4" />
 
-            <label class="block text-lg text-blue-500 mb-1">Trade:</label>
+            <label class="block text-lg text-blue-600 font-bold mb-1">Trade:</label>
             <select name="Trade_Id" 
                 class="w-full py-2 rounded-lg bg-green-200 text-green-500 focus:outline-green-300 mb-6">
                 <option>Select Trade</option>
