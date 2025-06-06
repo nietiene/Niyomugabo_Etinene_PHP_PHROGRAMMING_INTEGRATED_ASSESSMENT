@@ -100,9 +100,9 @@ if (isset($_POST['add'])) {
         </form>
     </main>
  
- <footer class="bg-blue-500 text-center py-4 shadow-inner text-sm text-white fixed bottom-0 w-full">
-          &copy; <?php echo date("Y"); ?> GIKONKO TSS. All rights reserved.
-  </footer>
-</body>
+<footer style="position: fixed; bottom: 0; left: 0; width: 100vw;" class="bg-blue-500 text-center py-4 shadow-inner text-sm text-white">
+  &copy; <?php echo date("Y"); ?> GIKONKO TSS. All rights reserved.
+</footer>
 
+</body>
 </html>
