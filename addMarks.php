@@ -13,8 +13,11 @@
 
         $sqlMarks = "SELECT * FROM marks";
         $queryMarks = mysqli_query($conn, $sqlMarks);
+        $MarksList = mysqli_fetch_assoc($queryMarks);
+
         if (!empty($_POST['Trainee_Id']) && !empty($_POST['Module_Id']) && !empty($_POST['Formative_Assessment']) && !empty($_POST['Summative_Assessment'])) {
 
+         if ($_POST['Module_Id'] === $MarksList['Module_Id'] && $_POST['Trainee_Id'] === $MarksList['Trainee_Id']) {   
             $trainee_code = $_POST['Trainee_Id'];
             $module_code = $_POST['Module_Id'];
             $Formative = $_POST['Formative_Assessment'];
@@ -45,7 +48,10 @@
             } else {
                 $error = "Code of trainee not found";
             }
-        } else {
+        }  else {
+            $error = "Marks Of this student already exist you can update instead";
+        }
+        }else {
             $error = "Please fill out all the fields!";
         }
     }
@@ -60,14 +66,14 @@
     <link href="output.css" rel="stylesheet" />
     <link rel="icon" type="/png" href="gikonko.png" />
 </head>
-<body class="min-h-screen bg-blue-300 flex flex-col">
+<body class="min-h-screen bg-blue-300 justify-center items-center">
 
 
     <header class="sticky top-0 w-full bg-white shadow-lg z-10">
         <?php include("Dashboard.php"); ?>
     </header>
 
-    <main class="flex-grow flex justify-center items-center p-9">
+    <main class="w-full flex justify-center items-center p-9">
         <form method="post" class="max-w-md w-full space-y-6 bg-green-400 p-9 rounded-lg shadow-2xl">
             <h1 class="text-xl font-bold text-blue-700 underline text-center">Add Marks</h1>
 

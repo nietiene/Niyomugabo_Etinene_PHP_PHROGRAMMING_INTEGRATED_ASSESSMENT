@@ -9,7 +9,15 @@
    }   
    if (isset($_GET['Mark_Id'])) {
        $Mark_Id = $_GET['Mark_Id'];
-       $sql = "SELECT * FROM marks WHERE Mark_Id = '$Mark_Id'";
+
+       $sql = "SELECT m.Mark_Id,
+                m.Trainee_Id, 
+                m.Module_Id,
+                m.Formative_Assessment,
+                m.Summative_Assessment,
+                m.Total_Marks,
+                m.decision, md.Module_Name FROM marks m 
+               JOIN modules md ON m.Module_Id = md.Module_Id  WHERE Mark_Id = '$Mark_Id'";
        $result = mysqli_query($conn, $sql);
      
        if (mysqli_num_rows($result) > 0 ) {
@@ -72,18 +80,34 @@
   <main class="flex-grow flex justify-center items-center p-9">
     <form method="post" class="max-w-md w-full bg-green-400 p-9 rounded-lg shadow-2xl">
       
-        <label class="text-md text-blue-700 font-bold block">Mark Code</label>
-        <input type="text" name="Mark_Id" value="<?php echo $data['Mark_Id']; ?>"
-         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400" readonly> <br>
-
+           <label for="Trainee_Id" class="block mb-1 font-semibold text-blue-700">Trainee Name</label>
+           <select name="Trainee_Id_Select" id="Trainee_Id_Select" required
+                class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-700 focus:ring-2 focus:ring-green-400 focus:outline-none">
+                <option value="" disabled selected>Select Trainee</option>
+                    <?php
+                       $sql = "SELECT Trainee_id, CONCAT(Firstname, ' ', Lastname) AS Trainee_Name FROM trainees";
+                       $query = mysqli_query($conn, $sql);
+                       while ($data1 = mysqli_fetch_assoc($query)) {
+                              echo "<option value='" . $data1['Trainee_id'] . "' data-id='" . $data1['Trainee_id'] . "'>" . $data1['Trainee_Name'] . "</option>";
+                       }
+                    ?>
+   </select>
         <label class="text-md text-blue-700 font-bold block">Trainee Code</label>
-        <input type="text" name="Trainee_Id" value="<?php echo $data['Trainee_Id']; ?>"
-         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
+        <input type="text" name="Trainee_Id" id="Trainee_Id"
+         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400 " readonly> <br>
 
         <label class="text-md text-blue-700 font-bold block">Module Code</label>
-        <input type="text" name="Module_Id" value="<?php echo $data['Module_Id']; ?>"
-        class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
-
+                <select id="Module_Id" name="Module_Id"
+                    class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-700 focus:ring-2 focus:ring-green-400 focus:outline-none"    required>
+                    <option value="" disabled selected>Select Module</option>
+                    <?php
+                        $sql = "SELECT * FROM modules";
+                        $query = mysqli_query($conn, $sql);
+                        while ($data = mysqli_fetch_assoc($query)) {
+                            echo "<option value='" . $data['Module_Id'] . "'>" . $data['Module_Name'] . "</option>";
+                        }
+                    ?>
+                </select>
         <label class="text-md text-blue-700 font-bold block">Formative Assessment /50</label>
         <input type="text" name="Formative_Assessment" value="<?php echo $data['Formative_Assessment']; ?>"
         class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-500 focus:ring-2 focus:outline-green-400"> <br>
@@ -105,5 +129,20 @@
     </form>
   </main>
 
+  <script>
+  
+  // this helps to fetch all data in select option, function runs every time user changed an option
+   document.getElementById('Trainee_Id_Select').addEventListener('change', function () {
+    
+   // helps to get options data and their index
+    const selectedOption = this.options[this.selectedIndex];
+    
+    // fetch Id from the trainee by using data-id
+    const traineeCode = selectedOption.getAttribute('data-id');
+    
+    // Store it in the traineeId which is the trainee Field
+    document.getElementById('Trainee_Id').value = traineeCode;
+});
+</script>
 </body>
 </html>
