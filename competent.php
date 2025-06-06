@@ -45,22 +45,26 @@
             <th class="px-6 py-3 border-b border-blue-500">Trainee Name</th>
             <th class="px-6 py-3 border-b border-blue-500">Module Code</th>
             <th class="px-6 py-3 border-b border-blue-500">Module Name</th>
+            <th class="px-6 py-3 border-b border-blue-500">Trade Name</th>
             <th class="px-6 py-3 border-b border-blue-500">Decision</th>
           </tr>
         </thead>
         <tbody class="font-semibold text-green-700">
           <?php
-              $sql = "SELECT m.Trainee_Id , 
-                       CONCAT(t.Firstname, ' ', t.lastname) AS Trainee_Name,
-                       m.Module_Id,
-                       md.Module_Name,
-                       m.decision,
-                       m.Total_Marks
-                       FROM marks m 
-                       JOIN Trainees t ON t.Trainee_Id = m.Trainee_Id
-                       JOIN modules md ON m.Module_Id = md.Module_Id
-                       HAVING m.Total_Marks >= 70";
+             
 
+$sql = "SELECT m.Trainee_Id, 
+        CONCAT(t.Firstname, ' ', t.lastname) AS Trainee_Name,
+        m.Module_Id,
+        md.Module_Name,
+        m.decision,
+        m.Total_Marks,
+        td.Trade_name
+        FROM marks m 
+        JOIN Trainees t ON t.Trainee_Id = m.Trainee_Id
+        JOIN modules md ON m.Module_Id = md.Module_Id
+        JOIN trades td ON td.Trade_id = t.Trade_id
+        HAVING m.Total_Marks >= 70";
               $query = mysqli_query($conn, $sql);
 
               if (mysqli_num_rows($query) > 0) {
@@ -71,6 +75,7 @@
                          <td class='px-6 py-3 border-b border-blue-500'>{$data['Trainee_Name']}</td>
                          <td class='px-6 py-3 border-b border-blue-500'>{$data['Module_Id']}</td>
                          <td class='px-6 py-3 border-b border-blue-500'>{$data['Module_Name']}</td>
+                         <td class='px-6 py-3 border-b border-blue-500'>{$data['Trade_name']}</td>
                          <td class='px-6 py-3 border-b border-blue-500 text-green-900'>{$data['decision']}</td>
                        </tr>
                       ";

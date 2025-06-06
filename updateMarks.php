@@ -29,7 +29,7 @@
 
    $error = "";     
    if (isset($_POST['save'])) {
-      if (!empty($_POST['Mark_Id']) && !empty($_POST['Trainee_Id']) && !empty($_POST['Module_Id']) && !empty($_POST['Formative_Assessment']) && !empty($_POST['Summative_Assessment'])) {
+      if (!empty($_POST['Trainee_Id']) && !empty($_POST['Module_Id']) && !empty($_POST['Formative_Assessment']) && !empty($_POST['Summative_Assessment'])) {
           $Mark_Id = $_POST['Mark_Id'];
           $trainee_code = $_POST['Trainee_Id'];
           $Module_Id = $_POST['Module_Id'];
@@ -79,7 +79,7 @@
 
   <main class="flex-grow flex justify-center items-center p-9">
     <form method="post" class="max-w-md w-full bg-green-400 p-9 rounded-lg shadow-2xl">
-      
+      <input type="hidden" name="Mark_Id" value="<?php echo $data['Mark_Id']; ?>">
            <label for="Trainee_Id" class="block mb-1 font-semibold text-blue-700">Trainee Name</label>
            <select name="Trainee_Id_Select" id="Trainee_Id_Select" required
                 class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-700 focus:ring-2 focus:ring-green-400 focus:outline-none">
@@ -103,8 +103,8 @@
                     <?php
                         $sql = "SELECT * FROM modules";
                         $query = mysqli_query($conn, $sql);
-                        while ($data = mysqli_fetch_assoc($query)) {
-                            echo "<option value='" . $data['Module_Id'] . "'>" . $data['Module_Name'] . "</option>";
+                        while ($data2 = mysqli_fetch_assoc($query)) {
+                            echo "<option value='" . $data2['Module_Id'] . "'>" . $data2['Module_Name'] . "</option>";
                         }
                     ?>
                 </select>
