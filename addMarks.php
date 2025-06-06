@@ -2,7 +2,7 @@
     include("conn.php");
     session_start();
 
-    if (!isset($_SESSION['Usename'])) {
+    if (!isset($_SESSION['username'])) {
         $_SESSION['login_error'] = "Please login to access this page";
         header("Location:login.php");
         exit();
@@ -17,11 +17,14 @@
 
         if (!empty($_POST['Trainee_Id']) && !empty($_POST['Module_Id']) && !empty($_POST['Formative_Assessment']) && !empty($_POST['Summative_Assessment'])) {
 
-         if ($_POST['Module_Id'] === $MarksList['Module_Id'] && $_POST['Trainee_Id'] === $MarksList['Trainee_Id']) {   
             $trainee_code = $_POST['Trainee_Id'];
             $module_code = $_POST['Module_Id'];
             $Formative = $_POST['Formative_Assessment'];
             $Summative = $_POST['Summative_Assessment'];
+
+            $checkMarksQuery = "SELECT * FROM marks WHERE Trainee_Id = '$trainee_code' AND Module_Id = '$module_code'"; 
+            $checkMarksResult = mysqli_query($conn, $checkMarksQuery);
+            if (!mysqli_num_rows($checkMarksResult) > 0) {
 
             $checkIdOfUser = "SELECT * FROM trainees WHERE Trainee_Id = '$trainee_code'";
             $sqlOfid = mysqli_query($conn, $checkIdOfUser);

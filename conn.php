@@ -1,10 +1,10 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "factorise@123", "gikonko_tss_managment_system");
+$conn = mysqli_connect("localhost", "root", "", "gikonko-tss");
 
 if ($conn) {
    
 } else {
-    die("Error" . mysqli_connect_error());
+    die("Error: " . mysqli_connect_error());
 }
 ?>

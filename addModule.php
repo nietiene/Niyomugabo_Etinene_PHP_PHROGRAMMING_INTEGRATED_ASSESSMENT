@@ -2,7 +2,7 @@
 include("conn.php");
 session_start();
 
-if (!isset($_SESSION['Usename'])) {
+if (!isset($_SESSION['username'])) {
     $_SESSION['login_error'] = "Please login to access this page";
     header("Location:login.php");
     exit();
@@ -11,11 +11,11 @@ if (!isset($_SESSION['Usename'])) {
 $error = "";
 if (isset($_POST['addModule'])) {
 
-    $sqlModule = "SELECT * FROM modules";
-    $queryModule = mysqli_query($conn, $sqlModule);
-    $ModuleList = mysqli_fetch_assoc($queryModule);
+    // $sqlModule = "SELECT * FROM modules";
+    // $queryModule = mysqli_query($conn, $sqlModule);
+    // $ModuleList = mysqli_fetch_assoc($queryModule);
     if (!empty($_POST['Module_Name']) && !empty($_POST['Trade_Id'])) {
-      if (!$_POST['Module_Name'] === $ModuleList['Module_Name']) {
+    //   if (!$_POST['Module_Name'] === $ModuleList['Module_Name']) {
 
       
         $Module_Name = $_POST['Module_Name'];
@@ -29,9 +29,9 @@ if (isset($_POST['addModule'])) {
         } else {
             die("ERROR:" . mysqli_error($conn));
         }
-    }  else {
-        $error = "Module arleady exist";
-    }
+    // }  else {
+    //     $error = "Module arleady exist";
+    // }
     }else {
         $error = "Please fill out the empty space";
     }

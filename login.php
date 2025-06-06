@@ -10,17 +10,17 @@
 
        $error = "";
        if (isset($_POST['login'])) {
-            $username = $_POST['Usename'];
-            $password = $_POST['Password'];
+            $username = $_POST['username'];
+            $password = $_POST['password'];
 
-            $sql = "SELECT * FROM users WHERE Usename='$username' AND Password='$password'";
+            $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
             $data = mysqli_query($conn, $sql);
             
             if (!$data) {
                 echo "ERROR". mysqli_error($conn);
             }
             if (mysqli_num_rows($data) > 0) {
-                $_SESSION['Usename'] = $username;
+                $_SESSION['username'] = $username;
                 header('Location: greetingUser.php');
             } else {
                $error = "Invalid Credentials";
@@ -48,10 +48,10 @@
      
         <h1 class="text-blue font-bold underline text-center text-blue-600 text-xl mb-6">Login Page</h1>
         <label class="font-bold text-blue-500 text-lg">Username</label>
-        <input type="text" name="Usename" 
+        <input type="text" name="username" 
         class="w-[76%] py-3 rounded-lg bg-green-200 shadow-lg focus:ring-2 focus:outline-green-400 mb-6 text-green-500"> <br>
         <label  class="font-bold text-blue-500 text-lg">Password</label>
-        <input type="password" name="Password" 
+        <input type="password" name="password" 
         class="w-[76%] py-3 rounded-lg bg-green-200 shadow-lg focus:ring-2 focus:outline-green-400 me-2 text-green-500 mb-6"> <br>
 
         <button name="login" class="bg-blue-400 w-[50%] py-3 text-white rounded-lg hover:bg-blue-500 shadow-2xl mb-6">Login</button>

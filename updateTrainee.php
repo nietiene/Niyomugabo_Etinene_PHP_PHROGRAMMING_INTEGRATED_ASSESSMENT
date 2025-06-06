@@ -2,7 +2,7 @@
 include('conn.php');
 session_start();
 
-if (!isset($_SESSION['Usename'])) {
+if (!isset($_SESSION['username'])) {
     $_SESSION['login_error'] = "Please login to access this page";
     header("Location:login.php");
     exit();
