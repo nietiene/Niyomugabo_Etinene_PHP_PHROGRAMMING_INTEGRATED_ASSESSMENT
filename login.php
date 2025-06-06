@@ -1,33 +1,39 @@
-  <?php
-       include ('conn.php');
-       session_start();
+<?php
+include ('conn.php');
+session_start();
 
-       $loginErrorMessage = "";
-       if (isset($_SESSION['login_error'])) {
-             $loginErrorMessage = $_SESSION['login_error'];   
-             unset($_SESSION['login_error']);     
-       }
+$loginErrorMessage = "";
+if (isset($_SESSION['login_error'])) {
+    $loginErrorMessage = $_SESSION['login_error'];
+    unset($_SESSION['login_error']);
+}
 
-       $error = "";
-       if (isset($_POST['login'])) {
-            $username = $_POST['username'];
-            $password = $_POST['password'];
+$error = "";
+if (isset($_POST['login'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-            $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-            $data = mysqli_query($conn, $sql);
-            
-            if (!$data) {
-                echo "ERROR". mysqli_error($conn);
-            }
-            if (mysqli_num_rows($data) > 0) {
-                $_SESSION['username'] = $username;
-                header('Location: greetingUser.php');
-            } else {
-               $error = "Invalid Credentials";
-            }
-       }
+    $sql = "SELECT * FROM users WHERE username = '$username'";
+    $result = mysqli_query($conn, $sql);
 
-   ?>
+    if (!$result) {
+        echo "ERROR: " . mysqli_error($conn);
+    } elseif (mysqli_num_rows($result) > 0) {
+        $user = mysqli_fetch_assoc($result);
+
+        if (password_verify($password, $user['password'])) {
+            $_SESSION['username'] = $username;
+            header('Location: greetingUser.php');
+            exit();
+        } else {
+            $error = "Invalid Credentials";
+        }
+    } else {
+        $error = "Invalid Credentials";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

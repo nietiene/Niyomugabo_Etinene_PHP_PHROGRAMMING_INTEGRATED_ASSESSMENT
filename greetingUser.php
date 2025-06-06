@@ -7,13 +7,20 @@
        header("Location: loginStudent.php");
        exit();
    }
+  
+// Prevent caching
+header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");
+header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>User Page</title>
+  <title>DOS Page</title>
   <link href="output.css" rel="stylesheet" />
   <link rel="icon" type="/png" href="gikonko.png" />
 </head>
@@ -36,5 +43,15 @@
           &copy; <?php echo date("Y"); ?> GIKONKO TSS. All rights reserved.
   </footer>
 
+
+  <script>
+
+  history.pushState(null, "", location.href);
+  window.onpopstate = function () {
+    history.pushState(null, "", location.href);
+  };
+</script>
+
+</script>
 </body>
 </html>

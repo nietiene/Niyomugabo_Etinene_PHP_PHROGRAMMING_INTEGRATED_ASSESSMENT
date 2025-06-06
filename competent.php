@@ -94,5 +94,7 @@ $sql = "SELECT m.Trainee_Id,
           &copy; <?php echo date("Y"); ?> GIKONKO TSS. All rights reserved.
   </footer>
 
+
+  
 </body>
 </html>
