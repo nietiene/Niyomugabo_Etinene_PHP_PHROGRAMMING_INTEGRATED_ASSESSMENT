@@ -1,6 +1,7 @@
 <?php
 include("conn.php");
 
+// this is variable for success
 $success = $error = "";
 
 if (isset($_POST['add_user'])) {
