@@ -71,23 +71,14 @@
 
             <div>
                 <label for="Trainee_Id" class="block mb-1 font-semibold text-blue-700">Trainee Code</label>
-                <input
-                    type="text"
-                    id="Trainee_Id"
-                    name="Trainee_Id"
-                    class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-700 focus:ring-2 focus:ring-green-400 focus:outline-none"
-                    required
-                />
+                <input  type="text"  id="Trainee_Id" name="Trainee_Id"
+                    class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-700 focus:ring-2 focus:ring-green-400 focus:outline-none" required/>
             </div>
 
             <div>
                 <label for="Module_Id" class="block mb-1 font-semibold text-blue-700">Module Name</label>
-                <select
-                    id="Module_Id"
-                    name="Module_Id"
-                    class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-700 focus:ring-2 focus:ring-green-400 focus:outline-none"
-                    required
-                >
+                <select id="Module_Id" name="Module_Id"
+                    class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-700 focus:ring-2 focus:ring-green-400 focus:outline-none"    required>
                     <option value="" disabled selected>Select Module</option>
                     <?php
                         $sql = "SELECT * FROM modules";
@@ -101,37 +92,21 @@
 
             <div>
                 <label for="Formative_Assessment" class="block mb-1 font-semibold text-blue-700">Formative Assessment Marks / 50</label>
-                <input
-                    type="number"
-                    id="Formative_Assessment"
-                    name="Formative_Assessment"
-                    class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-700 focus:ring-2 focus:ring-green-400 focus:outline-none"
-                />
+                <input type="number" id="Formative_Assessment" name="Formative_Assessment"
+                    class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-700 focus:ring-2 focus:ring-green-400 focus:outline-none" />
             </div>
 
             <div>
                 <label for="Summative_Assessment" class="block mb-1 font-semibold text-blue-700">Summative Assessment Marks / 50</label>
-                <input
-                    type="number"
-                    id="Summative_Assessment"
-                    name="Summative_Assessment"
-                    class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-700 focus:ring-2 focus:ring-green-400 focus:outline-none"
-                />
+                <input type="number" id="Summative_Assessment"name="Summative_Assessment"
+                    class="w-full py-2 rounded-lg shadow-lg bg-green-200 text-green-700 focus:ring-2 focus:ring-green-400 focus:outline-none" />
             </div>
 
             <div class="flex justify-between">
-                <button
-                    type="submit"
-                    name="addMarks"
-                    class="bg-blue-600 text-white py-2 px-6 rounded-lg shadow-xl hover:bg-blue-700 transition duration-200"
-                >
-                    Save Marks
-                </button>
-                <a
-                    href="listOfMarks.php"
-                    class="bg-red-600 text-white py-2 px-6 rounded-lg shadow-xl hover:bg-red-700 transition duration-200 flex items-center justify-center">
-                   ← Back
-                </a>
+                <button type="submit"  name="addMarks"
+                   class="bg-blue-600 text-white py-2 px-6 rounded-lg shadow-xl hover:bg-blue-700 transition duration-200">Save Marks</button>
+                <a href="listOfMarks.php"
+                    class="bg-red-600 text-white py-2 px-6 rounded-lg shadow-xl hover:bg-red-700 transition duration-200 flex items-center justify-center">← Back </a>
             </div>
 
             <?php if (!empty($error)): ?>
